@@ -1,0 +1,478 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 51;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		3D30543B064344AB0071A909 /* Pods_NoonCam.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5F3D80EB651F8862A4344DE5 /* Pods_NoonCam.framework */; };
+		E9B8BEA82498489F0082FCAE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9B8BEA72498489F0082FCAE /* AppDelegate.swift */; };
+		E9B8BEAA2498489F0082FCAE /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9B8BEA92498489F0082FCAE /* SceneDelegate.swift */; };
+		E9B8BEAF2498489F0082FCAE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E9B8BEAD2498489F0082FCAE /* Main.storyboard */; };
+		E9B8BEB22498489F0082FCAE /* NoonCam.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = E9B8BEB02498489F0082FCAE /* NoonCam.xcdatamodeld */; };
+		E9B8BEB4249848A10082FCAE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E9B8BEB3249848A10082FCAE /* Assets.xcassets */; };
+		E9B8BEB7249848A10082FCAE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E9B8BEB5249848A10082FCAE /* LaunchScreen.storyboard */; };
+		E9B8BEC02498579A0082FCAE /* MainNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9B8BEBF2498579A0082FCAE /* MainNavigationController.swift */; };
+		E9B8BEC42498625A0082FCAE /* LeftSlideMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9B8BEC32498625A0082FCAE /* LeftSlideMenuViewController.swift */; };
+		E9ED0E462498A38E004EB240 /* CamTalkViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9ED0E452498A38E004EB240 /* CamTalkViewController.swift */; };
+		E9ED0E4F2498E15A004EB240 /* ContentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9ED0E4E2498E15A004EB240 /* ContentViewController.swift */; };
+		E9ED0E512498E628004EB240 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9ED0E502498E628004EB240 /* MainViewController.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		5F3D80EB651F8862A4344DE5 /* Pods_NoonCam.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NoonCam.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		66C5A128ABCC7279CB305F9B /* Pods-NoonCam.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NoonCam.debug.xcconfig"; path = "Target Support Files/Pods-NoonCam/Pods-NoonCam.debug.xcconfig"; sourceTree = "<group>"; };
+		B81939587B92114EA55CDBC0 /* Pods-NoonCam.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NoonCam.release.xcconfig"; path = "Target Support Files/Pods-NoonCam/Pods-NoonCam.release.xcconfig"; sourceTree = "<group>"; };
+		E9B8BEA42498489F0082FCAE /* NoonCam.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NoonCam.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		E9B8BEA72498489F0082FCAE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		E9B8BEA92498489F0082FCAE /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		E9B8BEAE2498489F0082FCAE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		E9B8BEB12498489F0082FCAE /* NoonCam.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = NoonCam.xcdatamodel; sourceTree = "<group>"; };
+		E9B8BEB3249848A10082FCAE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		E9B8BEB6249848A10082FCAE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		E9B8BEB8249848A10082FCAE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E9B8BEBF2498579A0082FCAE /* MainNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainNavigationController.swift; sourceTree = "<group>"; };
+		E9B8BEC32498625A0082FCAE /* LeftSlideMenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeftSlideMenuViewController.swift; sourceTree = "<group>"; };
+		E9ED0E452498A38E004EB240 /* CamTalkViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CamTalkViewController.swift; sourceTree = "<group>"; };
+		E9ED0E4E2498E15A004EB240 /* ContentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentViewController.swift; sourceTree = "<group>"; };
+		E9ED0E502498E628004EB240 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		E9B8BEA12498489F0082FCAE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3D30543B064344AB0071A909 /* Pods_NoonCam.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		05369753155B5FB2AE6D543C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				5F3D80EB651F8862A4344DE5 /* Pods_NoonCam.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		B09FAD3B1A8E3F23978A651F /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				66C5A128ABCC7279CB305F9B /* Pods-NoonCam.debug.xcconfig */,
+				B81939587B92114EA55CDBC0 /* Pods-NoonCam.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		E9B8BE9B2498489F0082FCAE = {
+			isa = PBXGroup;
+			children = (
+				E9B8BEA62498489F0082FCAE /* NoonCam */,
+				E9B8BEA52498489F0082FCAE /* Products */,
+				B09FAD3B1A8E3F23978A651F /* Pods */,
+				05369753155B5FB2AE6D543C /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		E9B8BEA52498489F0082FCAE /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				E9B8BEA42498489F0082FCAE /* NoonCam.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		E9B8BEA62498489F0082FCAE /* NoonCam */ = {
+			isa = PBXGroup;
+			children = (
+				E9B8BEAD2498489F0082FCAE /* Main.storyboard */,
+				E9ED0E432498A35B004EB240 /* Controllers */,
+				E9B8BEB3249848A10082FCAE /* Assets.xcassets */,
+				E9B8BEB5249848A10082FCAE /* LaunchScreen.storyboard */,
+				E9B8BEB8249848A10082FCAE /* Info.plist */,
+				E9B8BEB02498489F0082FCAE /* NoonCam.xcdatamodeld */,
+			);
+			path = NoonCam;
+			sourceTree = "<group>";
+		};
+		E9B8BEBE2498576C0082FCAE /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				E9B8BEA72498489F0082FCAE /* AppDelegate.swift */,
+				E9B8BEA92498489F0082FCAE /* SceneDelegate.swift */,
+				E9B8BEBF2498579A0082FCAE /* MainNavigationController.swift */,
+				E9ED0E502498E628004EB240 /* MainViewController.swift */,
+				E9B8BEC32498625A0082FCAE /* LeftSlideMenuViewController.swift */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		E9ED0E432498A35B004EB240 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				E9ED0E472498B411004EB240 /* Custom */,
+				E9ED0E442498A37B004EB240 /* VideoCall */,
+				E9B8BEBE2498576C0082FCAE /* Main */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		E9ED0E442498A37B004EB240 /* VideoCall */ = {
+			isa = PBXGroup;
+			children = (
+				E9ED0E4E2498E15A004EB240 /* ContentViewController.swift */,
+				E9ED0E452498A38E004EB240 /* CamTalkViewController.swift */,
+			);
+			path = VideoCall;
+			sourceTree = "<group>";
+		};
+		E9ED0E472498B411004EB240 /* Custom */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Custom;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		E9B8BEA32498489F0082FCAE /* NoonCam */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E9B8BEBB249848A10082FCAE /* Build configuration list for PBXNativeTarget "NoonCam" */;
+			buildPhases = (
+				05D19B640863FA33788F6704 /* [CP] Check Pods Manifest.lock */,
+				E9B8BEA02498489F0082FCAE /* Sources */,
+				E9B8BEA12498489F0082FCAE /* Frameworks */,
+				E9B8BEA22498489F0082FCAE /* Resources */,
+				2FCF09D5BAD1662A4CE2CA0E /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = NoonCam;
+			productName = NoonCam;
+			productReference = E9B8BEA42498489F0082FCAE /* NoonCam.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		E9B8BE9C2498489F0082FCAE /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1150;
+				LastUpgradeCheck = 1150;
+				ORGANIZATIONNAME = "김학철";
+				TargetAttributes = {
+					E9B8BEA32498489F0082FCAE = {
+						CreatedOnToolsVersion = 11.5;
+					};
+				};
+			};
+			buildConfigurationList = E9B8BE9F2498489F0082FCAE /* Build configuration list for PBXProject "NoonCam" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = E9B8BE9B2498489F0082FCAE;
+			productRefGroup = E9B8BEA52498489F0082FCAE /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				E9B8BEA32498489F0082FCAE /* NoonCam */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		E9B8BEA22498489F0082FCAE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E9B8BEB7249848A10082FCAE /* LaunchScreen.storyboard in Resources */,
+				E9B8BEB4249848A10082FCAE /* Assets.xcassets in Resources */,
+				E9B8BEAF2498489F0082FCAE /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		05D19B640863FA33788F6704 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-NoonCam-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		2FCF09D5BAD1662A4CE2CA0E /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-NoonCam/Pods-NoonCam-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-NoonCam/Pods-NoonCam-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-NoonCam/Pods-NoonCam-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		E9B8BEA02498489F0082FCAE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E9B8BEC02498579A0082FCAE /* MainNavigationController.swift in Sources */,
+				E9ED0E462498A38E004EB240 /* CamTalkViewController.swift in Sources */,
+				E9B8BEC42498625A0082FCAE /* LeftSlideMenuViewController.swift in Sources */,
+				E9ED0E4F2498E15A004EB240 /* ContentViewController.swift in Sources */,
+				E9B8BEA82498489F0082FCAE /* AppDelegate.swift in Sources */,
+				E9B8BEAA2498489F0082FCAE /* SceneDelegate.swift in Sources */,
+				E9B8BEB22498489F0082FCAE /* NoonCam.xcdatamodeld in Sources */,
+				E9ED0E512498E628004EB240 /* MainViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		E9B8BEAD2498489F0082FCAE /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				E9B8BEAE2498489F0082FCAE /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		E9B8BEB5249848A10082FCAE /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				E9B8BEB6249848A10082FCAE /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		E9B8BEB9249848A10082FCAE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		E9B8BEBA249848A10082FCAE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		E9B8BEBC249848A10082FCAE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 66C5A128ABCC7279CB305F9B /* Pods-NoonCam.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 6QB33R9MCL;
+				INFOPLIST_FILE = NoonCam/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.snsncam.NoonCam;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		E9B8BEBD249848A10082FCAE /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = B81939587B92114EA55CDBC0 /* Pods-NoonCam.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 6QB33R9MCL;
+				INFOPLIST_FILE = NoonCam/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.snsncam.NoonCam;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		E9B8BE9F2498489F0082FCAE /* Build configuration list for PBXProject "NoonCam" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E9B8BEB9249848A10082FCAE /* Debug */,
+				E9B8BEBA249848A10082FCAE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E9B8BEBB249848A10082FCAE /* Build configuration list for PBXNativeTarget "NoonCam" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E9B8BEBC249848A10082FCAE /* Debug */,
+				E9B8BEBD249848A10082FCAE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		E9B8BEB02498489F0082FCAE /* NoonCam.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				E9B8BEB12498489F0082FCAE /* NoonCam.xcdatamodel */,
+			);
+			currentVersion = E9B8BEB12498489F0082FCAE /* NoonCam.xcdatamodel */;
+			path = NoonCam.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = E9B8BE9C2498489F0082FCAE /* Project object */;
+}
