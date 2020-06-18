@@ -7,5 +7,6 @@ target 'NoonCam' do
 
   # Pods for NoonCam
 pod 'SideMenu'
-pod 'SwipeMenuViewController'
+pod 'Malert'
+
 end

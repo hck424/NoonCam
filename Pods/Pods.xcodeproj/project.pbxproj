@@ -7,123 +7,144 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		08B5B89F28224381711F45A680C292D9 /* SideMenu-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 20C21288789A20C8F44343A1CC655729 /* SideMenu-dummy.m */; };
-		09A0A5D3733F69E93F553ABBCF02FB77 /* SideMenuTransitionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEF1BF45682439FDFACA8D6BAF0D7AEC /* SideMenuTransitionController.swift */; };
-		23927711895669357A624B6274C7B486 /* SwipeMenuViewController-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 399931CFC908F059640EAFD42E3EFC99 /* SwipeMenuViewController-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		27D830F1CAC60B99CC0A135F583BFFF2 /* SideMenuPresentationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5561B951E820B605958A535371229206 /* SideMenuPresentationController.swift */; };
-		29D2D3E7CF0F6DC0CD3AF37B5ACD9C9A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */; };
-		2ED518A3FA8DCBE08E621AC5C32844A9 /* SideMenuPushCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03B5927D5E1B9B9E1212C242E1AB2DB5 /* SideMenuPushCoordinator.swift */; };
-		3846AFE38D1B63A9F0D9073C4ABC6DAA /* SideMenuNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38D413761FE5D5AF9A649A66AF13E2AE /* SideMenuNavigationController.swift */; };
-		3E18B004D34ED5441A193684EEB25BD3 /* SideMenuPresentationStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5C7EDD8084C932EA7A86F8937A6EA42 /* SideMenuPresentationStyle.swift */; };
-		44957E83841767E46139E80F56BA2B4E /* Pods-NoonCam-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = A16A361DFB3DF79F376FD594476E179E /* Pods-NoonCam-dummy.m */; };
-		4E88B70410F6837FBD463EA4B6C33155 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 500AE36F8AAE31673334D0311A94ABCA /* Extensions.swift */; };
-		6ED0582197870F37C345F25914007CC8 /* Pods-NoonCam-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = D90738B9BC54D121E264D48AAD05A03B /* Pods-NoonCam-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		77AF2098DDCCAAE0CE4A20725C466905 /* SideMenuManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1514E63DAE61226F5C65A31CE75B38A4 /* SideMenuManager.swift */; };
-		77B9153709D33EEAC012E34D88C1E142 /* TabItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EC4CB5B30A8630871FA558B13FE583C /* TabItemView.swift */; };
-		890FF25D0CCFF9BADECBA64DCCEFF4FF /* SideMenuAnimationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B84D20FC86806CB7F16E79722F8E701 /* SideMenuAnimationController.swift */; };
-		8C06632AA14D12278B1277AC0CC6A0B2 /* SideMenuInteractionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E0AA020D3478F8674F39BFC15114166 /* SideMenuInteractionController.swift */; };
-		8D1CE5000597A547F432AE840A388D95 /* UIEdgeInsetsExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CAED5230A3ACA41E44852F0D92D54DB /* UIEdgeInsetsExtension.swift */; };
-		905A503F069C27E841BAD9F4EFD4F1AF /* Protected.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28007A34BC55D078A1A4F9A2D401EB51 /* Protected.swift */; };
-		90AA61B5591F2D52ACECCE6CF4193BBC /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */; };
-		9E97897CB645D4A0ED10AF87A1226193 /* SwipeMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A2ED82C9D33E44E68771785F7D91723 /* SwipeMenuViewController.swift */; };
+		0312914B4A62EEA8F8ABB0A19E685613 /* Pods-NoonCam-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = D90738B9BC54D121E264D48AAD05A03B /* Pods-NoonCam-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		08B5B89F28224381711F45A680C292D9 /* SideMenu-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = F0B630918BA55B9B3438D1D3A02767DA /* SideMenu-dummy.m */; };
+		09A0A5D3733F69E93F553ABBCF02FB77 /* SideMenuTransitionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 801BBB7A41BC050C7201C5EEC7BA1E39 /* SideMenuTransitionController.swift */; };
+		0DA17BB9FCEF158AE961BC5886C25F15 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62AA92E128749928883FE381A4751ECF /* Extensions.swift */; };
+		27A52D01C19EF202DEC0649E0AECEFC3 /* Malert_brand.png in Resources */ = {isa = PBXBuildFile; fileRef = D3143731655EE29B9F29D2917158F82F /* Malert_brand.png */; };
+		27D830F1CAC60B99CC0A135F583BFFF2 /* SideMenuPresentationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56390C22DED963AFF7AF95BB37605208 /* SideMenuPresentationController.swift */; };
+		2ED518A3FA8DCBE08E621AC5C32844A9 /* SideMenuPushCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEDEAA4D114190E0ECD6EC77D73B479A /* SideMenuPushCoordinator.swift */; };
+		3846AFE38D1B63A9F0D9073C4ABC6DAA /* SideMenuNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4D74FAF528E80F215062756BD6E419E /* SideMenuNavigationController.swift */; };
+		3AB8A303C9C84222CF409A7DA04D7873 /* MalertDimissTransitioning.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE4C8541760B12A310769EB294ED6DFD /* MalertDimissTransitioning.swift */; };
+		3E18B004D34ED5441A193684EEB25BD3 /* SideMenuPresentationStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33D7C7D63B96302C54DF41692F7734BF /* SideMenuPresentationStyle.swift */; };
+		3F4D0D721CA84998CBE337429B8EA0B5 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */; };
+		4E88B70410F6837FBD463EA4B6C33155 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 847BCEF1FF65271745707B92985EAD8F /* Extensions.swift */; };
+		551F10CECB62979E2BF18D5103C9EDD0 /* Malert.bundle in Resources */ = {isa = PBXBuildFile; fileRef = B931259D0FFAF5FE5E51413E8C03910C /* Malert.bundle */; };
+		59F0A01153306805A539B736A15CE502 /* Malert+Actions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5208CEEAB43A67849BA5BADC3B67C295 /* Malert+Actions.swift */; };
+		60D5FF76453C2BF1F9E65127BF2807BA /* Pods-NoonCam-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = A16A361DFB3DF79F376FD594476E179E /* Pods-NoonCam-dummy.m */; };
+		77AF2098DDCCAAE0CE4A20725C466905 /* SideMenuManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37F32795F025690CE0BD1EFF9E3BB343 /* SideMenuManager.swift */; };
+		799F4F6199FD1FDA60D14BDA3A399C65 /* Malert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19A2D2D4215621E512A0E4B64244356E /* Malert.swift */; };
+		856DF89DD12028FC3EC2873146020AB2 /* mockup.png in Resources */ = {isa = PBXBuildFile; fileRef = 3CC8CC07BB1B162E4521EB72970061DC /* mockup.png */; };
+		890FF25D0CCFF9BADECBA64DCCEFF4FF /* SideMenuAnimationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AEB82027FF564E16574B80BA964C42D /* SideMenuAnimationController.swift */; };
+		8B8A6FBD9A34322AF0A9BF522CB324DA /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */; };
+		8C06632AA14D12278B1277AC0CC6A0B2 /* SideMenuInteractionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5FE467C787F4FE6B4C3CEDD929E1272 /* SideMenuInteractionController.swift */; };
+		905A503F069C27E841BAD9F4EFD4F1AF /* Protected.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3C8EE3ED5E70F979A493E871F2E09C1 /* Protected.swift */; };
+		9F26C2B79DB167234D3414E17D632CF0 /* Malert-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = C85629086AE91D825E133F08CE81D77F /* Malert-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A2D3CB14AEB8A99EFAA9BDF84F66C9C2 /* MalertButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00D6D9712A7F20D036EEE936DB472B36 /* MalertButtonView.swift */; };
+		AFA233348E3A9FDF7EBF059B1C420BA3 /* MalertAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1006A2D348B35E69B2FC24CAED353C2 /* MalertAction.swift */; };
 		B27B12C5D2EF1BE7B3CBBBC8FA98110E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */; };
-		B46682AFD3AF846DE969FCFAEB90BEC0 /* SwipeMenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38300B4D5ECAB7410EC85A2559785B5E /* SwipeMenuView.swift */; };
-		B8BCD21052B6E65DD4E1C1CB00969721 /* ContentScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72935B5C6CAA7368BB12CD6591D22D31 /* ContentScrollView.swift */; };
-		C798DA148F7F666F393F2009DDF73E35 /* Initializable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A3DC7976C1DB5F9503E3A8AD902377B /* Initializable.swift */; };
-		C96A55C2A869A97AC4CA628A7F2A2A21 /* UITableViewVibrantCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EB17EAA40A3E87E098F4F2FA07D200C /* UITableViewVibrantCell.swift */; };
-		D1BD7393C7934049B3E51D9C5A5CD8A0 /* Print.swift in Sources */ = {isa = PBXBuildFile; fileRef = 281C78D84C998AFC5F9B7F6799F549F4 /* Print.swift */; };
-		D3D22BB8C279DC03EA91BFE3F5412477 /* Deprecations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 090AAC74B5621AC422EEECCB4D6DB2B4 /* Deprecations.swift */; };
-		D777716F0B6C0754B7B0230531743BC4 /* SideMenu-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = D47A2445F6AD7E4881D08EE181B7BB1D /* SideMenu-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		DDD8609251AFED79B8F7532E3A206F05 /* SwipeMenuViewController-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 5ADD950578AE64BABE9EB60E55F488DB /* SwipeMenuViewController-dummy.m */; };
-		E37362A781482A2993DC681CFA753306 /* UIViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35C02DCA3A29565D3E4C74759D06151F /* UIViewExtension.swift */; };
-		F6E4DEF530C0DBAE6EDCA9A721976F26 /* TabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 444C5C4624844C1A157EC92776E2EF35 /* TabView.swift */; };
-		FF63FD182889BE28C253A8D1019982BD /* UIColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C1DEB219BC42DB44D4685F7EDDAE851 /* UIColorExtension.swift */; };
+		C2A24B90F3C541C6971D4D7B344B5F5E /* MalertView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AD02687EC61A69B7DE8C753043EC4BB /* MalertView.swift */; };
+		C44E8EA66B51DAE27F3E59B8B568526F /* MalertPresentationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4B48D0A48AE357570679BDBDE068182 /* MalertPresentationManager.swift */; };
+		C798DA148F7F666F393F2009DDF73E35 /* Initializable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CEED97FE0894E72FC98E763F57A6EBB /* Initializable.swift */; };
+		C9033B618B87F2877EAE936F2C7EA5CD /* MalertPresentTransitioning.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4C5EE74661095625A4C182E80560A1E /* MalertPresentTransitioning.swift */; };
+		C96A55C2A869A97AC4CA628A7F2A2A21 /* UITableViewVibrantCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FAD6553169A3F3F98B1A3C2914293D8 /* UITableViewVibrantCell.swift */; };
+		CCABD0FF5D8D31529FB4194814F229B2 /* Malert+Constraints.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9F554AA2A1943B18914719624516427 /* Malert+Constraints.swift */; };
+		D1BD7393C7934049B3E51D9C5A5CD8A0 /* Print.swift in Sources */ = {isa = PBXBuildFile; fileRef = D26BFCB21FE76034DD3BF977A8CBFDB0 /* Print.swift */; };
+		D3D22BB8C279DC03EA91BFE3F5412477 /* Deprecations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 843CF24BE66070D5C733B8BE9533383C /* Deprecations.swift */; };
+		D777716F0B6C0754B7B0230531743BC4 /* SideMenu-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 809800F9DCDDC35E855BA7F20B8C45EF /* SideMenu-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		D8BC4494EF1335E229A7A4161F5C0D47 /* BaseMalertViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25DAE49F5427A34F70D4A97438336F53 /* BaseMalertViewController.swift */; };
+		F1B2CEE32B550A6C68E632EEE46F6737 /* BaseTransitioning.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69E1639662FBC0DA4C0C22F7AE6737CF /* BaseTransitioning.swift */; };
+		F4A67FE16956E4795BFAD858A7241282 /* Malert-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 81748CB5F8C6D2D4638374558E473131 /* Malert-dummy.m */; };
+		F95A13CBF65AAD679256E38EF3CCBC95 /* MalertInteractiveTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FB8FBAEF0FC6F890EDA8D46CCD2AF7A /* MalertInteractiveTransition.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		E869AF9035C2E786AA14BE699DBB3B1E /* PBXContainerItemProxy */ = {
+		3BB7BC2B057C02C7CEC6BCFD784A16A3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B117881115A50B47906E45574440276A;
+			remoteInfo = Malert;
+		};
+		8E48412E8267AD327B89BC4BB3B43324 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = C4A0A7D8591B67FB75E2E8D215E3735B;
 			remoteInfo = SideMenu;
 		};
-		EF9C2CA5FBEFAAEC0EEF3A9B8CF1BDB8 /* PBXContainerItemProxy */ = {
+		99799A259F8F92C6F4FD67EA080664EC /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 2DACB9880823AC6A3C72ED7C7B49473A;
-			remoteInfo = SwipeMenuViewController;
+			remoteGlobalIDString = F062B4408517689AF1DA5F570405334C;
+			remoteInfo = "Malert-Malert";
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		03B5927D5E1B9B9E1212C242E1AB2DB5 /* SideMenuPushCoordinator.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SideMenuPushCoordinator.swift; path = Pod/Classes/SideMenuPushCoordinator.swift; sourceTree = "<group>"; };
-		090AAC74B5621AC422EEECCB4D6DB2B4 /* Deprecations.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Deprecations.swift; path = Pod/Classes/Deprecations.swift; sourceTree = "<group>"; };
-		0A3DC7976C1DB5F9503E3A8AD902377B /* Initializable.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Initializable.swift; path = Pod/Classes/Initializable.swift; sourceTree = "<group>"; };
-		0CAED5230A3ACA41E44852F0D92D54DB /* UIEdgeInsetsExtension.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = UIEdgeInsetsExtension.swift; path = Sources/Classes/UIEdgeInsetsExtension.swift; sourceTree = "<group>"; };
-		0EB17EAA40A3E87E098F4F2FA07D200C /* UITableViewVibrantCell.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = UITableViewVibrantCell.swift; path = Pod/Classes/UITableViewVibrantCell.swift; sourceTree = "<group>"; };
-		1363EBEA48C329ECDB84E334FBDCE915 /* SideMenu-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SideMenu-prefix.pch"; sourceTree = "<group>"; };
-		1514E63DAE61226F5C65A31CE75B38A4 /* SideMenuManager.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SideMenuManager.swift; path = Pod/Classes/SideMenuManager.swift; sourceTree = "<group>"; };
-		1EC4CB5B30A8630871FA558B13FE583C /* TabItemView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = TabItemView.swift; path = Sources/Classes/TabItemView.swift; sourceTree = "<group>"; };
-		20C21288789A20C8F44343A1CC655729 /* SideMenu-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "SideMenu-dummy.m"; sourceTree = "<group>"; };
-		28007A34BC55D078A1A4F9A2D401EB51 /* Protected.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Protected.swift; path = Pod/Classes/Protected.swift; sourceTree = "<group>"; };
-		281C78D84C998AFC5F9B7F6799F549F4 /* Print.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Print.swift; path = Pod/Classes/Print.swift; sourceTree = "<group>"; };
-		2B5B9A294A743AE18EC66B4742971330 /* SideMenu.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SideMenu.debug.xcconfig; sourceTree = "<group>"; };
-		2B84D20FC86806CB7F16E79722F8E701 /* SideMenuAnimationController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SideMenuAnimationController.swift; path = Pod/Classes/SideMenuAnimationController.swift; sourceTree = "<group>"; };
+		00D6D9712A7F20D036EEE936DB472B36 /* MalertButtonView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = MalertButtonView.swift; path = Malert/Classes/MalertButtonView/MalertButtonView.swift; sourceTree = "<group>"; };
+		0168A3DB824ECAE44C70D1712F1E6613 /* Malert.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = Malert.modulemap; sourceTree = "<group>"; };
+		19A2D2D4215621E512A0E4B64244356E /* Malert.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Malert.swift; path = Malert/Classes/Malert/Malert.swift; sourceTree = "<group>"; };
+		1FAD6553169A3F3F98B1A3C2914293D8 /* UITableViewVibrantCell.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = UITableViewVibrantCell.swift; path = Pod/Classes/UITableViewVibrantCell.swift; sourceTree = "<group>"; };
+		25DAE49F5427A34F70D4A97438336F53 /* BaseMalertViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = BaseMalertViewController.swift; path = Malert/Classes/Base/BaseMalertViewController.swift; sourceTree = "<group>"; };
+		2AEB82027FF564E16574B80BA964C42D /* SideMenuAnimationController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SideMenuAnimationController.swift; path = Pod/Classes/SideMenuAnimationController.swift; sourceTree = "<group>"; };
 		2CCA5A7B66C51235C882AF72EA8F42F6 /* Pods-NoonCam.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-NoonCam.release.xcconfig"; sourceTree = "<group>"; };
 		319D06AA0D1D0BA345459C039040A1ED /* SideMenu.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = SideMenu.framework; path = SideMenu.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.2.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
-		34DD472F84674949C0279D1B15CC235B /* SwipeMenuViewController.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SwipeMenuViewController.release.xcconfig; sourceTree = "<group>"; };
-		35C02DCA3A29565D3E4C74759D06151F /* UIViewExtension.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = UIViewExtension.swift; path = Sources/Classes/UIViewExtension.swift; sourceTree = "<group>"; };
-		38300B4D5ECAB7410EC85A2559785B5E /* SwipeMenuView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SwipeMenuView.swift; path = Sources/Classes/SwipeMenuView.swift; sourceTree = "<group>"; };
-		38D413761FE5D5AF9A649A66AF13E2AE /* SideMenuNavigationController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SideMenuNavigationController.swift; path = Pod/Classes/SideMenuNavigationController.swift; sourceTree = "<group>"; };
-		399931CFC908F059640EAFD42E3EFC99 /* SwipeMenuViewController-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SwipeMenuViewController-umbrella.h"; sourceTree = "<group>"; };
-		3A2ED82C9D33E44E68771785F7D91723 /* SwipeMenuViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SwipeMenuViewController.swift; path = Sources/Classes/SwipeMenuViewController.swift; sourceTree = "<group>"; };
-		444C5C4624844C1A157EC92776E2EF35 /* TabView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = TabView.swift; path = Sources/Classes/TabView.swift; sourceTree = "<group>"; };
-		497F24BA7E2C84BB1FB32DEFD497592F /* SwipeMenuViewController.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = SwipeMenuViewController.modulemap; sourceTree = "<group>"; };
-		49F6537E5D64EB555524A31C44A0A1AA /* SideMenu.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SideMenu.release.xcconfig; sourceTree = "<group>"; };
-		500AE36F8AAE31673334D0311A94ABCA /* Extensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Extensions.swift; path = Pod/Classes/Extensions.swift; sourceTree = "<group>"; };
-		5561B951E820B605958A535371229206 /* SideMenuPresentationController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SideMenuPresentationController.swift; path = Pod/Classes/SideMenuPresentationController.swift; sourceTree = "<group>"; };
-		5667D56FF69EA8921A31AABB19F7CFA0 /* SwipeMenuViewController.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = SwipeMenuViewController.framework; path = SwipeMenuViewController.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		5ADD950578AE64BABE9EB60E55F488DB /* SwipeMenuViewController-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "SwipeMenuViewController-dummy.m"; sourceTree = "<group>"; };
-		6E0AA020D3478F8674F39BFC15114166 /* SideMenuInteractionController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SideMenuInteractionController.swift; path = Pod/Classes/SideMenuInteractionController.swift; sourceTree = "<group>"; };
-		72935B5C6CAA7368BB12CD6591D22D31 /* ContentScrollView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ContentScrollView.swift; path = Sources/Classes/ContentScrollView.swift; sourceTree = "<group>"; };
+		33D7C7D63B96302C54DF41692F7734BF /* SideMenuPresentationStyle.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SideMenuPresentationStyle.swift; path = Pod/Classes/SideMenuPresentationStyle.swift; sourceTree = "<group>"; };
+		34E3CCD9769B6C761D29363E061567AC /* ResourceBundle-Malert-Malert-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "ResourceBundle-Malert-Malert-Info.plist"; sourceTree = "<group>"; };
+		37F32795F025690CE0BD1EFF9E3BB343 /* SideMenuManager.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SideMenuManager.swift; path = Pod/Classes/SideMenuManager.swift; sourceTree = "<group>"; };
+		3CC8CC07BB1B162E4521EB72970061DC /* mockup.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = mockup.png; path = Malert/Assets/mockup.png; sourceTree = "<group>"; };
+		3EE40B7A7E6EF2B933E0CC574F9DF01A /* Malert.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Malert.xcconfig; sourceTree = "<group>"; };
+		411ED7521BDB29E056E273D9E7FD01B3 /* Malert-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Malert-Info.plist"; sourceTree = "<group>"; };
+		5208CEEAB43A67849BA5BADC3B67C295 /* Malert+Actions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Malert+Actions.swift"; path = "Malert/Classes/Malert/Malert+Actions.swift"; sourceTree = "<group>"; };
+		56390C22DED963AFF7AF95BB37605208 /* SideMenuPresentationController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SideMenuPresentationController.swift; path = Pod/Classes/SideMenuPresentationController.swift; sourceTree = "<group>"; };
+		5FB8FBAEF0FC6F890EDA8D46CCD2AF7A /* MalertInteractiveTransition.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = MalertInteractiveTransition.swift; path = Malert/Classes/Animations/MalertInteractiveTransition.swift; sourceTree = "<group>"; };
+		62AA92E128749928883FE381A4751ECF /* Extensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Extensions.swift; path = Malert/Classes/Util/Extensions.swift; sourceTree = "<group>"; };
+		69E1639662FBC0DA4C0C22F7AE6737CF /* BaseTransitioning.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = BaseTransitioning.swift; path = Malert/Classes/Animations/BaseTransitioning.swift; sourceTree = "<group>"; };
 		7B92BA862461588395C8A470AD0B0772 /* Pods-NoonCam-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-NoonCam-frameworks.sh"; sourceTree = "<group>"; };
-		7C1DEB219BC42DB44D4685F7EDDAE851 /* UIColorExtension.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = UIColorExtension.swift; path = Sources/Classes/UIColorExtension.swift; sourceTree = "<group>"; };
-		95CF12433FE1240B4EBFC706CF9F0795 /* SwipeMenuViewController-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "SwipeMenuViewController-Info.plist"; sourceTree = "<group>"; };
+		801BBB7A41BC050C7201C5EEC7BA1E39 /* SideMenuTransitionController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SideMenuTransitionController.swift; path = Pod/Classes/SideMenuTransitionController.swift; sourceTree = "<group>"; };
+		809800F9DCDDC35E855BA7F20B8C45EF /* SideMenu-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SideMenu-umbrella.h"; sourceTree = "<group>"; };
+		81748CB5F8C6D2D4638374558E473131 /* Malert-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Malert-dummy.m"; sourceTree = "<group>"; };
+		843CF24BE66070D5C733B8BE9533383C /* Deprecations.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Deprecations.swift; path = Pod/Classes/Deprecations.swift; sourceTree = "<group>"; };
+		847BCEF1FF65271745707B92985EAD8F /* Extensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Extensions.swift; path = Pod/Classes/Extensions.swift; sourceTree = "<group>"; };
+		8AD02687EC61A69B7DE8C753043EC4BB /* MalertView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = MalertView.swift; path = Malert/Classes/MalertView/MalertView.swift; sourceTree = "<group>"; };
+		94A65CAC8215F06D8A13AB4F409CB8ED /* Malert.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Malert.framework; path = Malert.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9CEED97FE0894E72FC98E763F57A6EBB /* Initializable.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Initializable.swift; path = Pod/Classes/Initializable.swift; sourceTree = "<group>"; };
 		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		A11F0633E5598E814C5C7C92EBE1182F /* SideMenu.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = SideMenu.modulemap; sourceTree = "<group>"; };
 		A16A361DFB3DF79F376FD594476E179E /* Pods-NoonCam-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-NoonCam-dummy.m"; sourceTree = "<group>"; };
-		A3BB77E8DE7095D8B5DAB370E08AA88A /* SwipeMenuViewController-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SwipeMenuViewController-prefix.pch"; sourceTree = "<group>"; };
-		BA77BC1B18786B40F08C6388740E6397 /* SideMenu.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = SideMenu.modulemap; sourceTree = "<group>"; };
+		A3C8EE3ED5E70F979A493E871F2E09C1 /* Protected.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Protected.swift; path = Pod/Classes/Protected.swift; sourceTree = "<group>"; };
+		A5FE467C787F4FE6B4C3CEDD929E1272 /* SideMenuInteractionController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SideMenuInteractionController.swift; path = Pod/Classes/SideMenuInteractionController.swift; sourceTree = "<group>"; };
+		AEDEAA4D114190E0ECD6EC77D73B479A /* SideMenuPushCoordinator.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SideMenuPushCoordinator.swift; path = Pod/Classes/SideMenuPushCoordinator.swift; sourceTree = "<group>"; };
+		B1006A2D348B35E69B2FC24CAED353C2 /* MalertAction.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = MalertAction.swift; path = Malert/Classes/MalertButtonView/MalertAction.swift; sourceTree = "<group>"; };
+		B407C6BBD2CA7451FBA09E04869C82D0 /* Malert-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Malert-prefix.pch"; sourceTree = "<group>"; };
+		B4C5EE74661095625A4C182E80560A1E /* MalertPresentTransitioning.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = MalertPresentTransitioning.swift; path = Malert/Classes/Animations/MalertPresentTransitioning.swift; sourceTree = "<group>"; };
+		B4D74FAF528E80F215062756BD6E419E /* SideMenuNavigationController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SideMenuNavigationController.swift; path = Pod/Classes/SideMenuNavigationController.swift; sourceTree = "<group>"; };
+		B931259D0FFAF5FE5E51413E8C03910C /* Malert.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; name = Malert.bundle; path = "Malert-Malert.bundle"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BC01A580560E73FEE6420DBEA05F7558 /* Pods-NoonCam.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-NoonCam.modulemap"; sourceTree = "<group>"; };
+		C4B48D0A48AE357570679BDBDE068182 /* MalertPresentationManager.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = MalertPresentationManager.swift; path = Malert/Classes/Animations/MalertPresentationManager.swift; sourceTree = "<group>"; };
+		C85629086AE91D825E133F08CE81D77F /* Malert-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Malert-umbrella.h"; sourceTree = "<group>"; };
+		CD77C09A4AE3FB7068B6AFA9DAD6C959 /* SideMenu-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SideMenu-prefix.pch"; sourceTree = "<group>"; };
 		CF9981680124C3F9EB08C9B97491F02D /* Pods-NoonCam-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-NoonCam-acknowledgements.markdown"; sourceTree = "<group>"; };
 		D257580AFCBFDDD7809AD96F9FB54874 /* Pods_NoonCam.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_NoonCam.framework; path = "Pods-NoonCam.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
-		D47A2445F6AD7E4881D08EE181B7BB1D /* SideMenu-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SideMenu-umbrella.h"; sourceTree = "<group>"; };
+		D26BFCB21FE76034DD3BF977A8CBFDB0 /* Print.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Print.swift; path = Pod/Classes/Print.swift; sourceTree = "<group>"; };
+		D3143731655EE29B9F29D2917158F82F /* Malert_brand.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = Malert_brand.png; path = Malert/Assets/Malert_brand.png; sourceTree = "<group>"; };
 		D90738B9BC54D121E264D48AAD05A03B /* Pods-NoonCam-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-NoonCam-umbrella.h"; sourceTree = "<group>"; };
-		DEE5CCFAA5CC72AD4F74354B857B9D00 /* SwipeMenuViewController.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SwipeMenuViewController.debug.xcconfig; sourceTree = "<group>"; };
-		E5C7EDD8084C932EA7A86F8937A6EA42 /* SideMenuPresentationStyle.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SideMenuPresentationStyle.swift; path = Pod/Classes/SideMenuPresentationStyle.swift; sourceTree = "<group>"; };
-		E5E2B361360D24FB6A92E26351C898C0 /* SideMenu-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "SideMenu-Info.plist"; sourceTree = "<group>"; };
+		DE4C8541760B12A310769EB294ED6DFD /* MalertDimissTransitioning.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = MalertDimissTransitioning.swift; path = Malert/Classes/Animations/MalertDimissTransitioning.swift; sourceTree = "<group>"; };
+		E9F554AA2A1943B18914719624516427 /* Malert+Constraints.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Malert+Constraints.swift"; path = "Malert/Classes/Malert/Malert+Constraints.swift"; sourceTree = "<group>"; };
 		EA1F789E86B8C9BD0BB4C26CDD3202B2 /* Pods-NoonCam-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-NoonCam-acknowledgements.plist"; sourceTree = "<group>"; };
+		EBA83EC90FDB810B19EDBA65C4AA23D2 /* SideMenu.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SideMenu.xcconfig; sourceTree = "<group>"; };
+		ED52519D4B15C299D01B065DE447480F /* SideMenu-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "SideMenu-Info.plist"; sourceTree = "<group>"; };
 		EEAF39311A0DC6C406A24D4D229BA178 /* Pods-NoonCam-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-NoonCam-Info.plist"; sourceTree = "<group>"; };
-		EEF1BF45682439FDFACA8D6BAF0D7AEC /* SideMenuTransitionController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SideMenuTransitionController.swift; path = Pod/Classes/SideMenuTransitionController.swift; sourceTree = "<group>"; };
+		F0B630918BA55B9B3438D1D3A02767DA /* SideMenu-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "SideMenu-dummy.m"; sourceTree = "<group>"; };
 		FB22EE2F722BDB7147EBFE20AD911F9B /* Pods-NoonCam.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-NoonCam.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		08159080B1D8FDCFC4CFFAC7372EA32F /* Frameworks */ = {
+		48596519A3858788E69D161BF867DA05 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				29D2D3E7CF0F6DC0CD3AF37B5ACD9C9A /* Foundation.framework in Frameworks */,
+				8B8A6FBD9A34322AF0A9BF522CB324DA /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		1F6CF3D2329EF1F17D6AB0F298826A5E /* Frameworks */ = {
+		940A124C5F3925D6B953BC611CFDC35F /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				90AA61B5591F2D52ACECCE6CF4193BBC /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -135,71 +156,52 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		E8E6D099FB530B05FD6C0FAC4D772F75 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3F4D0D721CA84998CBE337429B8EA0B5 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		00C88E48B2095DF79753939DB758B41A /* Support Files */ = {
+		022195093432DE1AED702454CC165422 /* Malert */ = {
 			isa = PBXGroup;
 			children = (
-				BA77BC1B18786B40F08C6388740E6397 /* SideMenu.modulemap */,
-				20C21288789A20C8F44343A1CC655729 /* SideMenu-dummy.m */,
-				E5E2B361360D24FB6A92E26351C898C0 /* SideMenu-Info.plist */,
-				1363EBEA48C329ECDB84E334FBDCE915 /* SideMenu-prefix.pch */,
-				D47A2445F6AD7E4881D08EE181B7BB1D /* SideMenu-umbrella.h */,
-				2B5B9A294A743AE18EC66B4742971330 /* SideMenu.debug.xcconfig */,
-				49F6537E5D64EB555524A31C44A0A1AA /* SideMenu.release.xcconfig */,
+				25DAE49F5427A34F70D4A97438336F53 /* BaseMalertViewController.swift */,
+				69E1639662FBC0DA4C0C22F7AE6737CF /* BaseTransitioning.swift */,
+				62AA92E128749928883FE381A4751ECF /* Extensions.swift */,
+				19A2D2D4215621E512A0E4B64244356E /* Malert.swift */,
+				5208CEEAB43A67849BA5BADC3B67C295 /* Malert+Actions.swift */,
+				E9F554AA2A1943B18914719624516427 /* Malert+Constraints.swift */,
+				B1006A2D348B35E69B2FC24CAED353C2 /* MalertAction.swift */,
+				00D6D9712A7F20D036EEE936DB472B36 /* MalertButtonView.swift */,
+				DE4C8541760B12A310769EB294ED6DFD /* MalertDimissTransitioning.swift */,
+				5FB8FBAEF0FC6F890EDA8D46CCD2AF7A /* MalertInteractiveTransition.swift */,
+				C4B48D0A48AE357570679BDBDE068182 /* MalertPresentationManager.swift */,
+				B4C5EE74661095625A4C182E80560A1E /* MalertPresentTransitioning.swift */,
+				8AD02687EC61A69B7DE8C753043EC4BB /* MalertView.swift */,
+				7223530FD6E9D3354F0EF3BF1CD32C15 /* Resources */,
+				DD42C5A3D297C2608D1A1E2C05232B23 /* Support Files */,
+			);
+			name = Malert;
+			path = Malert;
+			sourceTree = "<group>";
+		};
+		09FB5E8E781844C9BA7358F1E11C6C90 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				A11F0633E5598E814C5C7C92EBE1182F /* SideMenu.modulemap */,
+				EBA83EC90FDB810B19EDBA65C4AA23D2 /* SideMenu.xcconfig */,
+				F0B630918BA55B9B3438D1D3A02767DA /* SideMenu-dummy.m */,
+				ED52519D4B15C299D01B065DE447480F /* SideMenu-Info.plist */,
+				CD77C09A4AE3FB7068B6AFA9DAD6C959 /* SideMenu-prefix.pch */,
+				809800F9DCDDC35E855BA7F20B8C45EF /* SideMenu-umbrella.h */,
 			);
 			name = "Support Files";
 			path = "../Target Support Files/SideMenu";
-			sourceTree = "<group>";
-		};
-		08CD17D7CBB99913DD8CAF56106AED98 /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				117D9EF87FB6925305AE802582EAB3D3 /* SideMenu */,
-				0E174137298741DB132607F1F90B92C9 /* SwipeMenuViewController */,
-			);
-			name = Pods;
-			sourceTree = "<group>";
-		};
-		0E174137298741DB132607F1F90B92C9 /* SwipeMenuViewController */ = {
-			isa = PBXGroup;
-			children = (
-				72935B5C6CAA7368BB12CD6591D22D31 /* ContentScrollView.swift */,
-				38300B4D5ECAB7410EC85A2559785B5E /* SwipeMenuView.swift */,
-				3A2ED82C9D33E44E68771785F7D91723 /* SwipeMenuViewController.swift */,
-				1EC4CB5B30A8630871FA558B13FE583C /* TabItemView.swift */,
-				444C5C4624844C1A157EC92776E2EF35 /* TabView.swift */,
-				7C1DEB219BC42DB44D4685F7EDDAE851 /* UIColorExtension.swift */,
-				0CAED5230A3ACA41E44852F0D92D54DB /* UIEdgeInsetsExtension.swift */,
-				35C02DCA3A29565D3E4C74759D06151F /* UIViewExtension.swift */,
-				BCF7015FB69EE2B85A52CD4CD202F1EC /* Support Files */,
-			);
-			name = SwipeMenuViewController;
-			path = SwipeMenuViewController;
-			sourceTree = "<group>";
-		};
-		117D9EF87FB6925305AE802582EAB3D3 /* SideMenu */ = {
-			isa = PBXGroup;
-			children = (
-				090AAC74B5621AC422EEECCB4D6DB2B4 /* Deprecations.swift */,
-				500AE36F8AAE31673334D0311A94ABCA /* Extensions.swift */,
-				0A3DC7976C1DB5F9503E3A8AD902377B /* Initializable.swift */,
-				281C78D84C998AFC5F9B7F6799F549F4 /* Print.swift */,
-				28007A34BC55D078A1A4F9A2D401EB51 /* Protected.swift */,
-				2B84D20FC86806CB7F16E79722F8E701 /* SideMenuAnimationController.swift */,
-				6E0AA020D3478F8674F39BFC15114166 /* SideMenuInteractionController.swift */,
-				1514E63DAE61226F5C65A31CE75B38A4 /* SideMenuManager.swift */,
-				38D413761FE5D5AF9A649A66AF13E2AE /* SideMenuNavigationController.swift */,
-				5561B951E820B605958A535371229206 /* SideMenuPresentationController.swift */,
-				E5C7EDD8084C932EA7A86F8937A6EA42 /* SideMenuPresentationStyle.swift */,
-				03B5927D5E1B9B9E1212C242E1AB2DB5 /* SideMenuPushCoordinator.swift */,
-				EEF1BF45682439FDFACA8D6BAF0D7AEC /* SideMenuTransitionController.swift */,
-				0EB17EAA40A3E87E098F4F2FA07D200C /* UITableViewVibrantCell.swift */,
-				00C88E48B2095DF79753939DB758B41A /* Support Files */,
-			);
-			name = SideMenu;
-			path = SideMenu;
 			sourceTree = "<group>";
 		};
 		51B04BE890E985FBC3CED71E7E0CEBA5 /* Targets Support Files */ = {
@@ -210,19 +212,22 @@
 			name = "Targets Support Files";
 			sourceTree = "<group>";
 		};
-		BCF7015FB69EE2B85A52CD4CD202F1EC /* Support Files */ = {
+		7223530FD6E9D3354F0EF3BF1CD32C15 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				497F24BA7E2C84BB1FB32DEFD497592F /* SwipeMenuViewController.modulemap */,
-				5ADD950578AE64BABE9EB60E55F488DB /* SwipeMenuViewController-dummy.m */,
-				95CF12433FE1240B4EBFC706CF9F0795 /* SwipeMenuViewController-Info.plist */,
-				A3BB77E8DE7095D8B5DAB370E08AA88A /* SwipeMenuViewController-prefix.pch */,
-				399931CFC908F059640EAFD42E3EFC99 /* SwipeMenuViewController-umbrella.h */,
-				DEE5CCFAA5CC72AD4F74354B857B9D00 /* SwipeMenuViewController.debug.xcconfig */,
-				34DD472F84674949C0279D1B15CC235B /* SwipeMenuViewController.release.xcconfig */,
+				D3143731655EE29B9F29D2917158F82F /* Malert_brand.png */,
+				3CC8CC07BB1B162E4521EB72970061DC /* mockup.png */,
 			);
-			name = "Support Files";
-			path = "../Target Support Files/SwipeMenuViewController";
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		72BBFA36172C1010EDD0F795FF735C1A /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				022195093432DE1AED702454CC165422 /* Malert */,
+				C620FB7114482374CF691CF1CA4B53B4 /* SideMenu */,
+			);
+			name = Pods;
 			sourceTree = "<group>";
 		};
 		C0834CEBB1379A84116EF29F93051C60 /* iOS */ = {
@@ -250,12 +255,36 @@
 			path = "Target Support Files/Pods-NoonCam";
 			sourceTree = "<group>";
 		};
-		CEEC4882C912477EE8C3B3347B8BB862 /* Products */ = {
+		C620FB7114482374CF691CF1CA4B53B4 /* SideMenu */ = {
 			isa = PBXGroup;
 			children = (
+				843CF24BE66070D5C733B8BE9533383C /* Deprecations.swift */,
+				847BCEF1FF65271745707B92985EAD8F /* Extensions.swift */,
+				9CEED97FE0894E72FC98E763F57A6EBB /* Initializable.swift */,
+				D26BFCB21FE76034DD3BF977A8CBFDB0 /* Print.swift */,
+				A3C8EE3ED5E70F979A493E871F2E09C1 /* Protected.swift */,
+				2AEB82027FF564E16574B80BA964C42D /* SideMenuAnimationController.swift */,
+				A5FE467C787F4FE6B4C3CEDD929E1272 /* SideMenuInteractionController.swift */,
+				37F32795F025690CE0BD1EFF9E3BB343 /* SideMenuManager.swift */,
+				B4D74FAF528E80F215062756BD6E419E /* SideMenuNavigationController.swift */,
+				56390C22DED963AFF7AF95BB37605208 /* SideMenuPresentationController.swift */,
+				33D7C7D63B96302C54DF41692F7734BF /* SideMenuPresentationStyle.swift */,
+				AEDEAA4D114190E0ECD6EC77D73B479A /* SideMenuPushCoordinator.swift */,
+				801BBB7A41BC050C7201C5EEC7BA1E39 /* SideMenuTransitionController.swift */,
+				1FAD6553169A3F3F98B1A3C2914293D8 /* UITableViewVibrantCell.swift */,
+				09FB5E8E781844C9BA7358F1E11C6C90 /* Support Files */,
+			);
+			name = SideMenu;
+			path = SideMenu;
+			sourceTree = "<group>";
+		};
+		C99012D0D2C9868237849B365B1777B5 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				B931259D0FFAF5FE5E51413E8C03910C /* Malert.bundle */,
+				94A65CAC8215F06D8A13AB4F409CB8ED /* Malert.framework */,
 				D257580AFCBFDDD7809AD96F9FB54874 /* Pods_NoonCam.framework */,
 				319D06AA0D1D0BA345459C039040A1ED /* SideMenu.framework */,
-				5667D56FF69EA8921A31AABB19F7CFA0 /* SwipeMenuViewController.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -265,8 +294,8 @@
 			children = (
 				9D940727FF8FB9C785EB98E56350EF41 /* Podfile */,
 				D210D550F4EA176C3123ED886F8F87F5 /* Frameworks */,
-				08CD17D7CBB99913DD8CAF56106AED98 /* Pods */,
-				CEEC4882C912477EE8C3B3347B8BB862 /* Products */,
+				72BBFA36172C1010EDD0F795FF735C1A /* Pods */,
+				C99012D0D2C9868237849B365B1777B5 /* Products */,
 				51B04BE890E985FBC3CED71E7E0CEBA5 /* Targets Support Files */,
 			);
 			sourceTree = "<group>";
@@ -279,22 +308,37 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		DD42C5A3D297C2608D1A1E2C05232B23 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				0168A3DB824ECAE44C70D1712F1E6613 /* Malert.modulemap */,
+				3EE40B7A7E6EF2B933E0CC574F9DF01A /* Malert.xcconfig */,
+				81748CB5F8C6D2D4638374558E473131 /* Malert-dummy.m */,
+				411ED7521BDB29E056E273D9E7FD01B3 /* Malert-Info.plist */,
+				B407C6BBD2CA7451FBA09E04869C82D0 /* Malert-prefix.pch */,
+				C85629086AE91D825E133F08CE81D77F /* Malert-umbrella.h */,
+				34E3CCD9769B6C761D29363E061567AC /* ResourceBundle-Malert-Malert-Info.plist */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/Malert";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
-		21F9940992D431FCAE696B252F730E15 /* Headers */ = {
+		0A3552E93228368E7AF016B91F707EDA /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6ED0582197870F37C345F25914007CC8 /* Pods-NoonCam-umbrella.h in Headers */,
+				9F26C2B79DB167234D3414E17D632CF0 /* Malert-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		26D405FD310853E1D9176FB3DB390EAC /* Headers */ = {
+		0B281925203878BACF4403CF38A1A00C /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				23927711895669357A624B6274C7B486 /* SwipeMenuViewController-umbrella.h in Headers */,
+				0312914B4A62EEA8F8ABB0A19E685613 /* Pods-NoonCam-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -309,42 +353,43 @@
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		2DACB9880823AC6A3C72ED7C7B49473A /* SwipeMenuViewController */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 2C3D8E8FBA3C7321B9090D88DD887914 /* Build configuration list for PBXNativeTarget "SwipeMenuViewController" */;
-			buildPhases = (
-				26D405FD310853E1D9176FB3DB390EAC /* Headers */,
-				F0467B5C0466FC2BF593427338499141 /* Sources */,
-				08159080B1D8FDCFC4CFFAC7372EA32F /* Frameworks */,
-				DC8FC5D9C56CEC714AC05EDD847FE395 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = SwipeMenuViewController;
-			productName = SwipeMenuViewController;
-			productReference = 5667D56FF69EA8921A31AABB19F7CFA0 /* SwipeMenuViewController.framework */;
-			productType = "com.apple.product-type.framework";
-		};
 		5A8AA54E3C2322FD56E4D999E25AF64B /* Pods-NoonCam */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = E30486F250F3F0ADC446A8A285E18C5A /* Build configuration list for PBXNativeTarget "Pods-NoonCam" */;
+			buildConfigurationList = 565DA9B04189D66B24CFB793259D651C /* Build configuration list for PBXNativeTarget "Pods-NoonCam" */;
 			buildPhases = (
-				21F9940992D431FCAE696B252F730E15 /* Headers */,
-				DF8ADECD8B9C9F414181400C062CBFF2 /* Sources */,
-				1F6CF3D2329EF1F17D6AB0F298826A5E /* Frameworks */,
-				EB74E434E64FDB2D1180D5110788B1F7 /* Resources */,
+				0B281925203878BACF4403CF38A1A00C /* Headers */,
+				76BD8DDDBB9343E762A2203ADC0A74FF /* Sources */,
+				E8E6D099FB530B05FD6C0FAC4D772F75 /* Frameworks */,
+				1B1B6F9D311BB43737B9ABCDB17931EA /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				EA1DB069509A678B0683388F079CD8D9 /* PBXTargetDependency */,
-				B8EE6A4F6F410AC87ED78EDCC6396671 /* PBXTargetDependency */,
+				FA238E70B5842C7EB82D08C21A04B05E /* PBXTargetDependency */,
+				48FE808F17DE0DD721728D7781F74938 /* PBXTargetDependency */,
 			);
 			name = "Pods-NoonCam";
 			productName = "Pods-NoonCam";
 			productReference = D257580AFCBFDDD7809AD96F9FB54874 /* Pods_NoonCam.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		B117881115A50B47906E45574440276A /* Malert */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 747F6A7F5DF51CF64AA155948BFC61C9 /* Build configuration list for PBXNativeTarget "Malert" */;
+			buildPhases = (
+				0A3552E93228368E7AF016B91F707EDA /* Headers */,
+				152A8EC5102310D0E40EBC437DA9AE26 /* Sources */,
+				48596519A3858788E69D161BF867DA05 /* Frameworks */,
+				9BE27E6A0815323133594C86DF102088 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				2EA039B35B258D3F546FB8E155868985 /* PBXTargetDependency */,
+			);
+			name = Malert;
+			productName = Malert;
+			productReference = 94A65CAC8215F06D8A13AB4F409CB8ED /* Malert.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 		C4A0A7D8591B67FB75E2E8D215E3735B /* SideMenu */ = {
@@ -365,6 +410,23 @@
 			productReference = 319D06AA0D1D0BA345459C039040A1ED /* SideMenu.framework */;
 			productType = "com.apple.product-type.framework";
 		};
+		F062B4408517689AF1DA5F570405334C /* Malert-Malert */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 69DC5D8E6008C641D8EE5096D92E32F0 /* Build configuration list for PBXNativeTarget "Malert-Malert" */;
+			buildPhases = (
+				648116539FEEA0CE42C3D00E5E312EF5 /* Sources */,
+				940A124C5F3925D6B953BC611CFDC35F /* Frameworks */,
+				1693B1BAC3A875D22FF5BF0C4065DA61 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Malert-Malert";
+			productName = "Malert-Malert";
+			productReference = B931259D0FFAF5FE5E51413E8C03910C /* Malert.bundle */;
+			productType = "com.apple.product-type.bundle";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -383,22 +445,40 @@
 				Base,
 			);
 			mainGroup = CF1408CF629C7361332E53B88F7BD30C;
-			productRefGroup = CEEC4882C912477EE8C3B3347B8BB862 /* Products */;
+			productRefGroup = C99012D0D2C9868237849B365B1777B5 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
+				B117881115A50B47906E45574440276A /* Malert */,
+				F062B4408517689AF1DA5F570405334C /* Malert-Malert */,
 				5A8AA54E3C2322FD56E4D999E25AF64B /* Pods-NoonCam */,
 				C4A0A7D8591B67FB75E2E8D215E3735B /* SideMenu */,
-				2DACB9880823AC6A3C72ED7C7B49473A /* SwipeMenuViewController */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		DC8FC5D9C56CEC714AC05EDD847FE395 /* Resources */ = {
+		1693B1BAC3A875D22FF5BF0C4065DA61 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				27A52D01C19EF202DEC0649E0AECEFC3 /* Malert_brand.png in Resources */,
+				856DF89DD12028FC3EC2873146020AB2 /* mockup.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1B1B6F9D311BB43737B9ABCDB17931EA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9BE27E6A0815323133594C86DF102088 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				551F10CECB62979E2BF18D5103C9EDD0 /* Malert.bundle in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -409,16 +489,45 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		EB74E434E64FDB2D1180D5110788B1F7 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		152A8EC5102310D0E40EBC437DA9AE26 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D8BC4494EF1335E229A7A4161F5C0D47 /* BaseMalertViewController.swift in Sources */,
+				F1B2CEE32B550A6C68E632EEE46F6737 /* BaseTransitioning.swift in Sources */,
+				0DA17BB9FCEF158AE961BC5886C25F15 /* Extensions.swift in Sources */,
+				59F0A01153306805A539B736A15CE502 /* Malert+Actions.swift in Sources */,
+				CCABD0FF5D8D31529FB4194814F229B2 /* Malert+Constraints.swift in Sources */,
+				F4A67FE16956E4795BFAD858A7241282 /* Malert-dummy.m in Sources */,
+				799F4F6199FD1FDA60D14BDA3A399C65 /* Malert.swift in Sources */,
+				AFA233348E3A9FDF7EBF059B1C420BA3 /* MalertAction.swift in Sources */,
+				A2D3CB14AEB8A99EFAA9BDF84F66C9C2 /* MalertButtonView.swift in Sources */,
+				3AB8A303C9C84222CF409A7DA04D7873 /* MalertDimissTransitioning.swift in Sources */,
+				F95A13CBF65AAD679256E38EF3CCBC95 /* MalertInteractiveTransition.swift in Sources */,
+				C44E8EA66B51DAE27F3E59B8B568526F /* MalertPresentationManager.swift in Sources */,
+				C9033B618B87F2877EAE936F2C7EA5CD /* MalertPresentTransitioning.swift in Sources */,
+				C2A24B90F3C541C6971D4D7B344B5F5E /* MalertView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		648116539FEEA0CE42C3D00E5E312EF5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-/* End PBXResourcesBuildPhase section */
-
-/* Begin PBXSourcesBuildPhase section */
+		76BD8DDDBB9343E762A2203ADC0A74FF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				60D5FF76453C2BF1F9E65127BF2807BA /* Pods-NoonCam-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		8B7A6B51F5DD73DE3F3F294B1BF713BE /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -441,85 +550,46 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		DF8ADECD8B9C9F414181400C062CBFF2 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				44957E83841767E46139E80F56BA2B4E /* Pods-NoonCam-dummy.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		F0467B5C0466FC2BF593427338499141 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				B8BCD21052B6E65DD4E1C1CB00969721 /* ContentScrollView.swift in Sources */,
-				B46682AFD3AF846DE969FCFAEB90BEC0 /* SwipeMenuView.swift in Sources */,
-				DDD8609251AFED79B8F7532E3A206F05 /* SwipeMenuViewController-dummy.m in Sources */,
-				9E97897CB645D4A0ED10AF87A1226193 /* SwipeMenuViewController.swift in Sources */,
-				77B9153709D33EEAC012E34D88C1E142 /* TabItemView.swift in Sources */,
-				F6E4DEF530C0DBAE6EDCA9A721976F26 /* TabView.swift in Sources */,
-				FF63FD182889BE28C253A8D1019982BD /* UIColorExtension.swift in Sources */,
-				8D1CE5000597A547F432AE840A388D95 /* UIEdgeInsetsExtension.swift in Sources */,
-				E37362A781482A2993DC681CFA753306 /* UIViewExtension.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		B8EE6A4F6F410AC87ED78EDCC6396671 /* PBXTargetDependency */ = {
+		2EA039B35B258D3F546FB8E155868985 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			name = SwipeMenuViewController;
-			target = 2DACB9880823AC6A3C72ED7C7B49473A /* SwipeMenuViewController */;
-			targetProxy = EF9C2CA5FBEFAAEC0EEF3A9B8CF1BDB8 /* PBXContainerItemProxy */;
+			name = "Malert-Malert";
+			target = F062B4408517689AF1DA5F570405334C /* Malert-Malert */;
+			targetProxy = 99799A259F8F92C6F4FD67EA080664EC /* PBXContainerItemProxy */;
 		};
-		EA1DB069509A678B0683388F079CD8D9 /* PBXTargetDependency */ = {
+		48FE808F17DE0DD721728D7781F74938 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = SideMenu;
 			target = C4A0A7D8591B67FB75E2E8D215E3735B /* SideMenu */;
-			targetProxy = E869AF9035C2E786AA14BE699DBB3B1E /* PBXContainerItemProxy */;
+			targetProxy = 8E48412E8267AD327B89BC4BB3B43324 /* PBXContainerItemProxy */;
+		};
+		FA238E70B5842C7EB82D08C21A04B05E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = Malert;
+			target = B117881115A50B47906E45574440276A /* Malert */;
+			targetProxy = 3BB7BC2B057C02C7CEC6BCFD784A16A3 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		02B5356310DDDCCA409D5D5AB91C03C3 /* Debug */ = {
+		030625C863873333FA34AE813D7B50C7 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = FB22EE2F722BDB7147EBFE20AD911F9B /* Pods-NoonCam.debug.xcconfig */;
+			baseConfigurationReference = 3EE40B7A7E6EF2B933E0CC574F9DF01A /* Malert.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
-				CLANG_ENABLE_OBJC_WEAK = NO;
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "Target Support Files/Pods-NoonCam/Pods-NoonCam-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/Malert";
+				IBSC_MODULE = Malert;
+				INFOPLIST_FILE = "Target Support Files/Malert/ResourceBundle-Malert-Malert-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-NoonCam/Pods-NoonCam.modulemap";
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				PRODUCT_NAME = Malert;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
+				WRAPPER_EXTENSION = bundle;
 			};
-			name = Debug;
+			name = Release;
 		};
 		196DFA3E4A09A28224918543529A1885 /* Debug */ = {
 			isa = XCBuildConfiguration;
@@ -585,82 +655,9 @@
 			};
 			name = Debug;
 		};
-		1C8A687A8AC1620ECDFCDED2FAC17C9E /* Release */ = {
+		4CEF8FB5C024784FEB9FE2C61005CC0C /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 49F6537E5D64EB555524A31C44A0A1AA /* SideMenu.release.xcconfig */;
-			buildSettings = {
-				CLANG_ENABLE_OBJC_WEAK = NO;
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				GCC_PREFIX_HEADER = "Target Support Files/SideMenu/SideMenu-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/SideMenu/SideMenu-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				MODULEMAP_FILE = "Target Support Files/SideMenu/SideMenu.modulemap";
-				PRODUCT_MODULE_NAME = SideMenu;
-				PRODUCT_NAME = SideMenu;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
-		45B6D36435972CBBC59A481A20E44C4A /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 2B5B9A294A743AE18EC66B4742971330 /* SideMenu.debug.xcconfig */;
-			buildSettings = {
-				CLANG_ENABLE_OBJC_WEAK = NO;
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				GCC_PREFIX_HEADER = "Target Support Files/SideMenu/SideMenu-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/SideMenu/SideMenu-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				MODULEMAP_FILE = "Target Support Files/SideMenu/SideMenu.modulemap";
-				PRODUCT_MODULE_NAME = SideMenu;
-				PRODUCT_NAME = SideMenu;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
-		5224F3B4B20F2EDB1C8138376F13139C /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 2CCA5A7B66C51235C882AF72EA8F42F6 /* Pods-NoonCam.release.xcconfig */;
+			baseConfigurationReference = FB22EE2F722BDB7147EBFE20AD911F9B /* Pods-NoonCam.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				CLANG_ENABLE_OBJC_WEAK = NO;
@@ -691,16 +688,16 @@
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
-			name = Release;
+			name = Debug;
 		};
-		880821F0EBE3077CA6CC933B9D82B238 /* Release */ = {
+		770B68DA9F16B41CD7CDCD9737A856A2 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 34DD472F84674949C0279D1B15CC235B /* SwipeMenuViewController.release.xcconfig */;
+			baseConfigurationReference = EBA83EC90FDB810B19EDBA65C4AA23D2 /* SideMenu.xcconfig */;
 			buildSettings = {
+				CLANG_ENABLE_OBJC_WEAK = NO;
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
@@ -710,18 +707,18 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				GCC_PREFIX_HEADER = "Target Support Files/SwipeMenuViewController/SwipeMenuViewController-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/SwipeMenuViewController/SwipeMenuViewController-Info.plist";
+				GCC_PREFIX_HEADER = "Target Support Files/SideMenu/SideMenu-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/SideMenu/SideMenu-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				MODULEMAP_FILE = "Target Support Files/SwipeMenuViewController/SwipeMenuViewController.modulemap";
-				PRODUCT_MODULE_NAME = SwipeMenuViewController;
-				PRODUCT_NAME = SwipeMenuViewController;
+				MODULEMAP_FILE = "Target Support Files/SideMenu/SideMenu.modulemap";
+				PRODUCT_MODULE_NAME = SideMenu;
+				PRODUCT_NAME = SideMenu;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
@@ -733,10 +730,11 @@
 			};
 			name = Release;
 		};
-		929CF96F7ECA7E44069DAAE364ED0FA0 /* Debug */ = {
+		7CA1BCD9481E1A2B494FAE04F4A2D507 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = DEE5CCFAA5CC72AD4F74354B857B9D00 /* SwipeMenuViewController.debug.xcconfig */;
+			baseConfigurationReference = 3EE40B7A7E6EF2B933E0CC574F9DF01A /* Malert.xcconfig */;
 			buildSettings = {
+				CLANG_ENABLE_OBJC_WEAK = NO;
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
@@ -746,18 +744,54 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				GCC_PREFIX_HEADER = "Target Support Files/SwipeMenuViewController/SwipeMenuViewController-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/SwipeMenuViewController/SwipeMenuViewController-Info.plist";
+				GCC_PREFIX_HEADER = "Target Support Files/Malert/Malert-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/Malert/Malert-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				MODULEMAP_FILE = "Target Support Files/SwipeMenuViewController/SwipeMenuViewController.modulemap";
-				PRODUCT_MODULE_NAME = SwipeMenuViewController;
-				PRODUCT_NAME = SwipeMenuViewController;
+				MODULEMAP_FILE = "Target Support Files/Malert/Malert.modulemap";
+				PRODUCT_MODULE_NAME = Malert;
+				PRODUCT_NAME = Malert;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		8AF578EF61A3CC4C0D8327F2F282B110 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = EBA83EC90FDB810B19EDBA65C4AA23D2 /* SideMenu.xcconfig */;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/SideMenu/SideMenu-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/SideMenu/SideMenu-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/SideMenu/SideMenu.modulemap";
+				PRODUCT_MODULE_NAME = SideMenu;
+				PRODUCT_NAME = SideMenu;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
@@ -828,18 +862,102 @@
 			};
 			name = Release;
 		};
+		D3C74DA0AC753E1228751D85ACCA036F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3EE40B7A7E6EF2B933E0CC574F9DF01A /* Malert.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/Malert";
+				IBSC_MODULE = Malert;
+				INFOPLIST_FILE = "Target Support Files/Malert/ResourceBundle-Malert-Malert-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				PRODUCT_NAME = Malert;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				WRAPPER_EXTENSION = bundle;
+			};
+			name = Debug;
+		};
+		F830447996F608F5AB3D21449CF532CA /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2CCA5A7B66C51235C882AF72EA8F42F6 /* Pods-NoonCam.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-NoonCam/Pods-NoonCam-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-NoonCam/Pods-NoonCam.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		FA94EB5DF2DEBF945DC95C2DC05F5D6D /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3EE40B7A7E6EF2B933E0CC574F9DF01A /* Malert.xcconfig */;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/Malert/Malert-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/Malert/Malert-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/Malert/Malert.modulemap";
+				PRODUCT_MODULE_NAME = Malert;
+				PRODUCT_NAME = Malert;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		2C3D8E8FBA3C7321B9090D88DD887914 /* Build configuration list for PBXNativeTarget "SwipeMenuViewController" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				929CF96F7ECA7E44069DAAE364ED0FA0 /* Debug */,
-				880821F0EBE3077CA6CC933B9D82B238 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
 		4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -849,20 +967,38 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		92707F899E1CD6FD63DCC66A3882B68C /* Build configuration list for PBXNativeTarget "SideMenu" */ = {
+		565DA9B04189D66B24CFB793259D651C /* Build configuration list for PBXNativeTarget "Pods-NoonCam" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				45B6D36435972CBBC59A481A20E44C4A /* Debug */,
-				1C8A687A8AC1620ECDFCDED2FAC17C9E /* Release */,
+				4CEF8FB5C024784FEB9FE2C61005CC0C /* Debug */,
+				F830447996F608F5AB3D21449CF532CA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		E30486F250F3F0ADC446A8A285E18C5A /* Build configuration list for PBXNativeTarget "Pods-NoonCam" */ = {
+		69DC5D8E6008C641D8EE5096D92E32F0 /* Build configuration list for PBXNativeTarget "Malert-Malert" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				02B5356310DDDCCA409D5D5AB91C03C3 /* Debug */,
-				5224F3B4B20F2EDB1C8138376F13139C /* Release */,
+				D3C74DA0AC753E1228751D85ACCA036F /* Debug */,
+				030625C863873333FA34AE813D7B50C7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		747F6A7F5DF51CF64AA155948BFC61C9 /* Build configuration list for PBXNativeTarget "Malert" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7CA1BCD9481E1A2B494FAE04F4A2D507 /* Debug */,
+				FA94EB5DF2DEBF945DC95C2DC05F5D6D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		92707F899E1CD6FD63DCC66A3882B68C /* Build configuration list for PBXNativeTarget "SideMenu" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8AF578EF61A3CC4C0D8327F2F282B110 /* Debug */,
+				770B68DA9F16B41CD7CDCD9737A856A2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

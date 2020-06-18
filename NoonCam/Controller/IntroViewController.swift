@@ -10,13 +10,13 @@ import UIKit
 
 class IntroViewController: UIViewController {
 
-    @IBOutlet var ivLogo: UIImageView!
+//    @IBOutlet var ivLogo: UIImageView!
     override func viewDidLoad() {
         super.viewDidLoad()
-        let tap = UITapGestureRecognizer(target: self, action: #selector(viewDidTap))
-        tap.numberOfTapsRequired = 1
-        tap.numberOfTouchesRequired = 1
-        ivLogo.addGestureRecognizer(tap)
+//        let tap = UITapGestureRecognizer(target: self, action: #selector(viewDidTap))
+//        tap.numberOfTapsRequired = 1
+//        tap.numberOfTouchesRequired = 1
+//        ivLogo.addGestureRecognizer(tap)
     }
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)

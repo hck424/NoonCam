@@ -16,40 +16,26 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="NoonCam" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IQ3-9C-Ei5">
-                                <rect key="frame" x="114" y="416" width="186.5" height="54.5"/>
-                                <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="50"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="chat_icon" translatesAutoresizingMaskIntoConstraints="NO" id="uh3-h9-Gme">
-                                <rect key="frame" x="124" y="220" width="166" height="166"/>
-                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" secondItem="uh3-h9-Gme" secondAttribute="height" multiplier="1:1" id="XJp-rh-oVt"/>
-                                </constraints>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="4hP-jc-ecd">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstItem="uh3-h9-Gme" firstAttribute="width" secondItem="6fb-xi-A0h" secondAttribute="width" multiplier="0.4" id="f5e-ga-s9s"/>
-                            <constraint firstItem="uh3-h9-Gme" firstAttribute="centerY" secondItem="OYH-0b-VLs" secondAttribute="centerY" constant="-150" id="fnc-jG-N1V"/>
-                            <constraint firstItem="IQ3-9C-Ei5" firstAttribute="top" secondItem="uh3-h9-Gme" secondAttribute="bottom" constant="30" id="oA7-PF-g3Y"/>
-                            <constraint firstItem="uh3-h9-Gme" firstAttribute="centerX" secondItem="OYH-0b-VLs" secondAttribute="centerX" id="tR8-DO-GDF"/>
-                            <constraint firstItem="IQ3-9C-Ei5" firstAttribute="centerX" secondItem="uh3-h9-Gme" secondAttribute="centerX" id="v5K-Dq-B0G"/>
+                            <constraint firstItem="4hP-jc-ecd" firstAttribute="leading" secondItem="OYH-0b-VLs" secondAttribute="leading" id="BZC-1h-T24"/>
+                            <constraint firstItem="4hP-jc-ecd" firstAttribute="top" secondItem="6fb-xi-A0h" secondAttribute="top" id="I0V-TU-JGN"/>
+                            <constraint firstAttribute="bottom" secondItem="4hP-jc-ecd" secondAttribute="bottom" id="Sad-i3-XDM"/>
+                            <constraint firstAttribute="trailing" secondItem="4hP-jc-ecd" secondAttribute="trailing" id="ueE-4M-xqB"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="OYH-0b-VLs"/>
                     </view>
-                    <connections>
-                        <outlet property="ivLogo" destination="uh3-h9-Gme" id="Boq-DF-eV4"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="C2w-4b-mbf" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1506" y="-552"/>
+            <point key="canvasLocation" x="-1507.2463768115942" y="-552.45535714285711"/>
         </scene>
     </scenes>
     <resources>
-        <image name="chat_icon" width="45" height="45"/>
+        <image name="logo" width="240" height="400"/>
     </resources>
 </document>

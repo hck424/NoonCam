@@ -9,25 +9,39 @@
 import UIKit
 
 class MoneyViewController: UIViewController {
-
+    @IBOutlet weak var textView: UITextView!
+    @IBOutlet weak var heightTextView: NSLayoutConstraint!
+    
+    @IBOutlet weak var btnRefundList: UIButton!
+    @IBOutlet weak var btnCheck: UIButton!
+    @IBOutlet weak var btnRefundApplication: UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        self.view.layoutIfNeeded()
+        textView.textContainerInset = UIEdgeInsets(top: 8, left: 8, bottom: 8, right: 8)
+        textView.textContainer.lineBreakMode = .byTruncatingTail
+        textView.layer.borderColor = RGB(23, 133, 230).cgColor
+        textView.layer.borderWidth = 1.0
+        
+        let sizeTxt = textView.sizeThatFits(CGSize(width: textView.frame.size.width, height: 1000))
+        heightTextView.constant = sizeTxt.height
+        
+        btnCheck.isSelected = true
+        
+        btnRefundList.layer.cornerRadius = 5.0
+        btnRefundApplication.layer.cornerRadius = 5.0
+        
+        self.view.layoutIfNeeded()
     }
     @IBAction func onClickedBackAction(_ sender: Any) {
         self.navigationController?.popViewController(animated: false)
     }
 
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    @IBAction func onClickedButtonActions(_ sender: UIButton) {
+        if sender == btnCheck {
+            sender.isSelected = !(sender.isSelected)
+        }
+        
     }
-    */
-
 }

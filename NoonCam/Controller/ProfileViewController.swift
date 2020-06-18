@@ -8,26 +8,124 @@
 
 import UIKit
 
-class ProfileViewController: UIViewController {
+class ProfileViewController: UIViewController, UITextFieldDelegate {
 
+    @IBOutlet weak var ivProfile: UIImageView!
+    @IBOutlet weak var btnProfile: UIButton!
+    @IBOutlet weak var tfUserId: UITextField!
+    @IBOutlet weak var btnGender: UIButton!
+    @IBOutlet weak var btnAge: UIButton!
+    @IBOutlet weak var btnArea: UIButton!
+    @IBOutlet weak var btnTermsRegit: UIButton!
+    @IBOutlet weak var btnTermsPersonal: UIButton!
+    @IBOutlet weak var btnOk: UIButton!
+    @IBOutlet weak var bottomScroll: NSLayoutConstraint!
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        let title1 = btnTermsRegit.titleLabel?.text
+        let title2 = btnTermsPersonal.titleLabel?.text
+        
+        let attr = NSAttributedString(string: title1!, attributes: [
+            NSAttributedString.Key.underlineStyle: NSNumber(value: NSUnderlineStyle.single.rawValue)
+        ])
 
-        // Do any additional setup after loading the view.
+        let attr2 = NSAttributedString(string: title2!, attributes: [
+            NSAttributedString.Key.underlineStyle: NSNumber(value: NSUnderlineStyle.single.rawValue)
+        ])
+        
+        btnTermsRegit.setAttributedTitle(attr, for: .normal)
+        btnTermsPersonal.setAttributedTitle(attr2, for: .normal)
+        
+        ivProfile.layer.cornerRadius = 50.0
+        ivProfile.layer.borderColor = RGB(230, 230, 230).cgColor
+        ivProfile.layer.borderWidth = 1.0
+        
+        btnProfile.layer.cornerRadius = 5.0
+        
+        btnGender.layer.cornerRadius = 5.0
+        btnAge.layer.cornerRadius = 5.0
+        btnArea.layer.cornerRadius = 5.0
+        
+        btnGender.layer.borderColor = RGB(230, 230, 230).cgColor
+        btnGender.layer.borderWidth = 1.0
+        btnAge.layer.borderColor = RGB(230, 230, 230).cgColor
+        btnAge.layer.borderWidth = 1.0
+        btnArea.layer.borderColor = RGB(230, 230, 230).cgColor
+        btnArea.layer.borderWidth = 1.0
+        
+        
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        NotificationCenter.default.addObserver(
+            self,
+            selector: #selector(notificationHandler(_:)),
+            name: UIResponder.keyboardWillShowNotification,
+            object: nil)
+        
+        NotificationCenter.default.addObserver(
+            self,
+            selector: #selector(notificationHandler(_:)),
+            name: UIResponder.keyboardWillHideNotification,
+            object: nil)
+
+    }
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        NotificationCenter.default.removeObserver(self, name: UIResponder.keyboardWillShowNotification, object: nil)
+        NotificationCenter.default.removeObserver(self, name: UIResponder.keyboardWillHideNotification, object: nil)
+    }
     @IBAction func onClickedBackAction(_ sender: Any) {
         self.navigationController?.popViewController(animated: false)
     }
-    
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    @IBAction func onClickedButtonActions(_ sender: UIButton) {
+        if sender == btnProfile {
+            
+        }
+        else if sender == btnGender {
+            
+        }
+        else if sender == btnAge {
+            
+        }
+        else if sender == btnArea {
+            
+        }
+        else if sender == btnTermsRegit {
+            
+        }
+        else if sender == btnTermsPersonal {
+            
+        }
+        else if sender == btnOk {
+            
+        }
     }
-    */
-
+    
+    //MARK: UITextFieldDelegate
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        self.view.endEditing(true)
+    }
+    
+    //MARK: notificationHandler
+    @objc func notificationHandler(_ notification:Notification) {
+        let duration = CGFloat((notification.userInfo?[UIResponder.keyboardAnimationDurationUserInfoKey] as? NSNumber)?.floatValue ?? 0.0)
+        let heightKeyboard = (notification.userInfo?[UIResponder.keyboardFrameEndUserInfoKey] as AnyObject).cgRectValue.size.height
+        
+        if (notification.name == UIResponder.keyboardWillShowNotification) {
+            bottomScroll.constant = heightKeyboard
+            UIView.animate(withDuration: TimeInterval(duration), animations: {
+                self.view.layoutIfNeeded()
+            })
+        } else if (notification.name == UIResponder.keyboardWillHideNotification) {
+            bottomScroll.constant = 0.0
+            UIView.animate(withDuration: TimeInterval(duration), animations: {
+                self.view.layoutIfNeeded()
+            })
+        }
+    }
 }
