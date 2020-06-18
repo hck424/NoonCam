@@ -10,15 +10,42 @@ import UIKit
 import CoreData
 
 @UIApplicationMain
+
+
 class AppDelegate: UIResponder, UIApplicationDelegate {
-
-
-
+    var window: UIWindow?
+    var mainNaviController: MainNavigationController?
+    
+    class func instance() -> AppDelegate {
+        return UIApplication.shared.delegate as! AppDelegate
+    }
+    
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
+        
+        if #available(iOS 13.0, *) {
+        }
+        else {
+            window = UIWindow(frame: UIScreen.main.bounds)
+            self.callIntroViewController()
+        }
+        
         return true
     }
 
+    func callIntroMainViewController () {
+        let stroyboard:UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+        mainNaviController = stroyboard.instantiateViewController(withIdentifier: "MainNavigationController") as? MainNavigationController
+        window?.rootViewController = mainNaviController
+        window?.makeKeyAndVisible()
+    }
+    
+    func callIntroViewController () {
+        let stroyboard:UIStoryboard = UIStoryboard(name: "Intro", bundle: nil)
+        let vc = stroyboard.instantiateViewController(withIdentifier: "IntroViewController") as? IntroViewController
+        window?.rootViewController = vc
+        window?.makeKeyAndVisible()
+    }
+    
     // MARK: UISceneSession Lifecycle
     @available(iOS 13.0, *)
     func application(_ application: UIApplication, configurationForConnecting connectingSceneSession: UISceneSession, options: UIScene.ConnectionOptions) -> UISceneConfiguration {

@@ -8,36 +8,79 @@
 
 /* Begin PBXBuildFile section */
 		3D30543B064344AB0071A909 /* Pods_NoonCam.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5F3D80EB651F8862A4344DE5 /* Pods_NoonCam.framework */; };
-		E9B8BEA82498489F0082FCAE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9B8BEA72498489F0082FCAE /* AppDelegate.swift */; };
-		E9B8BEAA2498489F0082FCAE /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9B8BEA92498489F0082FCAE /* SceneDelegate.swift */; };
+		E52A6B1F249926BF006B5DAD /* Utility.swift in Sources */ = {isa = PBXBuildFile; fileRef = E52A6B1E249926BF006B5DAD /* Utility.swift */; };
+		E552A79D249A347800BFC64E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E552A789249A347800BFC64E /* AppDelegate.swift */; };
+		E552A79F249A347800BFC64E /* CamTalkFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = E552A78B249A347800BFC64E /* CamTalkFlowLayout.swift */; };
+		E552A7A0249A347800BFC64E /* IntroViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E552A78C249A347800BFC64E /* IntroViewController.swift */; };
+		E552A7A1249A347800BFC64E /* CamTalkCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E552A78D249A347800BFC64E /* CamTalkCell.swift */; };
+		E552A7A2249A347800BFC64E /* LeftSlideMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E552A78E249A347800BFC64E /* LeftSlideMenuViewController.swift */; };
+		E552A7A3249A347800BFC64E /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E552A78F249A347800BFC64E /* MainViewController.swift */; };
+		E552A7A5249A347800BFC64E /* Intro.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E552A791249A347800BFC64E /* Intro.storyboard */; };
+		E552A7A6249A347800BFC64E /* ChattingTalkViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E552A792249A347800BFC64E /* ChattingTalkViewController.swift */; };
+		E552A7A7249A347800BFC64E /* ChargeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E552A793249A347800BFC64E /* ChargeViewController.swift */; };
+		E552A7A8249A347800BFC64E /* JimViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E552A794249A347800BFC64E /* JimViewController.swift */; };
+		E552A7AA249A347800BFC64E /* MytalkViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E552A796249A347800BFC64E /* MytalkViewController.swift */; };
+		E552A7AB249A347800BFC64E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E552A797249A347800BFC64E /* SceneDelegate.swift */; };
+		E552A7AC249A347800BFC64E /* CamTalkViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E552A798249A347800BFC64E /* CamTalkViewController.swift */; };
+		E552A7AD249A347800BFC64E /* ChattingTalkListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E552A799249A347800BFC64E /* ChattingTalkListViewController.swift */; };
+		E552A7AE249A347800BFC64E /* TalkCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E552A79A249A347800BFC64E /* TalkCollectionViewCell.swift */; };
+		E552A7AF249A347800BFC64E /* CamTalkListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E552A79B249A347800BFC64E /* CamTalkListViewController.swift */; };
+		E552A7B0249A347800BFC64E /* MainNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E552A79C249A347800BFC64E /* MainNavigationController.swift */; };
+		E552A7BB249A35CB00BFC64E /* RollingView.xib in Resources */ = {isa = PBXBuildFile; fileRef = E552A7B9249A35CB00BFC64E /* RollingView.xib */; };
+		E552A7BC249A35CB00BFC64E /* RollingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E552A7BA249A35CB00BFC64E /* RollingView.swift */; };
+		E552A7BF249A361900BFC64E /* LetterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E552A7BE249A361900BFC64E /* LetterViewController.swift */; };
+		E552A7C1249A374300BFC64E /* LetterListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E552A7C0249A374300BFC64E /* LetterListViewController.swift */; };
+		E552A7C3249A3C6F00BFC64E /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E552A7C2249A3C6F00BFC64E /* ProfileViewController.swift */; };
+		E552A7C6249A3C8A00BFC64E /* NoticeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E552A7C5249A3C8A00BFC64E /* NoticeViewController.swift */; };
+		E552A7C8249A3C9E00BFC64E /* MoneyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E552A7C7249A3C9E00BFC64E /* MoneyViewController.swift */; };
+		E552A7CA249A3CA600BFC64E /* SettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E552A7C9249A3CA600BFC64E /* SettingViewController.swift */; };
+		E5669C20249A231100845BF6 /* TalkTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5669C1E249A231100845BF6 /* TalkTableViewCell.swift */; };
+		E5669C21249A231100845BF6 /* TalkTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E5669C1F249A231100845BF6 /* TalkTableViewCell.xib */; };
 		E9B8BEAF2498489F0082FCAE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E9B8BEAD2498489F0082FCAE /* Main.storyboard */; };
 		E9B8BEB22498489F0082FCAE /* NoonCam.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = E9B8BEB02498489F0082FCAE /* NoonCam.xcdatamodeld */; };
 		E9B8BEB4249848A10082FCAE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E9B8BEB3249848A10082FCAE /* Assets.xcassets */; };
 		E9B8BEB7249848A10082FCAE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E9B8BEB5249848A10082FCAE /* LaunchScreen.storyboard */; };
-		E9B8BEC02498579A0082FCAE /* MainNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9B8BEBF2498579A0082FCAE /* MainNavigationController.swift */; };
-		E9B8BEC42498625A0082FCAE /* LeftSlideMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9B8BEC32498625A0082FCAE /* LeftSlideMenuViewController.swift */; };
-		E9ED0E462498A38E004EB240 /* CamTalkViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9ED0E452498A38E004EB240 /* CamTalkViewController.swift */; };
-		E9ED0E4F2498E15A004EB240 /* ContentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9ED0E4E2498E15A004EB240 /* ContentViewController.swift */; };
-		E9ED0E512498E628004EB240 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9ED0E502498E628004EB240 /* MainViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		5F3D80EB651F8862A4344DE5 /* Pods_NoonCam.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NoonCam.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		66C5A128ABCC7279CB305F9B /* Pods-NoonCam.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NoonCam.debug.xcconfig"; path = "Target Support Files/Pods-NoonCam/Pods-NoonCam.debug.xcconfig"; sourceTree = "<group>"; };
 		B81939587B92114EA55CDBC0 /* Pods-NoonCam.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NoonCam.release.xcconfig"; path = "Target Support Files/Pods-NoonCam/Pods-NoonCam.release.xcconfig"; sourceTree = "<group>"; };
+		E52A6B1E249926BF006B5DAD /* Utility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utility.swift; sourceTree = "<group>"; };
+		E52A6B21249928FE006B5DAD /* Constant.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Constant.h; sourceTree = "<group>"; };
+		E552A789249A347800BFC64E /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		E552A78B249A347800BFC64E /* CamTalkFlowLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CamTalkFlowLayout.swift; sourceTree = "<group>"; };
+		E552A78C249A347800BFC64E /* IntroViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = IntroViewController.swift; path = NoonCam/Controller/IntroViewController.swift; sourceTree = SOURCE_ROOT; };
+		E552A78D249A347800BFC64E /* CamTalkCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CamTalkCell.swift; sourceTree = "<group>"; };
+		E552A78E249A347800BFC64E /* LeftSlideMenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LeftSlideMenuViewController.swift; sourceTree = "<group>"; };
+		E552A78F249A347800BFC64E /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		E552A791249A347800BFC64E /* Intro.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Intro.storyboard; path = NoonCam/Controller/Intro.storyboard; sourceTree = SOURCE_ROOT; };
+		E552A792249A347800BFC64E /* ChattingTalkViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChattingTalkViewController.swift; sourceTree = "<group>"; };
+		E552A793249A347800BFC64E /* ChargeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChargeViewController.swift; sourceTree = "<group>"; };
+		E552A794249A347800BFC64E /* JimViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JimViewController.swift; sourceTree = "<group>"; };
+		E552A796249A347800BFC64E /* MytalkViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MytalkViewController.swift; sourceTree = "<group>"; };
+		E552A797249A347800BFC64E /* SceneDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		E552A798249A347800BFC64E /* CamTalkViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CamTalkViewController.swift; sourceTree = "<group>"; };
+		E552A799249A347800BFC64E /* ChattingTalkListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChattingTalkListViewController.swift; sourceTree = "<group>"; };
+		E552A79A249A347800BFC64E /* TalkCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TalkCollectionViewCell.swift; sourceTree = "<group>"; };
+		E552A79B249A347800BFC64E /* CamTalkListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CamTalkListViewController.swift; sourceTree = "<group>"; };
+		E552A79C249A347800BFC64E /* MainNavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainNavigationController.swift; sourceTree = "<group>"; };
+		E552A7B9249A35CB00BFC64E /* RollingView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RollingView.xib; sourceTree = "<group>"; };
+		E552A7BA249A35CB00BFC64E /* RollingView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RollingView.swift; sourceTree = "<group>"; };
+		E552A7BE249A361900BFC64E /* LetterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LetterViewController.swift; sourceTree = "<group>"; };
+		E552A7C0249A374300BFC64E /* LetterListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LetterListViewController.swift; sourceTree = "<group>"; };
+		E552A7C2249A3C6F00BFC64E /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		E552A7C5249A3C8A00BFC64E /* NoticeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoticeViewController.swift; sourceTree = "<group>"; };
+		E552A7C7249A3C9E00BFC64E /* MoneyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoneyViewController.swift; sourceTree = "<group>"; };
+		E552A7C9249A3CA600BFC64E /* SettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingViewController.swift; sourceTree = "<group>"; };
+		E5669C1E249A231100845BF6 /* TalkTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TalkTableViewCell.swift; sourceTree = "<group>"; };
+		E5669C1F249A231100845BF6 /* TalkTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TalkTableViewCell.xib; sourceTree = "<group>"; };
 		E9B8BEA42498489F0082FCAE /* NoonCam.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NoonCam.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		E9B8BEA72498489F0082FCAE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		E9B8BEA92498489F0082FCAE /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		E9B8BEAE2498489F0082FCAE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		E9B8BEB12498489F0082FCAE /* NoonCam.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = NoonCam.xcdatamodel; sourceTree = "<group>"; };
 		E9B8BEB3249848A10082FCAE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E9B8BEB6249848A10082FCAE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E9B8BEB8249848A10082FCAE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		E9B8BEBF2498579A0082FCAE /* MainNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainNavigationController.swift; sourceTree = "<group>"; };
-		E9B8BEC32498625A0082FCAE /* LeftSlideMenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeftSlideMenuViewController.swift; sourceTree = "<group>"; };
-		E9ED0E452498A38E004EB240 /* CamTalkViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CamTalkViewController.swift; sourceTree = "<group>"; };
-		E9ED0E4E2498E15A004EB240 /* ContentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentViewController.swift; sourceTree = "<group>"; };
-		E9ED0E502498E628004EB240 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,9 +112,116 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
+		E52A6B20249926E0006B5DAD /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				E52A6B1E249926BF006B5DAD /* Utility.swift */,
+				E52A6B21249928FE006B5DAD /* Constant.h */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		E552A785249A33AD00BFC64E /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				E552A7BD249A360700BFC64E /* Letter */,
+				E552A7B3249A34D000BFC64E /* CamTalk */,
+				E552A7B1249A348E00BFC64E /* Main */,
+				E552A7B7249A355B00BFC64E /* Charge */,
+				E552A7B8249A356900BFC64E /* Chattingtalk */,
+				E552A7B6249A354000BFC64E /* Intro */,
+				E552A7C4249A3C7500BFC64E /* Menu */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		E552A7B1249A348E00BFC64E /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				E552A789249A347800BFC64E /* AppDelegate.swift */,
+				E552A797249A347800BFC64E /* SceneDelegate.swift */,
+				E552A78E249A347800BFC64E /* LeftSlideMenuViewController.swift */,
+				E552A79C249A347800BFC64E /* MainNavigationController.swift */,
+				E552A78F249A347800BFC64E /* MainViewController.swift */,
+			);
+			name = Main;
+			sourceTree = "<group>";
+		};
+		E552A7B3249A34D000BFC64E /* CamTalk */ = {
+			isa = PBXGroup;
+			children = (
+				E552A78D249A347800BFC64E /* CamTalkCell.swift */,
+				E552A78B249A347800BFC64E /* CamTalkFlowLayout.swift */,
+				E552A79B249A347800BFC64E /* CamTalkListViewController.swift */,
+				E552A798249A347800BFC64E /* CamTalkViewController.swift */,
+			);
+			name = CamTalk;
+			sourceTree = "<group>";
+		};
+		E552A7B6249A354000BFC64E /* Intro */ = {
+			isa = PBXGroup;
+			children = (
+				E552A791249A347800BFC64E /* Intro.storyboard */,
+				E552A78C249A347800BFC64E /* IntroViewController.swift */,
+			);
+			name = Intro;
+			sourceTree = "<group>";
+		};
+		E552A7B7249A355B00BFC64E /* Charge */ = {
+			isa = PBXGroup;
+			children = (
+				E552A793249A347800BFC64E /* ChargeViewController.swift */,
+			);
+			name = Charge;
+			sourceTree = "<group>";
+		};
+		E552A7B8249A356900BFC64E /* Chattingtalk */ = {
+			isa = PBXGroup;
+			children = (
+				E552A799249A347800BFC64E /* ChattingTalkListViewController.swift */,
+				E552A792249A347800BFC64E /* ChattingTalkViewController.swift */,
+				E552A794249A347800BFC64E /* JimViewController.swift */,
+				E552A796249A347800BFC64E /* MytalkViewController.swift */,
+				E552A79A249A347800BFC64E /* TalkCollectionViewCell.swift */,
+			);
+			name = Chattingtalk;
+			sourceTree = "<group>";
+		};
+		E552A7BD249A360700BFC64E /* Letter */ = {
+			isa = PBXGroup;
+			children = (
+				E552A7BE249A361900BFC64E /* LetterViewController.swift */,
+				E552A7C0249A374300BFC64E /* LetterListViewController.swift */,
+			);
+			name = Letter;
+			sourceTree = "<group>";
+		};
+		E552A7C4249A3C7500BFC64E /* Menu */ = {
+			isa = PBXGroup;
+			children = (
+				E552A7C2249A3C6F00BFC64E /* ProfileViewController.swift */,
+				E552A7C5249A3C8A00BFC64E /* NoticeViewController.swift */,
+				E552A7C7249A3C9E00BFC64E /* MoneyViewController.swift */,
+				E552A7C9249A3CA600BFC64E /* SettingViewController.swift */,
+			);
+			name = Menu;
+			sourceTree = "<group>";
+		};
+		E5669C1D249A229C00845BF6 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				E552A7BA249A35CB00BFC64E /* RollingView.swift */,
+				E552A7B9249A35CB00BFC64E /* RollingView.xib */,
+				E5669C1E249A231100845BF6 /* TalkTableViewCell.swift */,
+				E5669C1F249A231100845BF6 /* TalkTableViewCell.xib */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 		E9B8BE9B2498489F0082FCAE = {
 			isa = PBXGroup;
 			children = (
+				E9B8BEAD2498489F0082FCAE /* Main.storyboard */,
 				E9B8BEA62498489F0082FCAE /* NoonCam */,
 				E9B8BEA52498489F0082FCAE /* Products */,
 				B09FAD3B1A8E3F23978A651F /* Pods */,
@@ -90,52 +240,15 @@
 		E9B8BEA62498489F0082FCAE /* NoonCam */ = {
 			isa = PBXGroup;
 			children = (
-				E9B8BEAD2498489F0082FCAE /* Main.storyboard */,
-				E9ED0E432498A35B004EB240 /* Controllers */,
+				E552A785249A33AD00BFC64E /* Controller */,
+				E5669C1D249A229C00845BF6 /* Views */,
 				E9B8BEB3249848A10082FCAE /* Assets.xcassets */,
 				E9B8BEB5249848A10082FCAE /* LaunchScreen.storyboard */,
 				E9B8BEB8249848A10082FCAE /* Info.plist */,
 				E9B8BEB02498489F0082FCAE /* NoonCam.xcdatamodeld */,
+				E52A6B20249926E0006B5DAD /* Utils */,
 			);
 			path = NoonCam;
-			sourceTree = "<group>";
-		};
-		E9B8BEBE2498576C0082FCAE /* Main */ = {
-			isa = PBXGroup;
-			children = (
-				E9B8BEA72498489F0082FCAE /* AppDelegate.swift */,
-				E9B8BEA92498489F0082FCAE /* SceneDelegate.swift */,
-				E9B8BEBF2498579A0082FCAE /* MainNavigationController.swift */,
-				E9ED0E502498E628004EB240 /* MainViewController.swift */,
-				E9B8BEC32498625A0082FCAE /* LeftSlideMenuViewController.swift */,
-			);
-			path = Main;
-			sourceTree = "<group>";
-		};
-		E9ED0E432498A35B004EB240 /* Controllers */ = {
-			isa = PBXGroup;
-			children = (
-				E9ED0E472498B411004EB240 /* Custom */,
-				E9ED0E442498A37B004EB240 /* VideoCall */,
-				E9B8BEBE2498576C0082FCAE /* Main */,
-			);
-			path = Controllers;
-			sourceTree = "<group>";
-		};
-		E9ED0E442498A37B004EB240 /* VideoCall */ = {
-			isa = PBXGroup;
-			children = (
-				E9ED0E4E2498E15A004EB240 /* ContentViewController.swift */,
-				E9ED0E452498A38E004EB240 /* CamTalkViewController.swift */,
-			);
-			path = VideoCall;
-			sourceTree = "<group>";
-		};
-		E9ED0E472498B411004EB240 /* Custom */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Custom;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -199,8 +312,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				E9B8BEB7249848A10082FCAE /* LaunchScreen.storyboard in Resources */,
+				E5669C21249A231100845BF6 /* TalkTableViewCell.xib in Resources */,
 				E9B8BEB4249848A10082FCAE /* Assets.xcassets in Resources */,
 				E9B8BEAF2498489F0082FCAE /* Main.storyboard in Resources */,
+				E552A7BB249A35CB00BFC64E /* RollingView.xib in Resources */,
+				E552A7A5249A347800BFC64E /* Intro.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -253,14 +369,32 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E9B8BEC02498579A0082FCAE /* MainNavigationController.swift in Sources */,
-				E9ED0E462498A38E004EB240 /* CamTalkViewController.swift in Sources */,
-				E9B8BEC42498625A0082FCAE /* LeftSlideMenuViewController.swift in Sources */,
-				E9ED0E4F2498E15A004EB240 /* ContentViewController.swift in Sources */,
-				E9B8BEA82498489F0082FCAE /* AppDelegate.swift in Sources */,
-				E9B8BEAA2498489F0082FCAE /* SceneDelegate.swift in Sources */,
+				E552A7AD249A347800BFC64E /* ChattingTalkListViewController.swift in Sources */,
+				E552A7A2249A347800BFC64E /* LeftSlideMenuViewController.swift in Sources */,
+				E552A7C1249A374300BFC64E /* LetterListViewController.swift in Sources */,
+				E552A7CA249A3CA600BFC64E /* SettingViewController.swift in Sources */,
+				E552A7AF249A347800BFC64E /* CamTalkListViewController.swift in Sources */,
+				E552A7BC249A35CB00BFC64E /* RollingView.swift in Sources */,
+				E552A7AC249A347800BFC64E /* CamTalkViewController.swift in Sources */,
+				E552A7A1249A347800BFC64E /* CamTalkCell.swift in Sources */,
+				E552A7A6249A347800BFC64E /* ChattingTalkViewController.swift in Sources */,
+				E552A79D249A347800BFC64E /* AppDelegate.swift in Sources */,
+				E552A7A0249A347800BFC64E /* IntroViewController.swift in Sources */,
+				E52A6B1F249926BF006B5DAD /* Utility.swift in Sources */,
+				E552A7AB249A347800BFC64E /* SceneDelegate.swift in Sources */,
+				E5669C20249A231100845BF6 /* TalkTableViewCell.swift in Sources */,
 				E9B8BEB22498489F0082FCAE /* NoonCam.xcdatamodeld in Sources */,
-				E9ED0E512498E628004EB240 /* MainViewController.swift in Sources */,
+				E552A79F249A347800BFC64E /* CamTalkFlowLayout.swift in Sources */,
+				E552A7C3249A3C6F00BFC64E /* ProfileViewController.swift in Sources */,
+				E552A7AA249A347800BFC64E /* MytalkViewController.swift in Sources */,
+				E552A7AE249A347800BFC64E /* TalkCollectionViewCell.swift in Sources */,
+				E552A7C8249A3C9E00BFC64E /* MoneyViewController.swift in Sources */,
+				E552A7A8249A347800BFC64E /* JimViewController.swift in Sources */,
+				E552A7B0249A347800BFC64E /* MainNavigationController.swift in Sources */,
+				E552A7A7249A347800BFC64E /* ChargeViewController.swift in Sources */,
+				E552A7BF249A361900BFC64E /* LetterViewController.swift in Sources */,
+				E552A7C6249A3C8A00BFC64E /* NoticeViewController.swift in Sources */,
+				E552A7A3249A347800BFC64E /* MainViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
