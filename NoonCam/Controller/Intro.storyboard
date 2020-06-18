@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Intro View Controller-->
+        <scene sceneID="4ty-xN-ou5">
+            <objects>
+                <viewController storyboardIdentifier="IntroViewController" id="Q63-Md-Bmg" customClass="IntroViewController" customModule="NoonCam" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="6fb-xi-A0h">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="NoonCam" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IQ3-9C-Ei5">
+                                <rect key="frame" x="114" y="416" width="186.5" height="54.5"/>
+                                <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="50"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="chat_icon" translatesAutoresizingMaskIntoConstraints="NO" id="uh3-h9-Gme">
+                                <rect key="frame" x="124" y="220" width="166" height="166"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="uh3-h9-Gme" secondAttribute="height" multiplier="1:1" id="XJp-rh-oVt"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="uh3-h9-Gme" firstAttribute="width" secondItem="6fb-xi-A0h" secondAttribute="width" multiplier="0.4" id="f5e-ga-s9s"/>
+                            <constraint firstItem="uh3-h9-Gme" firstAttribute="centerY" secondItem="OYH-0b-VLs" secondAttribute="centerY" constant="-150" id="fnc-jG-N1V"/>
+                            <constraint firstItem="IQ3-9C-Ei5" firstAttribute="top" secondItem="uh3-h9-Gme" secondAttribute="bottom" constant="30" id="oA7-PF-g3Y"/>
+                            <constraint firstItem="uh3-h9-Gme" firstAttribute="centerX" secondItem="OYH-0b-VLs" secondAttribute="centerX" id="tR8-DO-GDF"/>
+                            <constraint firstItem="IQ3-9C-Ei5" firstAttribute="centerX" secondItem="uh3-h9-Gme" secondAttribute="centerX" id="v5K-Dq-B0G"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="OYH-0b-VLs"/>
+                    </view>
+                    <connections>
+                        <outlet property="ivLogo" destination="uh3-h9-Gme" id="Boq-DF-eV4"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="C2w-4b-mbf" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1506" y="-552"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="chat_icon" width="45" height="45"/>
+    </resources>
+</document>
