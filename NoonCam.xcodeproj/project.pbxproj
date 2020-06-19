@@ -34,6 +34,8 @@
 		E552A7C6249A3C8A00BFC64E /* NoticeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E552A7C5249A3C8A00BFC64E /* NoticeViewController.swift */; };
 		E552A7C8249A3C9E00BFC64E /* MoneyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E552A7C7249A3C9E00BFC64E /* MoneyViewController.swift */; };
 		E552A7CA249A3CA600BFC64E /* SettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E552A7C9249A3CA600BFC64E /* SettingViewController.swift */; };
+		E556FEEA249BB2CA001D9BD7 /* ItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E556FEE9249BB2CA001D9BD7 /* ItemView.swift */; };
+		E556FEEC249BB2E8001D9BD7 /* ItemView.xib in Resources */ = {isa = PBXBuildFile; fileRef = E556FEEB249BB2E8001D9BD7 /* ItemView.xib */; };
 		E5669C20249A231100845BF6 /* TalkTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5669C1E249A231100845BF6 /* TalkTableViewCell.swift */; };
 		E5669C21249A231100845BF6 /* TalkTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E5669C1F249A231100845BF6 /* TalkTableViewCell.xib */; };
 		E9115E80249B0D400047B351 /* NoticeDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9115E7F249B0D400047B351 /* NoticeDetailView.swift */; };
@@ -80,6 +82,8 @@
 		E552A7C5249A3C8A00BFC64E /* NoticeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoticeViewController.swift; sourceTree = "<group>"; };
 		E552A7C7249A3C9E00BFC64E /* MoneyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoneyViewController.swift; sourceTree = "<group>"; };
 		E552A7C9249A3CA600BFC64E /* SettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingViewController.swift; sourceTree = "<group>"; };
+		E556FEE9249BB2CA001D9BD7 /* ItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemView.swift; sourceTree = "<group>"; };
+		E556FEEB249BB2E8001D9BD7 /* ItemView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ItemView.xib; sourceTree = "<group>"; };
 		E5669C1E249A231100845BF6 /* TalkTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TalkTableViewCell.swift; sourceTree = "<group>"; };
 		E5669C1F249A231100845BF6 /* TalkTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TalkTableViewCell.xib; sourceTree = "<group>"; };
 		E9115E7F249B0D400047B351 /* NoticeDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoticeDetailView.swift; sourceTree = "<group>"; };
@@ -230,6 +234,8 @@
 				E9115E8E249B5AA70047B351 /* PopupView */,
 				E552A7BA249A35CB00BFC64E /* RollingView.swift */,
 				E552A7B9249A35CB00BFC64E /* RollingView.xib */,
+				E556FEE9249BB2CA001D9BD7 /* ItemView.swift */,
+				E556FEEB249BB2E8001D9BD7 /* ItemView.xib */,
 				E5669C1E249A231100845BF6 /* TalkTableViewCell.swift */,
 				E5669C1F249A231100845BF6 /* TalkTableViewCell.xib */,
 				E9115E7F249B0D400047B351 /* NoticeDetailView.swift */,
@@ -350,6 +356,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E556FEEC249BB2E8001D9BD7 /* ItemView.xib in Resources */,
 				E9B8BEB7249848A10082FCAE /* LaunchScreen.storyboard in Resources */,
 				E9115E94249B5B920047B351 /* TalkAlertView.xib in Resources */,
 				E5669C21249A231100845BF6 /* TalkTableViewCell.xib in Resources */,
@@ -429,6 +436,7 @@
 				E5669C20249A231100845BF6 /* TalkTableViewCell.swift in Sources */,
 				E9B8BEB22498489F0082FCAE /* NoonCam.xcdatamodeld in Sources */,
 				E552A79F249A347800BFC64E /* CamTalkFlowLayout.swift in Sources */,
+				E556FEEA249BB2CA001D9BD7 /* ItemView.swift in Sources */,
 				E9115E88249B21600047B351 /* Notice.swift in Sources */,
 				E552A7C3249A3C6F00BFC64E /* ProfileViewController.swift in Sources */,
 				E552A7AA249A347800BFC64E /* MytalkViewController.swift in Sources */,

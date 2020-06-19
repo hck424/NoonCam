@@ -8,16 +8,21 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="RollingView" customModule="NoonCam" customModuleProvider="target"/>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="RollingView" customModule="NoonCam" customModuleProvider="target">
+            <connections>
+                <outlet property="scrollView" destination="dKw-TW-f8S" id="RZX-Nq-vAq"/>
+                <outlet property="svContent" destination="o63-qv-Rbm" id="edc-fT-qJD"/>
+            </connections>
+        </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <view contentMode="scaleToFill" id="iN0-l3-epB">
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="RollingView" customModule="NoonCam" customModuleProvider="target">
             <rect key="frame" x="0.0" y="0.0" width="495" height="158"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" contentInsetAdjustmentBehavior="never" translatesAutoresizingMaskIntoConstraints="NO" id="dKw-TW-f8S">
                     <rect key="frame" x="0.0" y="0.0" width="495" height="158"/>
                     <subviews>
-                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="o63-qv-Rbm">
+                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="o63-qv-Rbm">
                             <rect key="frame" x="0.0" y="0.0" width="495" height="158"/>
                         </stackView>
                     </subviews>
@@ -40,7 +45,7 @@
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
-            <point key="canvasLocation" x="-124" y="15"/>
+            <point key="canvasLocation" x="-21" y="19"/>
         </view>
     </objects>
 </document>

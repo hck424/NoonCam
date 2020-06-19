@@ -24,7 +24,7 @@ class CamTalkListViewController: UIViewController, UICollectionViewDataSource, U
     var talkFlowLayout: CamTalkFlowLayout!
     
     var listType:ListType!
-    var listdata:[[String:String]] = [["a":"fdalf", "b":"fjdlsf"], ["1":"djfskla", "2":"fjsdf"]]
+    var listdata:[AnyHashable] = [["a":"fdalf", "b":"fjdlsf"], ["1":"djfskla", "2":"fjsdf"]]
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -42,8 +42,21 @@ class CamTalkListViewController: UIViewController, UICollectionViewDataSource, U
         talkFlowLayout = CamTalkFlowLayout()
         collectionView.collectionViewLayout = talkFlowLayout
         
+        self.view.layoutIfNeeded()
+        let rollView = RollingView.instantiateFromNib()
+        topView.addSubview(rollView)
+        rollView.translatesAutoresizingMaskIntoConstraints = false
+        rollView.leadingAnchor.constraint(equalTo: topView.leadingAnchor, constant: 0).isActive = true
+        rollView.trailingAnchor.constraint(equalTo: topView.trailingAnchor, constant: 0).isActive = true
+        rollView.topAnchor.constraint(equalTo: topView.topAnchor, constant: 0).isActive = true
+        rollView.bottomAnchor.constraint(equalTo: topView.bottomAnchor, constant: 0).isActive = true
+        
+        rollView.setupView(data: listdata)
+        
     }
-    
+    override func prepareForInterfaceBuilder() {
+        super.prepareForInterfaceBuilder()
+    }
     
     ///UICollectionViewDelegate, UICollectionViewDataSource
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
