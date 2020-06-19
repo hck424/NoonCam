@@ -1,20 +1,24 @@
 PODS:
+  - Alamofire (5.2.1)
   - Malert (4.0)
   - SideMenu (6.4.8)
 
 DEPENDENCIES:
+  - Alamofire (~> 5.2)
   - Malert
   - SideMenu
 
 SPEC REPOS:
   trunk:
+    - Alamofire
     - Malert
     - SideMenu
 
 SPEC CHECKSUMS:
+  Alamofire: e911732990610fe89af59ac0077f923d72dc3dfd
   Malert: 78badcb143f4df7bff1fa62f4bec05497c7865f3
   SideMenu: 4a891be552d30bb6fa87ad404d62e485f8450c34
 
-PODFILE CHECKSUM: 06b5feeed5135c1f9b5a31c00c40a2f754a9fa79
+PODFILE CHECKSUM: 2f7d97f5afa67f9522cebc10a9a8451885183a12
 
-COCOAPODS: 1.9.0
+COCOAPODS: 1.8.4

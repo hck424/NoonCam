@@ -822,13 +822,13 @@
                                         <constraints>
                                             <constraint firstAttribute="height" constant="179" id="WC0-ji-SjT"/>
                                         </constraints>
-                                        <mutableString key="text">예시 
+                                        <string key="text">예시 
 1. 환급은 별이 1,000개 이상일대 가능합니다.(1,000개의 별= 100,000원) 
 2. 누적된 별만 환급 대상이며 포인트는 출금 대상이 아닙니다. 
 3. 매주 금요일이 환급일이며 은행 휴무일일 경우 다음 영업일 환급됩니다. 
 4. 목요일까지 신청분에 대해 금요일 환급입니다. 
 5. 환급시 입력된 정보는 환급에만 사용됩니다. 
-6. 환급 신청후 환급 완료 전 회원 탈퇴와 환급 정보 오류로 인해 환급이 잘못될 경우의 챔임은 사용자 본인에게 있으며 회사는 책임을 지지 않습니다.</mutableString>
+6. 환급 신청후 환급 완료 전 회원 탈퇴와 환급 정보 오류로 인해 환급이 잘못될 경우의 챔임은 사용자 본인에게 있으며 회사는 책임을 지지 않습니다.</string>
                                         <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
@@ -1544,26 +1544,28 @@
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="d5L-n5-Oe7">
                                         <rect key="frame" x="0.0" y="0.0" width="414" height="80"/>
                                         <subviews>
-                                            <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="7k7-xl-ME3">
+                                            <stackView opaque="NO" contentMode="scaleToFill" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="7k7-xl-ME3">
                                                 <rect key="frame" x="0.0" y="0.0" width="414" height="80"/>
                                                 <subviews>
                                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="trophy" translatesAutoresizingMaskIntoConstraints="NO" id="SZc-rH-ngS">
-                                                        <rect key="frame" x="15" y="8" width="50" height="64"/>
+                                                        <rect key="frame" x="20" y="5" width="40" height="70"/>
                                                         <constraints>
-                                                            <constraint firstAttribute="width" constant="50" id="Hlu-Fs-50N"/>
+                                                            <constraint firstAttribute="width" constant="40" id="Hlu-Fs-50N"/>
                                                         </constraints>
                                                     </imageView>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Csw-hk-thW">
-                                                        <rect key="frame" x="75" y="8" width="324" height="64"/>
+                                                        <rect key="frame" x="80" y="5" width="334" height="70"/>
                                                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="70" id="JQw-bl-puG"/>
+                                                        </constraints>
                                                     </view>
                                                 </subviews>
-                                                <edgeInsets key="layoutMargins" top="8" left="15" bottom="8" right="15"/>
+                                                <edgeInsets key="layoutMargins" top="5" left="20" bottom="5" right="0.0"/>
                                             </stackView>
                                         </subviews>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="80" id="1ME-ZX-IRW"/>
                                             <constraint firstItem="7k7-xl-ME3" firstAttribute="leading" secondItem="d5L-n5-Oe7" secondAttribute="leading" id="UAL-zf-wzq"/>
                                             <constraint firstItem="7k7-xl-ME3" firstAttribute="top" secondItem="d5L-n5-Oe7" secondAttribute="top" id="VaL-Yu-Xjf"/>
                                             <constraint firstAttribute="trailing" secondItem="7k7-xl-ME3" secondAttribute="trailing" id="Yah-31-Tmu"/>
@@ -1679,8 +1681,7 @@
                     <connections>
                         <outlet property="collectionView" destination="VhK-ns-UQE" id="LWN-Ku-kRZ"/>
                         <outlet property="ivTropic" destination="SZc-rH-ngS" id="Opb-r0-Kbj"/>
-                        <outlet property="rollingView" destination="Csw-hk-thW" id="fjz-31-vCp"/>
-                        <outlet property="topView" destination="d5L-n5-Oe7" id="zGO-ce-dua"/>
+                        <outlet property="topView" destination="Csw-hk-thW" id="Kik-G5-cvQ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XXf-e6-BUx" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

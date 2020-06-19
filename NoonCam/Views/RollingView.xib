@@ -4,48 +4,45 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
-        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="RollingView" customModule="NoonCam" customModuleProvider="target">
-            <connections>
-                <outlet property="scrollView" destination="dKw-TW-f8S" id="RZX-Nq-vAq"/>
-                <outlet property="svContent" destination="o63-qv-Rbm" id="edc-fT-qJD"/>
-            </connections>
-        </placeholder>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="RollingView" customModule="NoonCam" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="495" height="158"/>
+        <view contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="iN0-l3-epB" customClass="RollingView" customModule="NoonCam" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="370" height="70"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" contentInsetAdjustmentBehavior="never" translatesAutoresizingMaskIntoConstraints="NO" id="dKw-TW-f8S">
-                    <rect key="frame" x="0.0" y="0.0" width="495" height="158"/>
+                <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" bounces="NO" scrollEnabled="NO" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" contentInsetAdjustmentBehavior="never" bouncesZoom="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8hQ-gg-gxJ">
+                    <rect key="frame" x="0.0" y="0.0" width="370" height="70"/>
                     <subviews>
-                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="o63-qv-Rbm">
-                            <rect key="frame" x="0.0" y="0.0" width="495" height="158"/>
+                        <stackView opaque="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="OCT-tb-OG9">
+                            <rect key="frame" x="0.0" y="0.0" width="370" height="70"/>
                         </stackView>
                     </subviews>
                     <constraints>
-                        <constraint firstAttribute="trailing" secondItem="o63-qv-Rbm" secondAttribute="trailing" id="5mi-so-V61"/>
-                        <constraint firstItem="o63-qv-Rbm" firstAttribute="width" secondItem="dKw-TW-f8S" secondAttribute="width" id="Nsh-07-S2u"/>
-                        <constraint firstItem="o63-qv-Rbm" firstAttribute="top" secondItem="dKw-TW-f8S" secondAttribute="top" id="duq-zk-qcJ"/>
-                        <constraint firstItem="o63-qv-Rbm" firstAttribute="leading" secondItem="dKw-TW-f8S" secondAttribute="leading" id="iSW-4O-jfA"/>
-                        <constraint firstItem="o63-qv-Rbm" firstAttribute="height" secondItem="dKw-TW-f8S" secondAttribute="height" priority="1" id="taJ-wV-4h4"/>
-                        <constraint firstAttribute="bottom" secondItem="o63-qv-Rbm" secondAttribute="bottom" id="w4l-Pm-5MO"/>
+                        <constraint firstAttribute="bottom" secondItem="OCT-tb-OG9" secondAttribute="bottom" id="Cmz-K6-yE5"/>
+                        <constraint firstAttribute="trailing" secondItem="OCT-tb-OG9" secondAttribute="trailing" id="GMh-Ie-Xsg"/>
+                        <constraint firstItem="OCT-tb-OG9" firstAttribute="top" secondItem="8hQ-gg-gxJ" secondAttribute="top" id="ZGT-LM-Bfq"/>
+                        <constraint firstItem="OCT-tb-OG9" firstAttribute="height" secondItem="8hQ-gg-gxJ" secondAttribute="height" priority="250" id="bga-UA-nfn"/>
+                        <constraint firstItem="OCT-tb-OG9" firstAttribute="width" secondItem="8hQ-gg-gxJ" secondAttribute="width" id="mIj-Cj-2nc"/>
+                        <constraint firstItem="OCT-tb-OG9" firstAttribute="leading" secondItem="8hQ-gg-gxJ" secondAttribute="leading" id="o0s-E5-06L"/>
                     </constraints>
                 </scrollView>
             </subviews>
             <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
             <constraints>
-                <constraint firstItem="dKw-TW-f8S" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="2XQ-TN-zPV"/>
-                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="dKw-TW-f8S" secondAttribute="trailing" id="Qph-QO-BBd"/>
-                <constraint firstItem="dKw-TW-f8S" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="fyI-1J-shs"/>
-                <constraint firstAttribute="bottom" secondItem="dKw-TW-f8S" secondAttribute="bottom" id="klu-pI-svc"/>
+                <constraint firstItem="8hQ-gg-gxJ" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="BMk-gO-Sw7"/>
+                <constraint firstAttribute="trailing" secondItem="8hQ-gg-gxJ" secondAttribute="trailing" id="fuX-wl-mtD"/>
+                <constraint firstAttribute="bottom" secondItem="8hQ-gg-gxJ" secondAttribute="bottom" id="q42-m3-tPN"/>
+                <constraint firstItem="8hQ-gg-gxJ" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="v0e-u0-LC8"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
-            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
-            <point key="canvasLocation" x="-21" y="19"/>
+            <connections>
+                <outlet property="scrollView" destination="8hQ-gg-gxJ" id="7PW-cN-b3l"/>
+                <outlet property="svContent" destination="OCT-tb-OG9" id="GIN-Cy-EvR"/>
+            </connections>
+            <point key="canvasLocation" x="-15.942028985507248" y="56.25"/>
         </view>
     </objects>
 </document>

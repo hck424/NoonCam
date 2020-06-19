@@ -8,5 +8,5 @@ target 'NoonCam' do
   # Pods for NoonCam
 pod 'SideMenu'
 pod 'Malert'
-
+pod 'Alamofire', '~> 5.2'
 end

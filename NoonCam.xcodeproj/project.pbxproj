@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		3D30543B064344AB0071A909 /* Pods_NoonCam.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5F3D80EB651F8862A4344DE5 /* Pods_NoonCam.framework */; };
+		1980EEC9C14A43540A3CC84E /* Pods_NoonCam.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B2F9C14C07110C29D3AF2F90 /* Pods_NoonCam.framework */; };
 		E52A6B1F249926BF006B5DAD /* Utility.swift in Sources */ = {isa = PBXBuildFile; fileRef = E52A6B1E249926BF006B5DAD /* Utility.swift */; };
 		E552A79D249A347800BFC64E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E552A789249A347800BFC64E /* AppDelegate.swift */; };
 		E552A79F249A347800BFC64E /* CamTalkFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = E552A78B249A347800BFC64E /* CamTalkFlowLayout.swift */; };
@@ -26,7 +26,6 @@
 		E552A7AE249A347800BFC64E /* TalkCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E552A79A249A347800BFC64E /* TalkCollectionViewCell.swift */; };
 		E552A7AF249A347800BFC64E /* CamTalkListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E552A79B249A347800BFC64E /* CamTalkListViewController.swift */; };
 		E552A7B0249A347800BFC64E /* MainNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E552A79C249A347800BFC64E /* MainNavigationController.swift */; };
-		E552A7BB249A35CB00BFC64E /* RollingView.xib in Resources */ = {isa = PBXBuildFile; fileRef = E552A7B9249A35CB00BFC64E /* RollingView.xib */; };
 		E552A7BC249A35CB00BFC64E /* RollingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E552A7BA249A35CB00BFC64E /* RollingView.swift */; };
 		E552A7BF249A361900BFC64E /* LetterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E552A7BE249A361900BFC64E /* LetterViewController.swift */; };
 		E552A7C1249A374300BFC64E /* LetterListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E552A7C0249A374300BFC64E /* LetterListViewController.swift */; };
@@ -45,6 +44,9 @@
 		E9115E8C249B3D760047B351 /* MoneyRefundListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9115E8B249B3D760047B351 /* MoneyRefundListViewController.swift */; };
 		E9115E92249B5B8B0047B351 /* TalkAlertView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9115E91249B5B8B0047B351 /* TalkAlertView.swift */; };
 		E9115E94249B5B920047B351 /* TalkAlertView.xib in Resources */ = {isa = PBXBuildFile; fileRef = E9115E93249B5B920047B351 /* TalkAlertView.xib */; };
+		E91C3433249C45B4001145FA /* RollingView.xib in Resources */ = {isa = PBXBuildFile; fileRef = E91C3432249C45B4001145FA /* RollingView.xib */; };
+		E91C3437249CA9B6001145FA /* CButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = E91C3436249CA9B6001145FA /* CButton.swift */; };
+		E9B562D2249CB87E00359651 /* ServerManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9B562D1249CB87E00359651 /* ServerManager.swift */; };
 		E9B8BEAF2498489F0082FCAE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E9B8BEAD2498489F0082FCAE /* Main.storyboard */; };
 		E9B8BEB22498489F0082FCAE /* NoonCam.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = E9B8BEB02498489F0082FCAE /* NoonCam.xcdatamodeld */; };
 		E9B8BEB4249848A10082FCAE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E9B8BEB3249848A10082FCAE /* Assets.xcassets */; };
@@ -52,9 +54,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		5F3D80EB651F8862A4344DE5 /* Pods_NoonCam.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NoonCam.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		66C5A128ABCC7279CB305F9B /* Pods-NoonCam.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NoonCam.debug.xcconfig"; path = "Target Support Files/Pods-NoonCam/Pods-NoonCam.debug.xcconfig"; sourceTree = "<group>"; };
-		B81939587B92114EA55CDBC0 /* Pods-NoonCam.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NoonCam.release.xcconfig"; path = "Target Support Files/Pods-NoonCam/Pods-NoonCam.release.xcconfig"; sourceTree = "<group>"; };
+		B2F9C14C07110C29D3AF2F90 /* Pods_NoonCam.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NoonCam.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C87B01D353EA0D3D7724DBBA /* Pods-NoonCam.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NoonCam.release.xcconfig"; path = "Target Support Files/Pods-NoonCam/Pods-NoonCam.release.xcconfig"; sourceTree = "<group>"; };
 		E52A6B1E249926BF006B5DAD /* Utility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utility.swift; sourceTree = "<group>"; };
 		E52A6B21249928FE006B5DAD /* Constant.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Constant.h; sourceTree = "<group>"; };
 		E552A789249A347800BFC64E /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -74,7 +75,6 @@
 		E552A79A249A347800BFC64E /* TalkCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TalkCollectionViewCell.swift; sourceTree = "<group>"; };
 		E552A79B249A347800BFC64E /* CamTalkListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CamTalkListViewController.swift; sourceTree = "<group>"; };
 		E552A79C249A347800BFC64E /* MainNavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainNavigationController.swift; sourceTree = "<group>"; };
-		E552A7B9249A35CB00BFC64E /* RollingView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RollingView.xib; sourceTree = "<group>"; };
 		E552A7BA249A35CB00BFC64E /* RollingView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RollingView.swift; sourceTree = "<group>"; };
 		E552A7BE249A361900BFC64E /* LetterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LetterViewController.swift; sourceTree = "<group>"; };
 		E552A7C0249A374300BFC64E /* LetterListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LetterListViewController.swift; sourceTree = "<group>"; };
@@ -86,6 +86,7 @@
 		E556FEEB249BB2E8001D9BD7 /* ItemView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ItemView.xib; sourceTree = "<group>"; };
 		E5669C1E249A231100845BF6 /* TalkTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TalkTableViewCell.swift; sourceTree = "<group>"; };
 		E5669C1F249A231100845BF6 /* TalkTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TalkTableViewCell.xib; sourceTree = "<group>"; };
+		E6382858BAFFB63E52CC7F29 /* Pods-NoonCam.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NoonCam.debug.xcconfig"; path = "Target Support Files/Pods-NoonCam/Pods-NoonCam.debug.xcconfig"; sourceTree = "<group>"; };
 		E9115E7F249B0D400047B351 /* NoticeDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoticeDetailView.swift; sourceTree = "<group>"; };
 		E9115E81249B0D470047B351 /* NoticeDetailView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NoticeDetailView.xib; sourceTree = "<group>"; };
 		E9115E87249B21600047B351 /* Notice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Notice.swift; sourceTree = "<group>"; };
@@ -94,6 +95,9 @@
 		E9115E8D249B47030047B351 /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
 		E9115E91249B5B8B0047B351 /* TalkAlertView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TalkAlertView.swift; sourceTree = "<group>"; };
 		E9115E93249B5B920047B351 /* TalkAlertView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TalkAlertView.xib; sourceTree = "<group>"; };
+		E91C3432249C45B4001145FA /* RollingView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RollingView.xib; sourceTree = "<group>"; };
+		E91C3436249CA9B6001145FA /* CButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CButton.swift; sourceTree = "<group>"; };
+		E9B562D1249CB87E00359651 /* ServerManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServerManager.swift; sourceTree = "<group>"; };
 		E9B8BEA42498489F0082FCAE /* NoonCam.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NoonCam.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E9B8BEAE2498489F0082FCAE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		E9B8BEB12498489F0082FCAE /* NoonCam.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = NoonCam.xcdatamodel; sourceTree = "<group>"; };
@@ -107,28 +111,28 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3D30543B064344AB0071A909 /* Pods_NoonCam.framework in Frameworks */,
+				1980EEC9C14A43540A3CC84E /* Pods_NoonCam.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		05369753155B5FB2AE6D543C /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				5F3D80EB651F8862A4344DE5 /* Pods_NoonCam.framework */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
 		B09FAD3B1A8E3F23978A651F /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				66C5A128ABCC7279CB305F9B /* Pods-NoonCam.debug.xcconfig */,
-				B81939587B92114EA55CDBC0 /* Pods-NoonCam.release.xcconfig */,
+				E6382858BAFFB63E52CC7F29 /* Pods-NoonCam.debug.xcconfig */,
+				C87B01D353EA0D3D7724DBBA /* Pods-NoonCam.release.xcconfig */,
 			);
 			path = Pods;
+			sourceTree = "<group>";
+		};
+		DB596F9AA35AB65F97668FB2 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				B2F9C14C07110C29D3AF2F90 /* Pods_NoonCam.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 		E52A6B20249926E0006B5DAD /* Utils */ = {
@@ -233,13 +237,14 @@
 			children = (
 				E9115E8E249B5AA70047B351 /* PopupView */,
 				E552A7BA249A35CB00BFC64E /* RollingView.swift */,
-				E552A7B9249A35CB00BFC64E /* RollingView.xib */,
+				E91C3432249C45B4001145FA /* RollingView.xib */,
 				E556FEE9249BB2CA001D9BD7 /* ItemView.swift */,
 				E556FEEB249BB2E8001D9BD7 /* ItemView.xib */,
 				E5669C1E249A231100845BF6 /* TalkTableViewCell.swift */,
 				E5669C1F249A231100845BF6 /* TalkTableViewCell.xib */,
 				E9115E7F249B0D400047B351 /* NoticeDetailView.swift */,
 				E9115E81249B0D470047B351 /* NoticeDetailView.xib */,
+				E91C3436249CA9B6001145FA /* CButton.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -261,6 +266,14 @@
 			path = PopupView;
 			sourceTree = "<group>";
 		};
+		E9B562D0249CB82200359651 /* DB */ = {
+			isa = PBXGroup;
+			children = (
+				E9B562D1249CB87E00359651 /* ServerManager.swift */,
+			);
+			path = DB;
+			sourceTree = "<group>";
+		};
 		E9B8BE9B2498489F0082FCAE = {
 			isa = PBXGroup;
 			children = (
@@ -268,7 +281,7 @@
 				E9B8BEA62498489F0082FCAE /* NoonCam */,
 				E9B8BEA52498489F0082FCAE /* Products */,
 				B09FAD3B1A8E3F23978A651F /* Pods */,
-				05369753155B5FB2AE6D543C /* Frameworks */,
+				DB596F9AA35AB65F97668FB2 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -283,6 +296,7 @@
 		E9B8BEA62498489F0082FCAE /* NoonCam */ = {
 			isa = PBXGroup;
 			children = (
+				E9B562D0249CB82200359651 /* DB */,
 				E9115E84249B213E0047B351 /* Models */,
 				E552A785249A33AD00BFC64E /* Controller */,
 				E5669C1D249A229C00845BF6 /* Views */,
@@ -303,11 +317,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = E9B8BEBB249848A10082FCAE /* Build configuration list for PBXNativeTarget "NoonCam" */;
 			buildPhases = (
-				05D19B640863FA33788F6704 /* [CP] Check Pods Manifest.lock */,
+				BC1B8C3840A30D79BE0C7109 /* [CP] Check Pods Manifest.lock */,
 				E9B8BEA02498489F0082FCAE /* Sources */,
 				E9B8BEA12498489F0082FCAE /* Frameworks */,
 				E9B8BEA22498489F0082FCAE /* Resources */,
-				2FCF09D5BAD1662A4CE2CA0E /* [CP] Embed Pods Frameworks */,
+				51625304A176DB21BF465F66 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -357,13 +371,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				E556FEEC249BB2E8001D9BD7 /* ItemView.xib in Resources */,
+				E91C3433249C45B4001145FA /* RollingView.xib in Resources */,
 				E9B8BEB7249848A10082FCAE /* LaunchScreen.storyboard in Resources */,
 				E9115E94249B5B920047B351 /* TalkAlertView.xib in Resources */,
 				E5669C21249A231100845BF6 /* TalkTableViewCell.xib in Resources */,
 				E9B8BEB4249848A10082FCAE /* Assets.xcassets in Resources */,
 				E9B8BEAF2498489F0082FCAE /* Main.storyboard in Resources */,
 				E9115E82249B0D470047B351 /* NoticeDetailView.xib in Resources */,
-				E552A7BB249A35CB00BFC64E /* RollingView.xib in Resources */,
 				E552A7A5249A347800BFC64E /* Intro.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -371,7 +385,24 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		05D19B640863FA33788F6704 /* [CP] Check Pods Manifest.lock */ = {
+		51625304A176DB21BF465F66 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-NoonCam/Pods-NoonCam-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-NoonCam/Pods-NoonCam-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-NoonCam/Pods-NoonCam-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		BC1B8C3840A30D79BE0C7109 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -393,23 +424,6 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		2FCF09D5BAD1662A4CE2CA0E /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-NoonCam/Pods-NoonCam-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-NoonCam/Pods-NoonCam-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-NoonCam/Pods-NoonCam-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -417,6 +431,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E9B562D2249CB87E00359651 /* ServerManager.swift in Sources */,
 				E552A7AD249A347800BFC64E /* ChattingTalkListViewController.swift in Sources */,
 				E552A7A2249A347800BFC64E /* LeftSlideMenuViewController.swift in Sources */,
 				E9115E80249B0D400047B351 /* NoticeDetailView.swift in Sources */,
@@ -431,6 +446,7 @@
 				E552A7A6249A347800BFC64E /* ChattingTalkViewController.swift in Sources */,
 				E552A79D249A347800BFC64E /* AppDelegate.swift in Sources */,
 				E552A7A0249A347800BFC64E /* IntroViewController.swift in Sources */,
+				E91C3437249CA9B6001145FA /* CButton.swift in Sources */,
 				E52A6B1F249926BF006B5DAD /* Utility.swift in Sources */,
 				E552A7AB249A347800BFC64E /* SceneDelegate.swift in Sources */,
 				E5669C20249A231100845BF6 /* TalkTableViewCell.swift in Sources */,
@@ -590,7 +606,7 @@
 		};
 		E9B8BEBC249848A10082FCAE /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 66C5A128ABCC7279CB305F9B /* Pods-NoonCam.debug.xcconfig */;
+			baseConfigurationReference = E6382858BAFFB63E52CC7F29 /* Pods-NoonCam.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -612,7 +628,7 @@
 		};
 		E9B8BEBD249848A10082FCAE /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = B81939587B92114EA55CDBC0 /* Pods-NoonCam.release.xcconfig */;
+			baseConfigurationReference = C87B01D353EA0D3D7724DBBA /* Pods-NoonCam.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;

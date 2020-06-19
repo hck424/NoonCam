@@ -25,7 +25,7 @@ class TalkAlertView: UIView {
         ivProfile.layer.borderWidth = 1.0
     }
     
-    func setData(data:[String:String]) {
+    func setData(data:[String:Any]) {
         
     }
     

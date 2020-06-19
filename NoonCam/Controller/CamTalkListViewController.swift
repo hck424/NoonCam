@@ -13,22 +13,23 @@ enum ListType : Int {
     case time, popular, regist
 }
 
-class CamTalkListViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate {
+class CamTalkListViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate, RollingViewDelegate {
     
     @IBOutlet weak var topView: UIView!
     @IBOutlet weak var ivTropic: UIImageView!
-    @IBOutlet weak var rollingView: UIView!
+    
     @IBOutlet weak var collectionView: UICollectionView!
     
-    
+    var rollingView: RollingView?
     var talkFlowLayout: CamTalkFlowLayout!
     
     var listType:ListType!
-    var listdata:[AnyHashable] = [["a":"fdalf", "b":"fjdlsf"], ["1":"djfskla", "2":"fjsdf"]]
+    var listdata:[[String:Any]]?
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        listdata = [["title":"그래", "b":"fjdlsf"], ["title":"아리랑", "2":"fjsdf"]]
         if listType == ListType.time {
          
         }
@@ -38,21 +39,26 @@ class CamTalkListViewController: UIViewController, UICollectionViewDataSource, U
         else if listType == ListType.regist {
          
         }
+        self.view.layoutIfNeeded()
         
         talkFlowLayout = CamTalkFlowLayout()
         collectionView.collectionViewLayout = talkFlowLayout
         
-        self.view.layoutIfNeeded()
-        let rollView = RollingView.instantiateFromNib()
-        topView.addSubview(rollView)
-        rollView.translatesAutoresizingMaskIntoConstraints = false
-        rollView.leadingAnchor.constraint(equalTo: topView.leadingAnchor, constant: 0).isActive = true
-        rollView.trailingAnchor.constraint(equalTo: topView.trailingAnchor, constant: 0).isActive = true
-        rollView.topAnchor.constraint(equalTo: topView.topAnchor, constant: 0).isActive = true
-        rollView.bottomAnchor.constraint(equalTo: topView.bottomAnchor, constant: 0).isActive = true
+        rollingView = RollingView.instantiateFromNib()
+        topView.addSubview(rollingView!)
         
-        rollView.setupView(data: listdata)
-        
+        rollingView!.translatesAutoresizingMaskIntoConstraints = false
+        rollingView!.leadingAnchor.constraint(equalTo: topView.leadingAnchor, constant: 0).isActive = true
+        rollingView!.trailingAnchor.constraint(equalTo: topView.trailingAnchor, constant: 0).isActive = true
+        rollingView!.topAnchor.constraint(equalTo: topView.topAnchor, constant: 0).isActive = true
+        rollingView!.bottomAnchor.constraint(equalTo: topView.bottomAnchor, constant: 0).isActive = true
+        rollingView?.delegate = self
+        rollingView!.setupData(data: listdata)
+        rollingView!.layer.borderWidth = 1
+        rollingView!.layer.borderColor = UIColor.red.cgColor
+    }
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
     }
     override func prepareForInterfaceBuilder() {
         super.prepareForInterfaceBuilder()
@@ -73,6 +79,9 @@ class CamTalkListViewController: UIViewController, UICollectionViewDataSource, U
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         
         collectionView.deselectItem(at: indexPath, animated: false)
+    }
+    
+    func showTalkAlertView(data:[String:Any]) {
         
         let talkPopView = TalkAlertView.instantiateFromNib()
         talkPopView.setData(data: ["title":"영상채팅"])
@@ -81,7 +90,7 @@ class CamTalkListViewController: UIViewController, UICollectionViewDataSource, U
         let alert = Malert(customView:talkPopView)
         alert.buttonsAxis = .vertical
         alert.separetorColor = RGB(230, 230, 230)
-//        alert.cornerRadius = 20.0
+        //        alert.cornerRadius = 20.0
         alert.animationType = .fadeIn
         alert.presentDuration = 0.5
         
@@ -90,7 +99,7 @@ class CamTalkListViewController: UIViewController, UICollectionViewDataSource, U
         let action3 = MalertAction(title: "신청")
         let action4 = MalertAction(title: "취소")
         
-//        action1.backgroundColor = UIColor(red:0.38, green:0.76, blue:0.15, alpha:1.0)
+        //        action1.backgroundColor = UIColor(red:0.38, green:0.76, blue:0.15, alpha:1.0)
         
         action1.tintColor = UIColor(red:0.15, green:0.64, blue:0.85, alpha:1.0)
         action2.tintColor = UIColor(red:0.15, green:0.64, blue:0.85, alpha:1.0)
@@ -104,4 +113,13 @@ class CamTalkListViewController: UIViewController, UICollectionViewDataSource, U
         
         present(alert, animated: true)
     }
+    
+    //MARK: RollingViewDelegate
+    func didClickedRollingItemView(data: [String : Any]) {
+        self.showTalkAlertView(data: data)
+    }
 }
+
+
+
+
