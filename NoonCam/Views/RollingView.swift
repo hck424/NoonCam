@@ -8,13 +8,13 @@
 
 import UIKit
 protocol RollingViewDelegate {
-    func didClickedRollingItemView(data:[String:Any])
+    func didClickedRollingItemView(_ talk: CamTalk)
 }
 
 class RollingView: UIView, UIScrollViewDelegate, ItemViewDelegate {
     @IBOutlet weak var scrollView: UIScrollView!
     @IBOutlet weak var svContent: UIStackView!
-    var arrData:[[String:Any]] = []
+    var arrData:[CamTalk] = []
     
     var timer:Timer?
     let heightContent:CGFloat = 70.0
@@ -27,32 +27,32 @@ class RollingView: UIView, UIScrollViewDelegate, ItemViewDelegate {
         scrollView.delegate = self
     }
     
-    func setupData(data:[[String:Any]]?) {
+    func setupData(_ data: [CamTalk]) {
         
         for subview in svContent.subviews {
             subview.removeFromSuperview()
         }
         
-        guard let data = data else { return }
-        
+        self.stopTimer()
         if let lastObject = data.last {
             arrData.append(lastObject)
         }
-        arrData.append(contentsOf: data)
+        arrData.append(contentsOf:data)
         if let firstObject = data.first {
             arrData.append(firstObject)
         }
         
         self.layoutIfNeeded()
         for i:Int in 0..<arrData.count {
-            let item = arrData[i]
+            let talk:CamTalk = arrData[i]
+            
             let itemView = ItemView.instantiateFromNib()
             svContent.addArrangedSubview(itemView)
             itemView.delegate = self
             itemView.translatesAutoresizingMaskIntoConstraints = false
             itemView.heightAnchor.constraint(equalToConstant: heightContent).isActive = true
             itemView.layoutIfNeeded()
-            itemView.setData(data:item, index:i)
+            itemView.setData(talk)
         }
         
         
@@ -98,9 +98,9 @@ class RollingView: UIView, UIScrollViewDelegate, ItemViewDelegate {
     }
     
     //MARK: ItemViewDelegate
-    func didClickedItemView(data: [String : Any]) {
+    func didClickedItemView(_ talk: CamTalk) {
         if let delegate = delegate {
-            delegate.didClickedRollingItemView(data:data)
+            delegate.didClickedRollingItemView(talk)
         }
     }
 }

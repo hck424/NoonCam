@@ -22,7 +22,7 @@
                             <nil key="textColor"/>
                             <nil key="highlightedColor"/>
                         </label>
-                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="m6O-ds-KEw">
+                        <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="m6O-ds-KEw">
                             <rect key="frame" x="128" y="54" width="100" height="100"/>
                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <constraints>
@@ -105,7 +105,7 @@
                 <outlet property="lbMessage" destination="2oX-BZ-adL" id="Lyl-bG-grq"/>
                 <outlet property="lbPoint" destination="aOO-k9-liq" id="df0-xy-aqN"/>
                 <outlet property="lbTitle" destination="qNI-jU-3BX" id="xFY-C0-Bq0"/>
-                <outlet property="lbUserId" destination="XG2-an-dcb" id="FWv-VP-fzg"/>
+                <outlet property="lbUserName" destination="Rd1-am-I63" id="0E5-3x-dps"/>
             </connections>
             <point key="canvasLocation" x="-126.08695652173914" y="95.089285714285708"/>
         </view>

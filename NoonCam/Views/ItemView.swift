@@ -7,9 +7,10 @@
 //
 
 import UIKit
+import Kingfisher
 
 protocol ItemViewDelegate {
-    func didClickedItemView(data:[String:Any])
+    func didClickedItemView(_ data: CamTalk)
 }
 class ItemView: UIView {
     
@@ -25,16 +26,34 @@ class ItemView: UIView {
         super.awakeFromNib()
     }
     
-    func setData(data:[String:Any], index:Int) {
+    func setData(_ talk:CamTalk) {
         ivProfile.layer.cornerRadius = 30
         ivProfile.layer.borderColor = RGB(230, 230, 230).cgColor
         ivProfile.layer.borderWidth = 1.0
         
-        lbTitle.text = ""
-        if let title = data["title"] {
-            lbTitle.text = title as? String
+        lbTitle.text = talk.contents!
+        lbUserId.text = talk.user_name!+","
+        lbAge.text = talk.user_age
+        if talk.user_sex == "여" {
+            ivProfile.image = UIImage.init(named: "woman")
         }
-        dataButton.data = data
+        else {
+            ivProfile.image = UIImage.init(named: "man")
+        }
+        
+        guard let url = URL(string: "http://snsncam.com/upload/talk/\(talk.user_id!)/thum/crop_\(talk.file_name!)") else {
+            return
+        }
+        
+        let resource = ImageResource(downloadURL: url)
+        KingfisherManager.shared.retrieveImage(with: resource) { [weak self] result in
+            let image = try? result.get().image
+            if let image = image {
+                self?.ivProfile.image = image
+            }
+        }
+        
+        dataButton.data = talk
     }
     
     class func instantiateFromNib() -> ItemView {
@@ -42,10 +61,7 @@ class ItemView: UIView {
     }
     
     @IBAction func onClickedButtonAction(_ sender: CButton) {
-        if (sender.data as? [String:Any]) != nil {
-            if let delegate = delegate {
-                delegate.didClickedItemView(data: sender.data as! [String : Any])
-            }
-        }
+        let talk: CamTalk = (sender.data as! CamTalk)
+        delegate?.didClickedItemView(talk)
     }
 }

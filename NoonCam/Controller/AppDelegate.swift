@@ -9,12 +9,56 @@
 import UIKit
 import CoreData
 
+let TAG_LOADING_IMG = 111000
+let Pai:Double = 3.14159
+
+extension UIView {
+    func startAnimation(raduis: CGFloat) {
+        let imageName = "icon_loading"
+
+        let indicator = viewWithTag(TAG_LOADING_IMG) as? UIImageView
+        if indicator != nil {
+            indicator?.removeFromSuperview()
+        }
+
+        isHidden = false
+        superview?.bringSubviewToFront(self)
+
+        let ivIndicator = UIImageView(frame: CGRect(x: 0, y: 0, width: 2 * raduis, height: 2 * raduis))
+        ivIndicator.tag = TAG_LOADING_IMG
+        ivIndicator.contentMode = .scaleAspectFit
+        ivIndicator.image = UIImage(named: imageName)
+        addSubview(ivIndicator)
+        indicator?.layer.borderWidth = 1.0
+        indicator?.layer.borderColor = UIColor.red.cgColor
+        ivIndicator.frame = CGRect(x: (frame.size.width - ivIndicator.frame.size.width) / 2, y: (frame.size.height - ivIndicator.frame.size.height) / 2, width: ivIndicator.frame.size.width, height: ivIndicator.frame.size.height)
+
+        let rotation = CABasicAnimation(keyPath: "transform.rotation")
+        rotation.fromValue = NSNumber(value: 0.0)
+        rotation.toValue = NSNumber(value: -2 * Pai)
+        rotation.duration = 1
+        rotation.repeatCount = .infinity
+
+        ivIndicator.layer.add(rotation, forKey: "loading")
+
+    }
+    func stopAnimation() {
+        isHidden = true
+        let indicator = viewWithTag(TAG_LOADING_IMG) as? UIImageView
+        if indicator != nil {
+            indicator?.layer.removeAnimation(forKey: "loading")
+            //        [indicator removeFromSuperview];
+        }
+    }
+}
+
 @UIApplicationMain
-
-
 class AppDelegate: UIResponder, UIApplicationDelegate {
     var window: UIWindow?
     var mainNaviController: MainNavigationController?
+    var loadingView: UIView?
+    
+    
     
     class func instance() -> AppDelegate {
         return UIApplication.shared.delegate as! AppDelegate
@@ -29,6 +73,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             self.callIntroViewController()
         }
         
+        ShareData.shared.myGender = Gender.male
+        ShareData.shared.myId = "a1f5f492-8f25-3090-96e2-d5414023c6cc"
+//        CValiable.shared.myArea = UserDefaults.standard.object(forKey: "USER_AREA") as? String
+        ShareData.shared.myArea = "서울"
         return true
     }
 
@@ -45,6 +93,28 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         window?.rootViewController = vc
         window?.makeKeyAndVisible()
     }
+    
+    func startIndicator() {
+        DispatchQueue.main.async(execute: {
+            if self.loadingView == nil {
+                self.loadingView = UIView(frame: UIScreen.main.bounds)
+            }
+
+            self.window?.addSubview(self.loadingView!)
+            self.loadingView?.startAnimation(raduis: 25.0)
+        })
+    }
+
+    func stopIndicator() {
+        DispatchQueue.main.async(execute: {
+            if self.loadingView != nil {
+                self.loadingView!.stopAnimation()
+                self.loadingView?.removeFromSuperview()
+            }
+        })
+    }
+    
+   
     
     // MARK: UISceneSession Lifecycle
     @available(iOS 13.0, *)

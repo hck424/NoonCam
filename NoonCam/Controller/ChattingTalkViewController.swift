@@ -7,8 +7,9 @@
 //
 
 import UIKit
+import Toast_Swift
 
-class ChattingTalkViewController: UIViewController {
+class ChattingTalkViewController: BaseViewController {
     @IBOutlet weak var btnTotal: UIButton!
     @IBOutlet weak var btnVillage: UIButton!
     @IBOutlet weak var btnMyTalk: UIButton!
@@ -35,29 +36,47 @@ class ChattingTalkViewController: UIViewController {
         btnTotal.sendActions(for: .touchUpInside)
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+    }
     
     @IBAction func onClickedButtonActions(_ sender: UIButton) {
         
         if (sender == btnTotal || sender == btnVillage || sender == btnMyTalk) {
-            btnTotal.isSelected = false;
-            btnVillage.isSelected = false;
-            btnMyTalk.isSelected = false;
             
-            sender.isSelected = true
-            
-            if let viewcon = selectedVc {
-                self.myRemoveChildVC(childVC: viewcon)
-            }
-            
-            if sender == btnTotal || sender == btnVillage {
+            if sender == btnTotal {
+                btnTotal.isSelected = false;
+                btnVillage.isSelected = false;
+                sender.isSelected = true
+                if let viewcon = selectedVc {
+                    self.myRemoveChildViewController(childViewController: viewcon)
+                }
                 let chattingTalkVC = self.storyboard?.instantiateViewController(withIdentifier: "ChattingTalkListViewController") as! ChattingTalkListViewController
-                if (sender == btnTotal) {
-                    chattingTalkVC.listType = ChattingListType.total
+                chattingTalkVC.listType = .total
+                self.myAddChildViewController(superView: containerView, childViewController: chattingTalkVC)
+                selectedVc = chattingTalkVC
+            }
+            else if sender == btnVillage {
+                guard let userArea = ShareData.shared.myArea else {
+                    self.view.makeToast("지역 설정이 되어 있지 안씁니다.")
+                    return
                 }
-                else {
-                    chattingTalkVC.listType = ChattingListType.village
+                
+                if userArea == "비공개" {
+                    self.view.makeToast("지역 비공개 설정입니다.")
+                    return
                 }
-                self.myAddChildVC(childVC: chattingTalkVC)
+                
+                btnTotal.isSelected = false;
+                btnVillage.isSelected = false;
+                sender.isSelected = true
+                
+                if let viewcon = selectedVc {
+                    self.myRemoveChildViewController(childViewController: viewcon)
+                }
+                let chattingTalkVC = self.storyboard?.instantiateViewController(withIdentifier: "ChattingTalkListViewController") as! ChattingTalkListViewController
+                chattingTalkVC.listType = .village
+                self.myAddChildViewController(superView: containerView, childViewController: chattingTalkVC)
                 selectedVc = chattingTalkVC
             }
             else if sender == btnMyTalk {
@@ -67,25 +86,4 @@ class ChattingTalkViewController: UIViewController {
             }
         }
     }
-    
-    func myAddChildVC(childVC:UIViewController) {
-        addChild(childVC)
-        
-        childVC.beginAppearanceTransition(true, animated: true)
-        if let view = childVC.view {
-            containerView.addSubview(view)
-        }
-        childVC.view.frame = containerView.bounds
-        childVC.endAppearanceTransition()
-        childVC.didMove(toParent: self)
-        //        childVC.view.layer.borderColor = UIColor.red.cgColor
-        //        childVC.view.layer.borderWidth = 1.0
-    }
-    
-    func myRemoveChildVC(childVC:UIViewController) {
-        childVC.beginAppearanceTransition(false, animated: true)
-        childVC.view.removeFromSuperview()
-        childVC.endAppearanceTransition()
-    }
-    
 }

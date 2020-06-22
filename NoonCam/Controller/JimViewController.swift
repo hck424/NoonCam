@@ -31,13 +31,13 @@ class JimViewController: UIViewController, TalkTableViewCellDelegate, UITableVie
         let cell: TalkTableViewCell = tableView.dequeueReusableCell(withIdentifier: "TalkTableViewCell") as! TalkTableViewCell
         cell.delegate = self
         cell.type = TalkCellType.jim
-        cell.configurationData(cellData: ["afjdks":"fdskalfj"])
+//        cell.configurationData(cellData: ["afjdks":"fdskalfj"])
         
         return cell
     }
     
     //MARK::TalkTableViewCellDelegate
-    func chattingTalkCellDidClickedSms(_ sender: UIButton, _ data: NSDictionary, _ action: Int) {
+    func chattingTalkCellDidClickedActions(_ sender: UIButton, _ chatting: ChattingTalk, _ action: Int) {
         if (action == 1) {  //sms
             print(action);
         }
@@ -45,5 +45,10 @@ class JimViewController: UIViewController, TalkTableViewCellDelegate, UITableVie
             print(action);
         }
     }
+    
+    func chattingTalkCellDidShowPhoto(_ sender: UIImageView, imageUrls: [String]) {
+        
+    }
+    
     
 }

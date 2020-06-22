@@ -25,7 +25,7 @@ class CamTalkFlowLayout: UICollectionViewFlowLayout {
             let numberOfColumns: CGFloat = 3.0
             let itemWith = (self.collectionView!.frame.width - (numberOfColumns * spaceing))/numberOfColumns
             
-            return CGSize(width: itemWith, height: 150)
+            return CGSize(width: itemWith, height: 160)
         }
     }
     

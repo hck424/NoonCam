@@ -9,7 +9,7 @@
 import UIKit
 
 class CButton: UIButton {
-    var data:Any?
+    var data: AnyObject?
     override func draw(_ rect: CGRect) {
         super.draw(rect)
         

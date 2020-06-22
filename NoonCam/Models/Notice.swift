@@ -7,17 +7,33 @@
 //
 
 import UIKit
+import ObjectMapper
+class Notice: Mappable {
 
-class Notice: NSObject {
-    var isExpand:Bool?
-    var title:NSString?
-    var detail:NSString?
-    var regiDate:NSString?
+    var isExpand:Bool = false
+    var reg_date: String?
+    var view_cnt: Int?
+    var user_id: String?
+    var use_yn: String?
+    var memo: String?
+    var page: Int?
+    var A_9: Int?
+    var title: String?
+    var seq: Int?
     
-    init(isExpand:Bool, title:NSString, detail:NSString, regiDate:NSString) {
-        self.isExpand = isExpand
-        self.title = title
-        self.detail = detail
-        self.regiDate = regiDate
+    required init?(map: Map) {
     }
+    
+    func mapping(map: Map) {
+        reg_date <- map["reg_date"]
+        view_cnt <- map["view_cnt"]
+        user_id <- map["user_id"]
+        use_yn <- map["use_yn"]
+        memo <- map["memo"]
+        page <- map["page"]
+        A_9 <- map["A_9"]
+        title <- map["title"]
+        seq <- map["seq"]
+    }
+    
 }

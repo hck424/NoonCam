@@ -68,7 +68,7 @@
                         <stackView opaque="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="Xc3-d7-Dom">
                             <rect key="frame" x="0.0" y="60.5" width="514" height="119.5"/>
                             <subviews>
-                                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bounces="NO" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" bouncesZoom="NO" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="9Jv-iq-QFg">
+                                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bounces="NO" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" bouncesZoom="NO" editable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9Jv-iq-QFg">
                                     <rect key="frame" x="0.0" y="0.0" width="514" height="119"/>
                                     <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                     <constraints>
@@ -107,7 +107,7 @@
                 <outlet property="svDetailContent" destination="Xc3-d7-Dom" id="T5L-rB-uJk"/>
                 <outlet property="tvDetailContent" destination="9Jv-iq-QFg" id="Pbs-Ip-vcb"/>
             </connections>
-            <point key="canvasLocation" x="-7" y="112"/>
+            <point key="canvasLocation" x="16" y="90"/>
         </view>
     </objects>
     <resources>

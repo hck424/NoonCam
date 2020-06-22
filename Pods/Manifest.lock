@@ -1,24 +1,46 @@
 PODS:
   - Alamofire (5.2.1)
+  - INSPhotoGallery (1.2.8)
+  - Kingfisher (5.14.0):
+    - Kingfisher/Core (= 5.14.0)
+  - Kingfisher/Core (5.14.0)
   - Malert (4.0)
+  - ObjectMapper (3.5.3)
   - SideMenu (6.4.8)
+  - SwiftKeychainWrapper (3.4.0)
+  - Toast-Swift (5.0.1)
 
 DEPENDENCIES:
   - Alamofire (~> 5.2)
+  - INSPhotoGallery
+  - Kingfisher (~> 5.0)
   - Malert
+  - ObjectMapper (~> 3.5)
   - SideMenu
+  - SwiftKeychainWrapper
+  - Toast-Swift (~> 5.0.1)
 
 SPEC REPOS:
   trunk:
     - Alamofire
+    - INSPhotoGallery
+    - Kingfisher
     - Malert
+    - ObjectMapper
     - SideMenu
+    - SwiftKeychainWrapper
+    - Toast-Swift
 
 SPEC CHECKSUMS:
   Alamofire: e911732990610fe89af59ac0077f923d72dc3dfd
+  INSPhotoGallery: ad317cb9a59c7a5f08550e4155b49622c24dcab3
+  Kingfisher: 7b64389a43139c903ec434788344c288217c792d
   Malert: 78badcb143f4df7bff1fa62f4bec05497c7865f3
+  ObjectMapper: 97111c97e054a6ee25917662106689f0b4127b37
   SideMenu: 4a891be552d30bb6fa87ad404d62e485f8450c34
+  SwiftKeychainWrapper: 6fc49fbf7d4a6b0772917acb0e53a1639f6078d6
+  Toast-Swift: 9b6a70f28b3bf0b96c40d46c0c4b9d6639846711
 
-PODFILE CHECKSUM: 2f7d97f5afa67f9522cebc10a9a8451885183a12
+PODFILE CHECKSUM: 3971bd9c6e480091a516e9126e29f1adb4488119
 
-COCOAPODS: 1.8.4
+COCOAPODS: 1.9.0

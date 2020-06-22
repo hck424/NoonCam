@@ -12,34 +12,36 @@ class NoticeViewController: UIViewController {
     @IBOutlet weak var scrollView: UIStackView!
     @IBOutlet weak var svContent: UIStackView!
     
-    var arrData:[Notice]?
+    var arrData:[Notice] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.makeData()
-        self.decorationUI()
+    
+        self.requestNoticeList()
+
+        
     }
     
-    func makeData() {
-        arrData = [Notice]()
-        arrData?.append(Notice(isExpand: false, title: "문화예술기관에 변화의 바람이 불고 있다", detail: "문화예술기관에 변화의 바람이 불고 있다. 브랜드를 새롭게 재정비하고, 저마다의 색으로 대중들과 소통할 채비를 갖추고 있다.\n과거의 문화예술은 특정 계층과 일부 전문가들의 전유물로만 인식이 되어 대중들과 거리감이 있었다면, 오늘날엔 미디어의 발달과 다양한 문화예술기관의 등장으로 대중의 일상 속에 친근하게 자리 잡아가고 있다.\n이러한 흐름에 발맞춰 기존의 어렵고 딱딱한 이미지를 벗어던지고 새로운 문화예술공간으로 도약하기 위해 세종문화회관은 2004년 이후 15년만에 브랜드 리뉴얼을 진행 중에 있다. ‘시민을 위한 문화예술복합공간’이라는 핵심가치는 그대로 유지한 채 브랜드 정체성을 나타내는 명칭, 로고 등은 새롭게 재정비한다.", regiDate: "2020.5.18"))
+    func requestNoticeList() {
+
+        let param = ["clientPara":["pageNum":NSNumber.init(value: 1)]]
         
-        arrData?.append(Notice(isExpand: false, title: "문화예술기관에 변화의 바람이 불고 있다", detail: "문화예술기관에 변화의 바람이 불고 있다. 브랜드를 새롭게 재정비하고, 저마다의 색으로 대중들과 소통할 채비를 갖추고 있다.\n과거의 문화예술은 특정 계층과 일부 전문가들의 전유물로만 인식이 되어 대중들과 거리감이 있었다면, 오늘날엔 미디어의 발달과 다양한 문화예술기관의 등장으로 대중의 일상 속에 친근하게 자리 잡아가고 있다.\n이러한 흐름에 발맞춰 기존의 어렵고 딱딱한 이미지를 벗어던지고 새로운 문화예술공간으로 도약하기 위해 세종문화회관은 2004년 이후 15년만에 브랜드 리뉴얼을 진행 중에 있다. ‘시민을 위한 문화예술복합공간’이라는 핵심가치는 그대로 유지한 채 브랜드 정체성을 나타내는 명칭, 로고 등은 새롭게 재정비한다.", regiDate: "2020.5.18"))
-        
-        arrData?.append(Notice(isExpand: false, title: "문화예술기관에 변화의 바람이 불고 있다", detail: "문화예술기관에 변화의 바람이 불고 있다. 브랜드를 새롭게 재정비하고, 저마다의 색으로 대중들과 소통할 채비를 갖추고 있다.\n과거의 문화예술은 특정 계층과 일부 전문가들의 전유물로만 인식이 되어 대중들과 거리감이 있었다면, 오늘날엔 미디어의 발달과 다양한 문화예술기관의 등장으로 대중의 일상 속에 친근하게 자리 잡아가고 있다.\n이러한 흐름에 발맞춰 기존의 어렵고 딱딱한 이미지를 벗어던지고 새로운 문화예술공간으로 도약하기 위해 세종문화회관은 2004년 이후 15년만에 브랜드 리뉴얼을 진행 중에 있다. ‘시민을 위한 문화예술복합공간’이라는 핵심가치는 그대로 유지한 채 브랜드 정체성을 나타내는 명칭, 로고 등은 새롭게 재정비한다.", regiDate: "2020.5.18"))
-        
-        arrData?.append(Notice(isExpand: false, title: "문화예술기관에 변화의 바람이 불고 있다", detail: "문화예술기관에 변화의 바람이 불고 있다. 브랜드를 새롭게 재정비하고, 저마다의 색으로 대중들과 소통할 채비를 갖추고 있다.\n과거의 문화예술은 특정 계층과 일부 전문가들의 전유물로만 인식이 되어 대중들과 거리감이 있었다면, 오늘날엔 미디어의 발달과 다양한 문화예술기관의 등장으로 대중의 일상 속에 친근하게 자리 잡아가고 있다.\n이러한 흐름에 발맞춰 기존의 어렵고 딱딱한 이미지를 벗어던지고 새로운 문화예술공간으로 도약하기 위해 세종문화회관은 2004년 이후 15년만에 브랜드 리뉴얼을 진행 중에 있다. ‘시민을 위한 문화예술복합공간’이라는 핵심가치는 그대로 유지한 채 브랜드 정체성을 나타내는 명칭, 로고 등은 새롭게 재정비한다.", regiDate: "2020.5.18"))
-        
-        arrData?.append(Notice(isExpand: false, title: "문화예술기관에 변화의 바람이 불고 있다", detail: "문화예술기관에 변화의 바람이 불고 있다. 브랜드를 새롭게 재정비하고, 저마다의 색으로 대중들과 소통할 채비를 갖추고 있다.\n과거의 문화예술은 특정 계층과 일부 전문가들의 전유물로만 인식이 되어 대중들과 거리감이 있었다면, 오늘날엔 미디어의 발달과 다양한 문화예술기관의 등장으로 대중의 일상 속에 친근하게 자리 잡아가고 있다.\n이러한 흐름에 발맞춰 기존의 어렵고 딱딱한 이미지를 벗어던지고 새로운 문화예술공간으로 도약하기 위해 세종문화회관은 2004년 이후 15년만에 브랜드 리뉴얼을 진행 중에 있다. ‘시민을 위한 문화예술복합공간’이라는 핵심가치는 그대로 유지한 채 브랜드 정체성을 나타내는 명칭, 로고 등은 새롭게 재정비한다.", regiDate: "2020.5.18"))
-        
-        arrData?.append(Notice(isExpand: false, title: "문화예술기관에 변화의 바람이 불고 있다", detail: "문화예술기관에 변화의 바람이 불고 있다. 브랜드를 새롭게 재정비하고, 저마다의 색으로 대중들과 소통할 채비를 갖추고 있다.\n과거의 문화예술은 특정 계층과 일부 전문가들의 전유물로만 인식이 되어 대중들과 거리감이 있었다면, 오늘날엔 미디어의 발달과 다양한 문화예술기관의 등장으로 대중의 일상 속에 친근하게 자리 잡아가고 있다.\n이러한 흐름에 발맞춰 기존의 어렵고 딱딱한 이미지를 벗어던지고 새로운 문화예술공간으로 도약하기 위해 세종문화회관은 2004년 이후 15년만에 브랜드 리뉴얼을 진행 중에 있다. ‘시민을 위한 문화예술복합공간’이라는 핵심가치는 그대로 유지한 채 브랜드 정체성을 나타내는 명칭, 로고 등은 새롭게 재정비한다.", regiDate: "2020.5.18"))
-       
-        arrData?.append(Notice(isExpand: false, title: "문화예술기관에 변화의 바람이 불고 있다", detail: "문화예술기관에 변화의 바람이 불고 있다. 브랜드를 새롭게 재정비하고, 저마다의 색으로 대중들과 소통할 채비를 갖추고 있다.\n과거의 문화예술은 특정 계층과 일부 전문가들의 전유물로만 인식이 되어 대중들과 거리감이 있었다면, 오늘날엔 미디어의 발달과 다양한 문화예술기관의 등장으로 대중의 일상 속에 친근하게 자리 잡아가고 있다.\n이러한 흐름에 발맞춰 기존의 어렵고 딱딱한 이미지를 벗어던지고 새로운 문화예술공간으로 도약하기 위해 세종문화회관은 2004년 이후 15년만에 브랜드 리뉴얼을 진행 중에 있다. ‘시민을 위한 문화예술복합공간’이라는 핵심가치는 그대로 유지한 채 브랜드 정체성을 나타내는 명칭, 로고 등은 새롭게 재정비한다.", regiDate: "2020.5.18"))
-        
+        ApiManager.shared.requestNoticeList(param, success: { (result) in
+            if let list = result?["result"] as? [Notice] {
+                self.arrData.append(contentsOf: list)
+                self.scrollView.isHidden = false
+                self.decorationUI()
+            }
+            else {
+                self.scrollView.isHidden = true
+            }
+        }) { (error) in
+            print(error?.localizedDescription as Any)
+        }
     }
     
     func decorationUI() {
-        for notice in arrData! {
+        for notice: Notice in arrData {
             let notiView: NoticeDetailView = Bundle.main.loadNibNamed("NoticeDetailView", owner:self, options: nil)?.first as! NoticeDetailView
             notiView.setData(notice: notice)
             svContent.addArrangedSubview(notiView)

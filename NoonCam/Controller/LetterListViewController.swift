@@ -9,11 +9,16 @@
 import UIKit
 
 class LetterListViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, TalkTableViewCellDelegate {
+    func chattingTalkCellDidShowPhoto(_ sender: UIImageView, imageUrls: [String]) {
+        
+    }
+    
     @IBOutlet weak var tblView: UITableView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         tblView.register(UINib.init(nibName: "TalkTableViewCell", bundle: Bundle.main), forCellReuseIdentifier: "TalkTableViewCell")
+    
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -24,13 +29,14 @@ class LetterListViewController: UIViewController, UITableViewDataSource, UITable
         let cell: TalkTableViewCell = tableView.dequeueReusableCell(withIdentifier: "TalkTableViewCell") as! TalkTableViewCell
         cell.delegate = self
         cell.type = TalkCellType.letter
-        cell.configurationData(cellData: ["afjdks":"fdskalfj"])
+//        cell.configurationData(cellData: ["afjdks":"fdskalfj"])
         
         return cell
     }
     
-    //MARK::TalkTableViewCellDelegate
-    func chattingTalkCellDidClickedSms(_ sender: UIButton, _ data: NSDictionary, _ action: Int) {
+    //MARK: TalkTableViewCellDelegate
+    func chattingTalkCellDidClickedActions(_ sender: UIButton, _ chatting: ChattingTalk, _ action: Int) {
         
     }
+    
 }

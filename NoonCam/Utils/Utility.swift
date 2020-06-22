@@ -8,21 +8,10 @@
 
 import UIKit
 import Foundation
+import SwiftKeychainWrapper
 
 class Utility : NSObject {
-//    class func image(from color: UIColor) -> UIImage {
-//
-//        let rect = CGRect(x: 0, y: 0, width: 10, height: 10)
-//        UIGraphicsBeginImageContext(rect.size)
-//        let context = UIGraphicsGetCurrentContext()
-//        context?.setFillColor(color.cgColor )
-//        context?.fill(rect)
-//
-//        guard let image = UIGraphicsGetImageFromCurrentImageContext() else { return UIImage()}
-//        UIGraphicsEndImageContext()
-//        return image
-//    }
-    
+
     class func image(color: UIColor) -> UIImage {
         let rect: CGRect = CGRect(x: 0, y: 0, width: 10, height: 10)
         UIGraphicsBeginImageContextWithOptions(rect.size, false, 0)
@@ -31,6 +20,22 @@ class Utility : NSObject {
         let image: UIImage = UIGraphicsGetImageFromCurrentImageContext()!
         UIGraphicsEndImageContext()
         return image
+    }
+    
+    class func getUUID() -> NSString {
+        let uniqueServiceName = "NoonCam"
+//        let uniqueAccessGroup = nil
+        let wrapper = KeychainWrapper(serviceName: uniqueServiceName, accessGroup: nil)
+        var uuid = wrapper.string(forKey: uniqueServiceName)
+        if uuid == nil  {
+            let uuidRef = CFUUIDCreate(nil)
+            let uuidStringRef = CFUUIDCreateString(nil, uuidRef)
+            uuid = uuidStringRef! as String
+            let success = wrapper.set(uuid!, forKey: uniqueServiceName)
+            print("new uuid create :\(success)")
+        }
+        
+        return uuid! as NSString
     }
 }
 

@@ -8,7 +8,7 @@
 
 import UIKit
 
-class LetterViewController: UIViewController {
+class LetterViewController: BaseViewController {
     
     @IBOutlet weak var btnDelete: UIButton!
     @IBOutlet weak var btnJim: UIButton!
@@ -18,30 +18,10 @@ class LetterViewController: UIViewController {
         super.viewDidLoad()
         
         let vc : LetterListViewController = self.storyboard?.instantiateViewController(withIdentifier: "LetterListViewController") as! LetterListViewController
-        self.myAddChildVC(childVC: vc)
+        self.myAddChildViewController(superView: containerView, childViewController: vc)
     }
     
     @IBAction func onClickedButtonAction(_ sender: UIButton) {
         
-    }
-    
-    func myAddChildVC(childVC:UIViewController) {
-        addChild(childVC)
-        
-        childVC.beginAppearanceTransition(true, animated: true)
-        if let view = childVC.view {
-            containerView.addSubview(view)
-        }
-        childVC.view.frame = containerView.bounds
-        childVC.endAppearanceTransition()
-        childVC.didMove(toParent: self)
-    }
-    
-    func myRemoveChildVC(childVC:UIViewController) {
-        childVC.beginAppearanceTransition(false, animated: true)
-        childVC.view.removeFromSuperview()
-        childVC.endAppearanceTransition()
-    }
-    
-    
+    }   
 }

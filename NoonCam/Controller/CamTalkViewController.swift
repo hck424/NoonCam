@@ -16,17 +16,16 @@ public func RGBA(_ r: CGFloat, _ g: CGFloat, _ b: CGFloat, _ a: CGFloat) -> UICo
     UIColor(red: r / 255.0, green: g / 255.0, blue: b / 255.0, alpha: a / 1.0)
 }
 
-
-class CamTalkViewController: UIViewController {
-    
-    
+class CamTalkViewController: BaseViewController {
     @IBOutlet var arrTabBtn: [UIButton]!
-    
     @IBOutlet weak var containerView: UIView!
+    
     var selectedVc:UIViewController? = nil
-     
+    var listType: CamTalkType?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        listType = .all
         
         arrTabBtn = arrTabBtn.sorted(by: { $0.tag < $1.tag })
         
@@ -55,42 +54,62 @@ class CamTalkViewController: UIViewController {
                 btn.setBackgroundImage(imgSel, for: .selected)
             }
         }
-        let btn = arrTabBtn.first
-        btn?.sendActions(for: UIControl.Event.touchUpInside)
+        self.addCamTalkList(listType!)
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
     }
 
+    func addCamTalkList(_ listType:CamTalkType) {
+        
+        let talkListVc = self.storyboard?.instantiateViewController(withIdentifier: "CamTalkListViewController") as! CamTalkListViewController
+        talkListVc.listType = listType
+        self.myAddChildViewController(superView: containerView, childViewController: talkListVc)
+        selectedVc = talkListVc
+    }
+    
     @IBAction func onClickedButtonActions(_ sender: UIButton) {
         
-        if let viewcon = selectedVc {
-            self.myRemoveChildVC(childVC: viewcon)
-        }
         if sender.tag >= 1 && sender.tag <= 5 {
-            for i in 0..<5 {
-                let btn = arrTabBtn[i]
-                btn.isSelected = false
-            }
-            sender.isSelected = true
             if sender.tag == 1 {
-                let talkListVc = self.storyboard?.instantiateViewController(withIdentifier: "CamTalkListViewController") as! CamTalkListViewController
-                talkListVc.listType = ListType.time
-                self.myAddChildVC(childVC: talkListVc)
-                selectedVc = talkListVc
+                for i in 0..<5 {
+                   let btn = arrTabBtn[i]
+                   btn.isSelected = false
+                }
+                sender.isSelected = true
+
+                listType = .time
+                if let viewcon = selectedVc {
+                    self.myRemoveChildViewController(childViewController: viewcon)
+                }
+                self.addCamTalkList(listType!)
             }
             else if sender.tag == 2 {
-                let talkListVc = self.storyboard?.instantiateViewController(withIdentifier: "CamTalkListViewController") as! CamTalkListViewController
-                talkListVc.listType = ListType.popular
-                self.myAddChildVC(childVC: talkListVc)
-                selectedVc = talkListVc
+                for i in 0..<5 {
+                   let btn = arrTabBtn[i]
+                   btn.isSelected = false
+                }
+                sender.isSelected = true
+
+                listType = .popular
+                if let viewcon = selectedVc {
+                    self.myRemoveChildViewController(childViewController: viewcon)
+                }
+                self.addCamTalkList(listType!)
             }
             else if sender.tag == 3 {
-                let talkListVc = self.storyboard?.instantiateViewController(withIdentifier: "CamTalkListViewController") as! CamTalkListViewController
-                talkListVc.listType = ListType.regist
-                self.myAddChildVC(childVC: talkListVc)
-                selectedVc = talkListVc
+                for i in 0..<5 {
+                   let btn = arrTabBtn[i]
+                   btn.isSelected = false
+                }
+                sender.isSelected = true
+
+                listType = .regist
+                if let viewcon = selectedVc {
+                    self.myRemoveChildViewController(childViewController: viewcon)
+                }
+                self.addCamTalkList(listType!)
             }
             else if sender.tag == 4 {
                 let vc = self.storyboard?.instantiateViewController(withIdentifier: "MytalkViewController") as!MytalkViewController
@@ -102,25 +121,5 @@ class CamTalkViewController: UIViewController {
                 AppDelegate.instance().mainNaviController?.pushViewController(vc, animated: false)
             }
         }
-    }
-    
-    func myAddChildVC(childVC:UIViewController) {
-        addChild(childVC)
-        
-        childVC.beginAppearanceTransition(true, animated: true)
-        if let view = childVC.view {
-            containerView.addSubview(view)
-        }
-        childVC.view.frame = containerView.bounds
-        childVC.endAppearanceTransition()
-        childVC.didMove(toParent: self)
-//        childVC.view.layer.borderColor = UIColor.red.cgColor
-//        childVC.view.layer.borderWidth = 1.0
-    }
-    
-    func myRemoveChildVC(childVC:UIViewController) {
-        childVC.beginAppearanceTransition(false, animated: true)
-        childVC.view.removeFromSuperview()
-        childVC.endAppearanceTransition()
     }
 }

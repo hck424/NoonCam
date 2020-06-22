@@ -7,13 +7,9 @@
 //
 
 import UIKit
-import Malert
 
-enum ListType : Int {
-    case time, popular, regist
-}
 
-class CamTalkListViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate, RollingViewDelegate {
+class CamTalkListViewController: BaseViewController, UICollectionViewDataSource, UICollectionViewDelegate, RollingViewDelegate , UIScrollViewDelegate {
     
     @IBOutlet weak var topView: UIView!
     @IBOutlet weak var ivTropic: UIImageView!
@@ -23,23 +19,21 @@ class CamTalkListViewController: UIViewController, UICollectionViewDataSource, U
     var rollingView: RollingView?
     var talkFlowLayout: CamTalkFlowLayout!
     
-    var listType:ListType!
-    var listdata:[[String:Any]]?
+    var listType:CamTalkType!
     
+    var listData:[CamTalk] = []
+    var hotList:[CamTalk] = []
+    var pageNum = 1
+    var totalPage = 1
+    
+    var isRequest: Bool = false
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        listdata = [["title":"그래", "b":"fjdlsf"], ["title":"아리랑", "2":"fjsdf"]]
-        if listType == ListType.time {
-         
-        }
-        else if listType == ListType.popular {
-         
-        }
-        else if listType == ListType.regist {
-         
-        }
+        listType = .all
+        
         self.view.layoutIfNeeded()
+         
         
         talkFlowLayout = CamTalkFlowLayout()
         collectionView.collectionViewLayout = talkFlowLayout
@@ -53,9 +47,10 @@ class CamTalkListViewController: UIViewController, UICollectionViewDataSource, U
         rollingView!.topAnchor.constraint(equalTo: topView.topAnchor, constant: 0).isActive = true
         rollingView!.bottomAnchor.constraint(equalTo: topView.bottomAnchor, constant: 0).isActive = true
         rollingView?.delegate = self
-        rollingView!.setupData(data: listdata)
-        rollingView!.layer.borderWidth = 1
-        rollingView!.layer.borderColor = UIColor.red.cgColor
+        
+
+        self.requestCamTalkList()
+      
     }
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
@@ -64,59 +59,76 @@ class CamTalkListViewController: UIViewController, UICollectionViewDataSource, U
         super.prepareForInterfaceBuilder()
     }
     
+    func requestCamTalkList() {
+        if pageNum > totalPage { return }
+        if pageNum == 1 {
+            hotList.removeAll()
+            listData.removeAll()
+        }
+        let param = ["clientPara":["user_id": "\(ShareData.shared.myId!)",
+            "pageNum": NSNumber(value: pageNum),
+            "search_sex": "\(ShareData.shared.myGender.opposit().value)",
+            "my_sex": "\(ShareData.shared.myGender.value)",
+            "search_top": "\(listType.value)"]]
+        
+        isRequest = true
+        ApiManager.shared.requestCamTalkList(param, success: { result in
+            self.isRequest = false
+            if let list = result?["result"] as? [CamTalk] {
+                self.listData.append(contentsOf: list)
+            }
+            
+            if let hot = result?["hot"] as? [CamTalk] {
+                self.hotList.append(contentsOf: hot)
+            }
+            self.totalPage = result!["bbsCount"] as! Int
+            
+            self.collectionView.reloadData()
+            
+            if (self.pageNum == 1) {
+                self.rollingView?.setupData(self.hotList)
+            }
+            
+            self.pageNum += 1
+        }) { error in
+            print(error?.localizedDescription ?? "")
+        }
+    }
+    
     ///UICollectionViewDelegate, UICollectionViewDataSource
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-//        return listdata.count
-        return 10
+        return listData.count
     }
 
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell:CamTalkCell = collectionView.dequeueReusableCell(withReuseIdentifier: "CamTalkCell", for: indexPath) as! CamTalkCell
         
+        let talk: CamTalk = listData[indexPath.row]
+        cell.configurationData(talk)
+        
         return cell
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        
         collectionView.deselectItem(at: indexPath, animated: false)
-    }
-    
-    func showTalkAlertView(data:[String:Any]) {
-        
-        let talkPopView = TalkAlertView.instantiateFromNib()
-        talkPopView.setData(data: ["title":"영상채팅"])
-        
-        
-        let alert = Malert(customView:talkPopView)
-        alert.buttonsAxis = .vertical
-        alert.separetorColor = RGB(230, 230, 230)
-        //        alert.cornerRadius = 20.0
-        alert.animationType = .fadeIn
-        alert.presentDuration = 0.5
-        
-        let action1 = MalertAction(title: "쪽지")
-        let action2 = MalertAction(title: "찜")
-        let action3 = MalertAction(title: "신청")
-        let action4 = MalertAction(title: "취소")
-        
-        //        action1.backgroundColor = UIColor(red:0.38, green:0.76, blue:0.15, alpha:1.0)
-        
-        action1.tintColor = UIColor(red:0.15, green:0.64, blue:0.85, alpha:1.0)
-        action2.tintColor = UIColor(red:0.15, green:0.64, blue:0.85, alpha:1.0)
-        action3.tintColor = UIColor(red:0.15, green:0.64, blue:0.85, alpha:1.0)
-        action4.tintColor = UIColor.red
-        
-        alert.addAction(action1)
-        alert.addAction(action2)
-        alert.addAction(action3)
-        alert.addAction(action4)
-        
-        present(alert, animated: true)
+        let talk:CamTalk = listData[indexPath.row]
+        showTalkAlertView(talk)
     }
     
     //MARK: RollingViewDelegate
-    func didClickedRollingItemView(data: [String : Any]) {
-        self.showTalkAlertView(data: data)
+    func didClickedRollingItemView(_ talk: CamTalk) {
+        self.showTalkAlertView(talk)
+    }
+    
+    //MARK: UIScrollViewDelegate
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        let velocityY : CGFloat = scrollView.panGestureRecognizer.translation(in: scrollView.superview).y
+        let contentOffsetY : CGFloat = scrollView.contentOffset.y + scrollView.frame.size.height
+        let contnetSizeH : CGFloat = scrollView.contentSize.height
+        
+        if velocityY < 0 && contentOffsetY > contnetSizeH && isRequest == false {
+            self.requestCamTalkList()
+        }
     }
 }
 

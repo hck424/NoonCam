@@ -7,7 +7,7 @@
 //
 
 import UIKit
-
+import Kingfisher
 class ProfileViewController: UIViewController, UITextFieldDelegate {
 
     @IBOutlet weak var ivProfile: UIImageView!
@@ -56,9 +56,8 @@ class ProfileViewController: UIViewController, UITextFieldDelegate {
         btnArea.layer.borderColor = RGB(230, 230, 230).cgColor
         btnArea.layer.borderWidth = 1.0
         
-        
+        self.decorationUI()
     }
-    
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         NotificationCenter.default.addObserver(
@@ -79,6 +78,39 @@ class ProfileViewController: UIViewController, UITextFieldDelegate {
         NotificationCenter.default.removeObserver(self, name: UIResponder.keyboardWillShowNotification, object: nil)
         NotificationCenter.default.removeObserver(self, name: UIResponder.keyboardWillHideNotification, object: nil)
     }
+    
+    func decorationUI () {
+        guard let myInfo = ShareData.shared.myInfo else {
+            return
+        }
+        
+        //default setting
+        if ShareData.shared.myGender == .male {
+            ivProfile.image = UIImage.init(named: "man")
+        }
+        else {
+            ivProfile.image = UIImage.init(named: "woman")
+        }
+        
+        if let fileName = myInfo["user_img"], let userId = myInfo["user_id"]  {
+            guard let url = URL(string: "http://snsncam.com/upload/talk/\(userId)/thum/crop_\(fileName)") else {
+                return
+            }
+            
+            let resource = ImageResource(downloadURL: url)
+            KingfisherManager.shared.retrieveImage(with: resource) { [weak self] result in
+                let image = try? result.get().image
+                if let image = image {
+                    self?.ivProfile.image = image
+                }
+            }
+        }
+        
+        btnGender.setTitle(ShareData.shared.myGender.value, for: .normal)
+        btnAge.setTitle(myInfo["user_age"] as? String, for: .normal)
+        btnArea.setTitle(myInfo["user_area"] as? String, for: .normal)
+    }
+    
     @IBAction func onClickedBackAction(_ sender: Any) {
         self.navigationController?.popViewController(animated: false)
     }
@@ -90,6 +122,13 @@ class ProfileViewController: UIViewController, UITextFieldDelegate {
             
         }
         else if sender == btnAge {
+            
+            let pickerVC = CPickerViewController.init(nibName: "CPickerViewController", bundle: nil)
+            pickerVC.arrData = ["20대", "30대", "40대", "50대", "60대", "70대", "80대"]
+            pickerVC.setNeedsStatusBarAppearanceUpdate()
+            pickerVC.modalPresentationStyle = UIModalPresentationStyle.overCurrentContext
+            present(pickerVC, animated: false, completion: nil)
+            
             
         }
         else if sender == btnArea {
@@ -105,6 +144,8 @@ class ProfileViewController: UIViewController, UITextFieldDelegate {
             
         }
     }
+    
+    
     
     //MARK: UITextFieldDelegate
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {

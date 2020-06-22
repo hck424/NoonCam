@@ -18,9 +18,7 @@ class NoticeDetailView: UIView {
     @IBOutlet weak var heightTextView: NSLayoutConstraint!
     
     var notice:Notice?
-    
     var  index: Int?
-    var isExpand: Bool = false
     
     override class func awakeFromNib() {
         super.awakeFromNib()
@@ -35,18 +33,17 @@ class NoticeDetailView: UIView {
         self.notice = notice
         tvDetailContent.textContainerInset = UIEdgeInsets(top: 8, left: 15, bottom: 15, right: 8)
         tvDetailContent.textContainer.lineBreakMode = .byTruncatingTail
-
+        
         svDetailContent.isHidden = true
         lbTitle.text = notice.title as String?
-        lbDate.text = notice.regiDate as String?
-        
+        lbDate.text = notice.reg_date as String?
     }
     
     @IBAction func onClickedButtonActions(_ sender: Any) {
-        notice?.isExpand = !(notice?.isExpand! ?? false)
-        if notice?.isExpand! ?? false {
+        notice!.isExpand = !notice!.isExpand
+        if notice?.isExpand ?? false {
             svDetailContent.isHidden = false
-            tvDetailContent.text = notice?.detail! as String?
+            tvDetailContent.text = notice?.memo! as String?
             let sizeTxt = tvDetailContent.sizeThatFits(CGSize(width: tvDetailContent.frame.size.width, height: 1000))
             heightTextView.constant = sizeTxt.height
             ivArrow.image = UIImage.init(named: "icon_arrow_up")
