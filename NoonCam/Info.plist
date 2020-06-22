@@ -67,5 +67,9 @@
 	</array>
 	<key>UIStatusBarStyle</key>
 	<string>UIStatusBarStyleLightContent</string>
+	<key>NSCameraUsageDescription</key>
+	<string>카메라를 사용을 허용해 주세요.</string>
+	<key>NSPhotoLibraryUsageDescription</key>
+	<string>앨범 사용을 허용해 주세요.</string>
 </dict>
 </plist>

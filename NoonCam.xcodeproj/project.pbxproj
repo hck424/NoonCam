@@ -42,6 +42,8 @@
 		E5585C2C249D931400154277 /* ServiceError.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5585C2B249D931300154277 /* ServiceError.swift */; };
 		E5585C2E249DB14D00154277 /* CamTalk.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5585C2D249DB14D00154277 /* CamTalk.swift */; };
 		E5585C32249DC2AD00154277 /* ShareData.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5585C31249DC2AD00154277 /* ShareData.swift */; };
+		E558F09124A07067001926BD /* HCameraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E558F08F24A07067001926BD /* HCameraViewController.swift */; };
+		E558F09224A07067001926BD /* HCameraViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E558F09024A07067001926BD /* HCameraViewController.xib */; };
 		E5669C20249A231100845BF6 /* TalkTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5669C1E249A231100845BF6 /* TalkTableViewCell.swift */; };
 		E5669C21249A231100845BF6 /* TalkTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E5669C1F249A231100845BF6 /* TalkTableViewCell.xib */; };
 		E5A2D05B249E204B00CD016B /* ChattingTalk.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5A2D05A249E204B00CD016B /* ChattingTalk.swift */; };
@@ -99,6 +101,8 @@
 		E5585C2B249D931300154277 /* ServiceError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceError.swift; sourceTree = "<group>"; };
 		E5585C2D249DB14D00154277 /* CamTalk.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CamTalk.swift; sourceTree = "<group>"; };
 		E5585C31249DC2AD00154277 /* ShareData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShareData.swift; sourceTree = "<group>"; };
+		E558F08F24A07067001926BD /* HCameraViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HCameraViewController.swift; sourceTree = "<group>"; };
+		E558F09024A07067001926BD /* HCameraViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HCameraViewController.xib; sourceTree = "<group>"; };
 		E5669C1E249A231100845BF6 /* TalkTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TalkTableViewCell.swift; sourceTree = "<group>"; };
 		E5669C1F249A231100845BF6 /* TalkTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TalkTableViewCell.xib; sourceTree = "<group>"; };
 		E5A2D05A249E204B00CD016B /* ChattingTalk.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChattingTalk.swift; sourceTree = "<group>"; };
@@ -168,8 +172,7 @@
 				E552A7B8249A356900BFC64E /* Chattingtalk */,
 				E552A7B6249A354000BFC64E /* Intro */,
 				E552A7C4249A3C7500BFC64E /* Menu */,
-				E5577B2F249F86F100C97347 /* CPickerViewController.swift */,
-				E5577B30249F86F100C97347 /* CPickerViewController.xib */,
+				E558F08E24A0702C001926BD /* Common */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -248,6 +251,17 @@
 				E9115E8B249B3D760047B351 /* MoneyRefundListViewController.swift */,
 			);
 			name = Menu;
+			sourceTree = "<group>";
+		};
+		E558F08E24A0702C001926BD /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				E5577B2F249F86F100C97347 /* CPickerViewController.swift */,
+				E5577B30249F86F100C97347 /* CPickerViewController.xib */,
+				E558F08F24A07067001926BD /* HCameraViewController.swift */,
+				E558F09024A07067001926BD /* HCameraViewController.xib */,
+			);
+			name = Common;
 			sourceTree = "<group>";
 		};
 		E5669C1D249A229C00845BF6 /* Views */ = {
@@ -393,6 +407,7 @@
 			files = (
 				E5577B32249F86F100C97347 /* CPickerViewController.xib in Resources */,
 				E556FEEC249BB2E8001D9BD7 /* ItemView.xib in Resources */,
+				E558F09224A07067001926BD /* HCameraViewController.xib in Resources */,
 				E91C3433249C45B4001145FA /* RollingView.xib in Resources */,
 				E9B8BEB7249848A10082FCAE /* LaunchScreen.storyboard in Resources */,
 				E9115E94249B5B920047B351 /* TalkAlertView.xib in Resources */,
@@ -482,6 +497,7 @@
 				E552A7C3249A3C6F00BFC64E /* ProfileViewController.swift in Sources */,
 				E5577B23249EEC2100C97347 /* BaseViewController.swift in Sources */,
 				E5585C2C249D931400154277 /* ServiceError.swift in Sources */,
+				E558F09124A07067001926BD /* HCameraViewController.swift in Sources */,
 				E552A7AA249A347800BFC64E /* MytalkViewController.swift in Sources */,
 				E9115E8C249B3D760047B351 /* MoneyRefundListViewController.swift in Sources */,
 				E5585C23249CEDF700154277 /* NetWorkManager.swift in Sources */,

@@ -121,10 +121,24 @@ class ProfileViewController: UIViewController, UITextFieldDelegate {
         self.view.endEditing(true)
         
         if sender == btnProfile {
+            let alert = UIAlertController.init(title: nil, message: nil, preferredStyle: UIAlertController.Style.actionSheet)
             
+            alert.addAction(UIAlertAction.init(title: "카메라", style: UIAlertAction.Style.default) { (action) in
+                alert.dismiss(animated: false, completion: nil)
+                self.showCamera(UIImagePickerController.SourceType.camera)
+            })
+            alert.addAction(UIAlertAction.init(title: "캘러리", style: UIAlertAction.Style.default, handler: { (action) in
+                alert.dismiss(animated: false, completion: nil)
+                self.showCamera(UIImagePickerController.SourceType.photoLibrary)
+            }))
+            alert.addAction(UIAlertAction.init(title: "취소", style: UIAlertAction.Style.cancel, handler: { (action) in
+                alert.dismiss(animated: false, completion: nil)
+            }))
+            
+            present(alert, animated: true, completion: nil)
         }
         else if sender == btnGender {
-            
+            self.view.makeToast("성별은 변경 불가합니다.")
         }
         else if sender == btnAge {
             let pickerVC = CPickerViewController.init(nibName: "CPickerViewController", bundle: nil)
@@ -210,5 +224,15 @@ class ProfileViewController: UIViewController, UITextFieldDelegate {
                 self.view.layoutIfNeeded()
             })
         }
+    }
+    
+    func showCamera(_ sourcetype:UIImagePickerController.SourceType) {
+        let vc :HCameraViewController = HCameraViewController.init()
+        vc.sourceType = sourcetype
+        vc.didFinishImagesWithClosure = ({(originImg:UIImage?, cropImg:UIImage?) -> () in
+            print("block operation")
+        })
+        self.navigationController?.pushViewController(vc, animated: false)
+        
     }
 }

@@ -14,4 +14,5 @@ pod 'Kingfisher', '~> 5.0'
 pod 'INSPhotoGallery'
 pod 'Toast-Swift', '~> 5.0.1'
 pod 'SwiftKeychainWrapper'
+pod 'CropViewController'
 end

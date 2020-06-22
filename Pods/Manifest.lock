@@ -1,5 +1,6 @@
 PODS:
   - Alamofire (5.2.1)
+  - CropViewController (2.5.3)
   - INSPhotoGallery (1.2.8)
   - Kingfisher (5.14.0):
     - Kingfisher/Core (= 5.14.0)
@@ -12,6 +13,7 @@ PODS:
 
 DEPENDENCIES:
   - Alamofire (~> 5.2)
+  - CropViewController
   - INSPhotoGallery
   - Kingfisher (~> 5.0)
   - Malert
@@ -23,6 +25,7 @@ DEPENDENCIES:
 SPEC REPOS:
   trunk:
     - Alamofire
+    - CropViewController
     - INSPhotoGallery
     - Kingfisher
     - Malert
@@ -33,6 +36,7 @@ SPEC REPOS:
 
 SPEC CHECKSUMS:
   Alamofire: e911732990610fe89af59ac0077f923d72dc3dfd
+  CropViewController: a5c143548a0fabcd6cc25f2d26e40460cfb8c78c
   INSPhotoGallery: ad317cb9a59c7a5f08550e4155b49622c24dcab3
   Kingfisher: 7b64389a43139c903ec434788344c288217c792d
   Malert: 78badcb143f4df7bff1fa62f4bec05497c7865f3
@@ -41,6 +45,6 @@ SPEC CHECKSUMS:
   SwiftKeychainWrapper: 6fc49fbf7d4a6b0772917acb0e53a1639f6078d6
   Toast-Swift: 9b6a70f28b3bf0b96c40d46c0c4b9d6639846711
 
-PODFILE CHECKSUM: 3971bd9c6e480091a516e9126e29f1adb4488119
+PODFILE CHECKSUM: 382cde7bac45a2002d11fe289424ed9dce045c0c
 
 COCOAPODS: 1.9.0
