@@ -7,7 +7,7 @@
 //
 
 import UIKit
-import PickerView
+
 
 class CPickerViewController: UIViewController {
     
@@ -16,9 +16,14 @@ class CPickerViewController: UIViewController {
     @IBOutlet weak var pickerView: UIPickerView!
     var arrData:[Any]?
     var keys:[String]?
-    var completion: ((_ vcs: UIViewController, _ selData: Any?) -> Void)?
-    
     var selectedData:Any?
+    var selIndex:Int = 0
+    var didSelectedItemWithClosure:(arrData:[Any]?, keys:[String]?, actionClosure:((_ selData:Any?, _ index:Int) ->()))? {
+        didSet {
+            arrData = didSelectedItemWithClosure!.arrData
+            keys = didSelectedItemWithClosure!.keys
+        }
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -26,15 +31,12 @@ class CPickerViewController: UIViewController {
     
     @IBAction func onClickedButtonActions(_ sender: UIButton) {
         if sender == btnOk {
-            if let completion = completion {
-                completion(self, selectedData)
-            }
+            self.didSelectedItemWithClosure?.actionClosure(selectedData, selIndex)
         }
         else if sender == btnFullClose {
-            if let completion = completion {
-                completion(self, nil)
-            }
+            self.didSelectedItemWithClosure?.actionClosure(nil, selIndex)
         }
+        self.dismiss(animated: false, completion: nil)
     }
     
 }
@@ -106,8 +108,9 @@ extension CPickerViewController: UIPickerViewDelegate {
         
         return label
     }
-
+    
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
         self.selectedData = arrData?[row]
+        self.selIndex = row
     }
 }

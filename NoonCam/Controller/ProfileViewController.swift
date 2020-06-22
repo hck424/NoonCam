@@ -124,12 +124,13 @@ class ProfileViewController: UIViewController, UITextFieldDelegate {
         else if sender == btnAge {
             
             let pickerVC = CPickerViewController.init(nibName: "CPickerViewController", bundle: nil)
-            pickerVC.arrData = ["20대", "30대", "40대", "50대", "60대", "70대", "80대"]
+            let arr = ["20대", "30대", "40대", "50대", "60대", "70대", "80대"]
+            pickerVC.didSelectedItemWithClosure = (arr, nil, {actionClosure(selItem: Any?, index:Int) {
+                
+                }})
             pickerVC.setNeedsStatusBarAppearanceUpdate()
             pickerVC.modalPresentationStyle = UIModalPresentationStyle.overCurrentContext
             present(pickerVC, animated: false, completion: nil)
-            
-            
         }
         else if sender == btnArea {
             
@@ -144,7 +145,9 @@ class ProfileViewController: UIViewController, UITextFieldDelegate {
             
         }
     }
-    
+    func actionClosure(selItem:Any?, index:Int) {
+        
+    }
     
     
     //MARK: UITextFieldDelegate
