@@ -24,6 +24,24 @@ class ApiManager: NSObject {
         }
     }
     
+    func convertDictToUrlEncoded(_ param:[String : Any]) -> Data? {
+        var str = ""
+        var i : Int = 0
+        for key in param.keys {
+            if i < (param.keys.count - 1) {
+                str += "\(key)=\(param[key] as! String)&"
+            }
+            else {
+                str += "\(key)=\(param[key] as! String)"
+            }
+            i += 1
+        }
+        
+        guard let data = str.data(using: String.Encoding.utf8) else { return nil}
+        return data
+        
+    }
+    
     //MARK: 영상토크 리스트
     func requestCamTalkList(_ params:[String:Any], success: @escaping ResSuccess, failure: @escaping ResFailure) {
         guard let body = self.convertDictToJsonData(params) else { failure(.someError); return }
@@ -138,19 +156,18 @@ class ApiManager: NSObject {
     }
         
     //프로파일 정보 변경
-//    func requestModifyUserInfomation(_ param:[String : Any], @escaping ResSuccess, failure: @escaping ResFailure) {
-//        let para = ["clientPara":params]
-//        
-//        guard let body = self.convertDictToJsonData(para) else { failure(.someError); return }
-//
-//        NetWorkManager.shared.excecutePost("http://snsncam.com/api/talk/getUserInfo.json", body as Data, true, success: { result in
-//            print(result ?? "")
-//            success(result)
-//
-//        }) { error in
-//            print(error!)
-//            failure(error)
-//        }
-//    }
+    func requestModifyUserInfomation(_ params:[String : Any], successBlock success:@escaping ResSuccess, failureBlock failure: @escaping ResFailure) {
+        
+        guard let body = self.convertDictToUrlEncoded(params) else { failure(.someError); return}
+        
+        NetWorkManager.shared.excecutePost("http://snsncam.com/api/talk/updateUser.do", body as Data, false, success: { result in
+            print(result ?? "")
+            success(result)
+
+        }) { error in
+            print(error!)
+            failure(error)
+        }
+    }
     
 }

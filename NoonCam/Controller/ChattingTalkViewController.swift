@@ -62,7 +62,7 @@ class ChattingTalkViewController: BaseViewController {
                     return
                 }
                 
-                if userArea == "비공개" {
+                if userArea == "미공개" {
                     self.view.makeToast("지역 비공개 설정입니다.")
                     return
                 }

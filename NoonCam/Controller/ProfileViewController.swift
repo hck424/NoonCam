@@ -118,6 +118,8 @@ class ProfileViewController: UIViewController, UITextFieldDelegate {
         self.navigationController?.popViewController(animated: false)
     }
     @IBAction func onClickedButtonActions(_ sender: UIButton) {
+        self.view.endEditing(true)
+        
         if sender == btnProfile {
             
         }
@@ -173,7 +175,14 @@ class ProfileViewController: UIViewController, UITextFieldDelegate {
                          "user_area" : btnArea.titleLabel?.text!,
                          "user_sex": btnGender.titleLabel?.text!]
             
-//            ApiManager.shared.requestModifyUserInfomation:param
+            ApiManager.shared.requestModifyUserInfomation(param as [String : Any], successBlock: { (result) in
+                self.view.makeToast("회원 정보가 수정되었습니다.")
+                ShareData.shared.myArea = self.btnArea.titleLabel?.text!
+                ShareData.shared.myAge = self.btnAge.titleLabel?.text!
+                ShareData.shared.myName = self.tfUserId.text!
+            }) { (error) in
+                print(error?.localizedDescription ?? "")
+            }
             
         }
     }

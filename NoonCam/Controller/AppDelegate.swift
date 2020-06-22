@@ -76,7 +76,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         ShareData.shared.myGender = Gender.male
         ShareData.shared.myId = "a1f5f492-8f25-3090-96e2-d5414023c6cc"
 //        CValiable.shared.myArea = UserDefaults.standard.object(forKey: "USER_AREA") as? String
-        ShareData.shared.myArea = "서울"
+//        ShareData.shared.myArea = "서울"
         return true
     }
 

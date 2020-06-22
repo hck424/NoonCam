@@ -63,7 +63,10 @@ public func numberString(_ num: NSNumber) -> String {
 class ShareData: NSObject {
     public var myGender:Gender = .male
     public var myId:String?
+    public var myName:String?
+    public var myAge:String?
     public var myArea:String?
+    
     var myInfo:[String : Any]?
     
     static let shared = ShareData()
