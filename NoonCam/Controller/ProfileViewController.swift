@@ -125,9 +125,9 @@ class ProfileViewController: UIViewController, UITextFieldDelegate {
             
             let pickerVC = CPickerViewController.init(nibName: "CPickerViewController", bundle: nil)
             let arr = ["20대", "30대", "40대", "50대", "60대", "70대", "80대"]
-            pickerVC.didSelectedItemWithClosure = (arr, nil, {actionClosure(selItem: Any?, index:Int) {
-                
-                }})
+//            pickerVC.didSelectedItemWithClosure = (arr, nil, {actionClosure(selItem: Any?, index:Int) {
+//                
+//                }})
             pickerVC.setNeedsStatusBarAppearanceUpdate()
             pickerVC.modalPresentationStyle = UIModalPresentationStyle.overCurrentContext
             present(pickerVC, animated: false, completion: nil)
