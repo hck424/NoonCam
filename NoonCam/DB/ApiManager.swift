@@ -137,5 +137,20 @@ class ApiManager: NSObject {
         }
     }
         
+    //프로파일 정보 변경
+//    func requestModifyUserInfomation(_ param:[String : Any], @escaping ResSuccess, failure: @escaping ResFailure) {
+//        let para = ["clientPara":params]
+//        
+//        guard let body = self.convertDictToJsonData(para) else { failure(.someError); return }
+//
+//        NetWorkManager.shared.excecutePost("http://snsncam.com/api/talk/getUserInfo.json", body as Data, true, success: { result in
+//            print(result ?? "")
+//            success(result)
+//
+//        }) { error in
+//            print(error!)
+//            failure(error)
+//        }
+//    }
     
 }

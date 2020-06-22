@@ -16,22 +16,24 @@ class CPickerViewController: UIViewController {
     @IBOutlet weak var pickerView: UIPickerView!
     var arrData:[Any]?
     var keys:[String]?
-    var selectedData:Any?
     var selIndex:Int = 0
-    var didSelectedItemWithClosure:(arrData:[Any]?, keys:[String]?, actionClosure:((_ selData:Any?, _ index:Int) ->()))? {
+    var didSelectedItemWithClosure:(arrData:[Any]?, keys:[String]?,selIndex:Int, actionClosure:((_ selData:Any?, _ index:Int) ->()))? {
         didSet {
             arrData = didSelectedItemWithClosure!.arrData
             keys = didSelectedItemWithClosure!.keys
+            self.selIndex = didSelectedItemWithClosure!.selIndex
         }
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.pickerView.selectRow(selIndex, inComponent: 0, animated: true)
     }
     
     @IBAction func onClickedButtonActions(_ sender: UIButton) {
         if sender == btnOk {
-            self.didSelectedItemWithClosure?.actionClosure(selectedData, selIndex)
+            let selData = arrData?[selIndex]
+            self.didSelectedItemWithClosure?.actionClosure(selData, selIndex)
         }
         else if sender == btnFullClose {
             self.didSelectedItemWithClosure?.actionClosure(nil, selIndex)
@@ -71,19 +73,19 @@ extension CPickerViewController: UIPickerViewDelegate {
         label.textAlignment = .center
         label.font = UIFont(name: "Helvetica", size: 16)
         
+        label.text = ""
+        
+        var text:NSString = ""
         if let data = arrData?[row] as? String {
-            label.text = data
-        }
-        else if let data = arrData?[row] as? NSAttributedString {
-            label.attributedText = data
+            text = data as NSString
         }
         else if let data = arrData?[row] as? [String:Any] {
             if keys?.count == 0 {
-                label.text = ""
+                
             }
             else if keys?.count == 1 {
                 if let key = keys?.first, let d = data[key] as? String {
-                    label.text = d
+                    text = d as NSString
                 }
             }
             else {
@@ -101,16 +103,23 @@ extension CPickerViewController: UIPickerViewDelegate {
                         text += "\(d) "
                     }
                 }
-                
-                label.text = text
             }
         }
+        
+        let attr: NSAttributedString
+        
+        if selIndex == row {
+            attr = NSAttributedString.init(string: text as String, attributes:[NSAttributedString.Key.foregroundColor: UIColor.red])
+        } else {
+            attr = NSAttributedString.init(string: text as String, attributes:[NSAttributedString.Key.foregroundColor: UIColor.darkText])
+        }
+        label.attributedText = attr
         
         return label
     }
     
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
-        self.selectedData = arrData?[row]
         self.selIndex = row
+        pickerView.reloadAllComponents()
     }
 }

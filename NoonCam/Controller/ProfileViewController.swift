@@ -8,6 +8,8 @@
 
 import UIKit
 import Kingfisher
+import Toast_Swift
+
 class ProfileViewController: UIViewController, UITextFieldDelegate {
 
     @IBOutlet weak var ivProfile: UIImageView!
@@ -109,6 +111,7 @@ class ProfileViewController: UIViewController, UITextFieldDelegate {
         btnGender.setTitle(ShareData.shared.myGender.value, for: .normal)
         btnAge.setTitle(myInfo["user_age"] as? String, for: .normal)
         btnArea.setTitle(myInfo["user_area"] as? String, for: .normal)
+        tfUserId.text = myInfo["user_name"] as? String
     }
     
     @IBAction func onClickedBackAction(_ sender: Any) {
@@ -122,32 +125,59 @@ class ProfileViewController: UIViewController, UITextFieldDelegate {
             
         }
         else if sender == btnAge {
-            
             let pickerVC = CPickerViewController.init(nibName: "CPickerViewController", bundle: nil)
             let arr = ["20대", "30대", "40대", "50대", "60대", "70대", "80대"]
-//            pickerVC.didSelectedItemWithClosure = (arr, nil, {actionClosure(selItem: Any?, index:Int) {
-//                
-//                }})
+            let title = btnAge.titleLabel?.text!
+            let defaultIndex = arr.firstIndex(of: title!) ?? 0
+            pickerVC.didSelectedItemWithClosure = (arr, nil,defaultIndex, {(selData:Any?, index:Int) -> () in
+                if selData != nil {
+                    self.btnAge .setTitle(selData as? String, for: .normal)
+                }
+            })
+            
             pickerVC.setNeedsStatusBarAppearanceUpdate()
             pickerVC.modalPresentationStyle = UIModalPresentationStyle.overCurrentContext
             present(pickerVC, animated: false, completion: nil)
         }
         else if sender == btnArea {
             
+            let pickerVC = CPickerViewController.init(nibName: "CPickerViewController", bundle: nil)
+            let arr = ["미공개", "서울", "부산", "대구", "인천", "광주", "대전", "울산", "경기", "강원", "충북", "충남", "전북", "전남", "경북", "경남", "제주"]
+            let title = btnArea.titleLabel?.text!
+            let defaultIndex = arr.firstIndex(of: title!) ?? 0
+            pickerVC.didSelectedItemWithClosure = (arr, nil, defaultIndex, {(selData:Any?, index:Int) -> () in
+                if selData != nil {
+                    self.btnArea.setTitle(selData as? String, for: .normal)
+                }
+            })
+            
+            pickerVC.setNeedsStatusBarAppearanceUpdate()
+            pickerVC.modalPresentationStyle = UIModalPresentationStyle.overCurrentContext
+            present(pickerVC, animated: false, completion: nil)
         }
         else if sender == btnTermsRegit {
-            
+            self.view.makeToast("링크 준비중입니다.")
         }
         else if sender == btnTermsPersonal {
-            
+            self.view.makeToast("링크 준비중입니다.")
         }
         else if sender == btnOk {
+            if tfUserId.text == nil {
+                self.view.makeToast("네임은 필수 정보입니다.")
+                return
+            }
+//            user_id={user_id}&user_name={user_name}&user_age={user_age}&user_area={user_area}&user_sex={user_sex}
+            let param = ["user_id": ShareData.shared.myInfo!["user_id"],
+                         "user_name" : tfUserId.text!,
+                         "user_age" : btnAge.titleLabel?.text!,
+                         "user_area" : btnArea.titleLabel?.text!,
+                         "user_sex": btnGender.titleLabel?.text!]
+            
+//            ApiManager.shared.requestModifyUserInfomation:param
             
         }
     }
-    func actionClosure(selItem:Any?, index:Int) {
-        
-    }
+    
     
     
     //MARK: UITextFieldDelegate
