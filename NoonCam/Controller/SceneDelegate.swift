@@ -8,7 +8,15 @@
 
 import UIKit
 
+
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
+    class func instance() -> SceneDelegate? {
+        if #available(iOS 13.0, *) {
+            return Array(UIApplication.shared.connectedScenes).first?.delegate as? SceneDelegate
+        } else {
+            return nil
+        }
+    }
 
     var window: UIWindow?
 
@@ -18,9 +26,10 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         
         if let scene = scene as? UIWindowScene {
             window = UIWindow(windowScene: scene)
-            AppDelegate.instance().window = window
+            
+            AppDelegate.instance().callIntroViewController()
         }
-        AppDelegate.instance().callIntroViewController()
+        
         guard let _ = (scene as? UIWindowScene) else { return }
     }
 

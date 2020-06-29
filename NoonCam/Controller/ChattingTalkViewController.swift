@@ -82,7 +82,7 @@ class ChattingTalkViewController: BaseViewController {
             else if sender == btnMyTalk {
                 let vc = self.storyboard?.instantiateViewController(withIdentifier: "MytalkViewController") as!MytalkViewController
                 vc.type = .chatting
-                AppDelegate.instance().mainNaviController?.pushViewController(vc, animated: false)
+                AppDelegate.instance().getMainMainNavi().pushViewController(vc, animated: false)
             }
         }
     }

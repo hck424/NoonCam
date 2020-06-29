@@ -32,10 +32,501 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="C2w-4b-mbf" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1507.2463768115942" y="-552.45535714285711"/>
+            <point key="canvasLocation" x="-1336" y="-558"/>
+        </scene>
+        <!--Term View Controller-->
+        <scene sceneID="l1X-F4-Gk1">
+            <objects>
+                <viewController storyboardIdentifier="TermViewController" id="IkZ-2Q-Cdl" customClass="TermViewController" customModule="NoonCam" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="BcX-Aq-wEd">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="gps-YZ-SjD">
+                                <rect key="frame" x="0.0" y="88" width="414" height="808"/>
+                                <subviews>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="esk-sE-6Aq">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="724"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                        <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                        <dataDetectorType key="dataDetectorTypes" phoneNumber="YES" link="YES" address="YES" flightNumber="YES"/>
+                                    </textView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="SSo-rz-qQQ">
+                                        <rect key="frame" x="0.0" y="724" width="414" height="84"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UpF-RA-L4a">
+                                                <rect key="frame" x="0.0" y="0.0" width="414" height="50"/>
+                                                <color key="backgroundColor" red="0.090196078430000007" green="0.52156862749999999" blue="0.93725490199999995" alpha="1" colorSpace="calibratedRGB"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="50" id="kWH-ag-Ki2"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="18"/>
+                                                <state key="normal" title="동의함"/>
+                                                <connections>
+                                                    <action selector="onClickedButtonActions:" destination="IkZ-2Q-Cdl" eventType="touchUpInside" id="7tC-ty-ZHR"/>
+                                                </connections>
+                                            </button>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4Ph-3B-Bpo">
+                                                <rect key="frame" x="0.0" y="50" width="414" height="34"/>
+                                                <color key="backgroundColor" red="0.090196078430000007" green="0.52156862749999999" blue="0.93725490199999995" alpha="1" colorSpace="calibratedRGB"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="34" id="rRN-xM-FTM"/>
+                                                </constraints>
+                                            </view>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="gps-YZ-SjD" firstAttribute="trailing" secondItem="V0Y-4j-beR" secondAttribute="trailing" id="Bel-TV-lLZ"/>
+                            <constraint firstItem="gps-YZ-SjD" firstAttribute="top" secondItem="V0Y-4j-beR" secondAttribute="top" id="JU3-tZ-rFC"/>
+                            <constraint firstAttribute="bottom" secondItem="gps-YZ-SjD" secondAttribute="bottom" id="VzE-JH-fTF"/>
+                            <constraint firstItem="gps-YZ-SjD" firstAttribute="leading" secondItem="V0Y-4j-beR" secondAttribute="leading" id="dwn-Bw-Tes"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="V0Y-4j-beR"/>
+                    </view>
+                    <navigationItem key="navigationItem" leftItemsSupplementBackButton="YES" id="XTm-u4-gJ4">
+                        <barButtonItem key="leftBarButtonItem" style="plain" id="osT-xJ-uiD">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="RUJ-e0-SxK">
+                                <rect key="frame" x="20" y="0.0" width="150" height="44"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="18"/>
+                                <inset key="titleEdgeInsets" minX="6" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                <state key="normal" title="개인정보 약관" image="icon_back">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="onClickedButtonActions:" destination="IkZ-2Q-Cdl" eventType="touchUpInside" id="DLP-io-GaW"/>
+                                </connections>
+                            </button>
+                        </barButtonItem>
+                    </navigationItem>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
+                    <connections>
+                        <outlet property="btnBack" destination="RUJ-e0-SxK" id="B19-jp-cye"/>
+                        <outlet property="btnOk" destination="UpF-RA-L4a" id="bb9-kv-6zQ"/>
+                        <outlet property="svOk" destination="SSo-rz-qQQ" id="l25-d0-WvL"/>
+                        <outlet property="textView" destination="esk-sE-6Aq" id="fBE-oy-oL1"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="BVX-zY-Vph" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="908.69565217391312" y="-528.34821428571422"/>
+        </scene>
+        <!--Member Regist View Controller-->
+        <scene sceneID="waz-Vd-puN">
+            <objects>
+                <viewController storyboardIdentifier="MemberRegistViewController" id="yOt-lT-Q2X" customClass="MemberRegistViewController" customModule="NoonCam" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="0us-OC-1Aa">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="OGh-Wq-5r8">
+                                <rect key="frame" x="0.0" y="88" width="414" height="808"/>
+                                <subviews>
+                                    <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" contentInsetAdjustmentBehavior="never" translatesAutoresizingMaskIntoConstraints="NO" id="i1t-3Z-MEj">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="724"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="M3j-9Q-J0q">
+                                                <rect key="frame" x="0.0" y="0.0" width="414" height="414"/>
+                                                <subviews>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="ppI-Ce-PRL">
+                                                        <rect key="frame" x="25" y="30" width="364" height="34"/>
+                                                        <subviews>
+                                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="닉네임" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="zLv-J1-5LS">
+                                                                <rect key="frame" x="0.0" y="0.0" width="274" height="34"/>
+                                                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                                                <textInputTraits key="textInputTraits"/>
+                                                                <connections>
+                                                                    <action selector="editingChangedActions:" destination="yOt-lT-Q2X" eventType="editingChanged" id="N8S-t8-IDO"/>
+                                                                    <outlet property="delegate" destination="yOt-lT-Q2X" id="bvE-fE-pur"/>
+                                                                </connections>
+                                                            </textField>
+                                                            <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BB8-GY-AqP">
+                                                                <rect key="frame" x="282" y="0.0" width="82" height="34"/>
+                                                                <color key="backgroundColor" red="0.6293368936" green="0.25212717060000001" blue="0.21174174549999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                                <inset key="contentEdgeInsets" minX="15" minY="0.0" maxX="15" maxY="0.0"/>
+                                                                <state key="normal" title="중복체크">
+                                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                </state>
+                                                                <connections>
+                                                                    <action selector="onClickedButtonActions:" destination="yOt-lT-Q2X" eventType="touchUpInside" id="WaM-2w-Qxf"/>
+                                                                </connections>
+                                                            </button>
+                                                        </subviews>
+                                                    </stackView>
+                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="인사말" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="cpj-J6-Xx4">
+                                                        <rect key="frame" x="25" y="74" width="364" height="34"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                                        <textInputTraits key="textInputTraits"/>
+                                                        <connections>
+                                                            <action selector="editingChangedActions:" destination="yOt-lT-Q2X" eventType="editingChanged" id="atf-di-1BG"/>
+                                                            <outlet property="delegate" destination="yOt-lT-Q2X" id="QdY-8E-DuQ"/>
+                                                        </connections>
+                                                    </textField>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="3HA-7W-RFN">
+                                                        <rect key="frame" x="25" y="118" width="364" height="35"/>
+                                                        <subviews>
+                                                            <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="253" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qFW-g7-abd">
+                                                                <rect key="frame" x="0.0" y="0.0" width="65" height="35"/>
+                                                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                                                <inset key="contentEdgeInsets" minX="10" minY="0.0" maxX="20" maxY="0.0"/>
+                                                                <inset key="imageEdgeInsets" minX="-15" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                                                <state key="normal" title="남" image="icon_check_box_off">
+                                                                    <color key="titleColor" red="0.4756349325" green="0.47564673419999998" blue="0.47564041610000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                </state>
+                                                                <state key="selected" image="icon_check_box_on"/>
+                                                                <connections>
+                                                                    <action selector="onClickedButtonActions:" destination="yOt-lT-Q2X" eventType="touchUpInside" id="fcU-DY-Lfo"/>
+                                                                </connections>
+                                                            </button>
+                                                            <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="252" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rZa-Ai-keY">
+                                                                <rect key="frame" x="75" y="0.0" width="65" height="35"/>
+                                                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                                                <inset key="contentEdgeInsets" minX="10" minY="0.0" maxX="20" maxY="0.0"/>
+                                                                <inset key="imageEdgeInsets" minX="-15" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                                                <state key="normal" title="여" image="icon_check_box_off">
+                                                                    <color key="titleColor" red="0.4756349325" green="0.47564673419999998" blue="0.47564041610000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                </state>
+                                                                <state key="selected" image="icon_check_box_on"/>
+                                                                <connections>
+                                                                    <action selector="onClickedButtonActions:" destination="yOt-lT-Q2X" eventType="touchUpInside" id="M9d-GP-96f"/>
+                                                                </connections>
+                                                            </button>
+                                                            <view contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6yZ-TK-fcu" customClass="UIButton">
+                                                                <rect key="frame" x="150" y="0.0" width="99" height="35"/>
+                                                                <subviews>
+                                                                    <stackView opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="QLT-ds-z1a">
+                                                                        <rect key="frame" x="0.0" y="0.0" width="99" height="35"/>
+                                                                        <subviews>
+                                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="연령" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1Gd-M8-g3i">
+                                                                                <rect key="frame" x="16" y="0.0" width="55" height="35"/>
+                                                                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                                                                <color key="textColor" red="0.0" green="0.52156862749999999" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                                <nil key="highlightedColor"/>
+                                                                            </label>
+                                                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="sort_down" translatesAutoresizingMaskIntoConstraints="NO" id="dSJ-uQ-bDj">
+                                                                                <rect key="frame" x="76" y="0.0" width="15" height="35"/>
+                                                                                <constraints>
+                                                                                    <constraint firstAttribute="width" constant="15" id="vKo-Cw-5kn"/>
+                                                                                </constraints>
+                                                                            </imageView>
+                                                                        </subviews>
+                                                                        <edgeInsets key="layoutMargins" top="0.0" left="16" bottom="0.0" right="8"/>
+                                                                    </stackView>
+                                                                </subviews>
+                                                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                                                <constraints>
+                                                                    <constraint firstItem="QLT-ds-z1a" firstAttribute="leading" secondItem="6yZ-TK-fcu" secondAttribute="leading" id="glD-Uc-aiR"/>
+                                                                    <constraint firstAttribute="bottom" secondItem="QLT-ds-z1a" secondAttribute="bottom" id="jJ7-e3-lNo"/>
+                                                                    <constraint firstAttribute="trailing" secondItem="QLT-ds-z1a" secondAttribute="trailing" id="sYI-G7-WpG"/>
+                                                                    <constraint firstItem="QLT-ds-z1a" firstAttribute="top" secondItem="6yZ-TK-fcu" secondAttribute="top" id="vav-3k-sXa"/>
+                                                                </constraints>
+                                                                <connections>
+                                                                    <action selector="onClickedButtonActions:" destination="yOt-lT-Q2X" eventType="touchUpInside" id="SnT-Cq-QiS"/>
+                                                                </connections>
+                                                            </view>
+                                                            <view contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2N5-QQ-ASD" customClass="UIButton">
+                                                                <rect key="frame" x="259" y="0.0" width="105" height="35"/>
+                                                                <subviews>
+                                                                    <stackView opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="iBY-oh-405">
+                                                                        <rect key="frame" x="0.0" y="0.0" width="105" height="35"/>
+                                                                        <subviews>
+                                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="지역" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aOc-JL-cgP">
+                                                                                <rect key="frame" x="16" y="0.0" width="61" height="35"/>
+                                                                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                                                                <color key="textColor" red="0.0" green="0.52156862749999999" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                                <nil key="highlightedColor"/>
+                                                                            </label>
+                                                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="sort_down" translatesAutoresizingMaskIntoConstraints="NO" id="a4n-WJ-PVv">
+                                                                                <rect key="frame" x="82" y="0.0" width="15" height="35"/>
+                                                                                <constraints>
+                                                                                    <constraint firstAttribute="width" constant="15" id="bVb-sV-cGi"/>
+                                                                                </constraints>
+                                                                            </imageView>
+                                                                        </subviews>
+                                                                        <edgeInsets key="layoutMargins" top="0.0" left="16" bottom="0.0" right="8"/>
+                                                                    </stackView>
+                                                                </subviews>
+                                                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="bottom" secondItem="iBY-oh-405" secondAttribute="bottom" id="9bd-BF-d9m"/>
+                                                                    <constraint firstAttribute="trailing" secondItem="iBY-oh-405" secondAttribute="trailing" id="eua-FA-W3i"/>
+                                                                    <constraint firstItem="iBY-oh-405" firstAttribute="top" secondItem="2N5-QQ-ASD" secondAttribute="top" id="kJl-aV-87g"/>
+                                                                    <constraint firstItem="iBY-oh-405" firstAttribute="leading" secondItem="2N5-QQ-ASD" secondAttribute="leading" id="v0M-EF-f4L"/>
+                                                                </constraints>
+                                                                <connections>
+                                                                    <action selector="onClickedButtonActions:" destination="yOt-lT-Q2X" eventType="touchUpInside" id="lwM-m6-ZD3"/>
+                                                                </connections>
+                                                            </view>
+                                                        </subviews>
+                                                        <constraints>
+                                                            <constraint firstItem="2N5-QQ-ASD" firstAttribute="width" secondItem="6yZ-TK-fcu" secondAttribute="width" multiplier="1.05714" id="A8d-99-Bhh"/>
+                                                            <constraint firstAttribute="height" constant="35" id="Sik-Vg-QMh"/>
+                                                        </constraints>
+                                                    </stackView>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="가입시 등록된 성별은 변경 불가능합니다." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2wP-Oa-qbD">
+                                                        <rect key="frame" x="25" y="163" width="364" height="17"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                        <color key="textColor" red="0.50980392159999999" green="0.50980392159999999" blue="0.50980392159999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="VZo-m7-ol1">
+                                                        <rect key="frame" x="25" y="190" width="364" height="50"/>
+                                                        <subviews>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="알림  :" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1KL-Yi-2Qm">
+                                                                <rect key="frame" x="0.0" y="20" width="38.5" height="30"/>
+                                                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                                                <nil key="textColor"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Rup-ak-sgM">
+                                                                <rect key="frame" x="48.5" y="20" width="76" height="30"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="height" constant="30" id="Skh-VV-dIk"/>
+                                                                </constraints>
+                                                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                                                <inset key="contentEdgeInsets" minX="8" minY="0.0" maxX="20" maxY="0.0"/>
+                                                                <inset key="imageEdgeInsets" minX="-12" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                                                <state key="normal" title="소리" image="icon_check_box_off">
+                                                                    <color key="titleColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                                </state>
+                                                                <state key="selected" image="icon_check_box_on">
+                                                                    <color key="titleColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                                </state>
+                                                                <connections>
+                                                                    <action selector="onClickedButtonActions:" destination="yOt-lT-Q2X" eventType="touchUpInside" id="SIc-gM-0bb"/>
+                                                                </connections>
+                                                            </button>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JUg-QJ-upY">
+                                                                <rect key="frame" x="134.5" y="20" width="76" height="30"/>
+                                                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                                                <inset key="contentEdgeInsets" minX="8" minY="0.0" maxX="20" maxY="0.0"/>
+                                                                <inset key="imageEdgeInsets" minX="-12" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                                                <state key="normal" title="진동" image="icon_check_box_off">
+                                                                    <color key="titleColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                                </state>
+                                                                <state key="selected" image="icon_check_box_on">
+                                                                    <color key="titleColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                                </state>
+                                                                <connections>
+                                                                    <action selector="onClickedButtonActions:" destination="yOt-lT-Q2X" eventType="touchUpInside" id="Tf2-B7-KZm"/>
+                                                                </connections>
+                                                            </button>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="22u-p4-WKD">
+                                                                <rect key="frame" x="220.5" y="20" width="76" height="30"/>
+                                                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                                                <inset key="contentEdgeInsets" minX="8" minY="0.0" maxX="20" maxY="0.0"/>
+                                                                <inset key="imageEdgeInsets" minX="-12" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                                                <state key="normal" title="없음" image="icon_check_box_off">
+                                                                    <color key="titleColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                                </state>
+                                                                <state key="selected" image="icon_check_box_on">
+                                                                    <color key="titleColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                                </state>
+                                                                <connections>
+                                                                    <action selector="onClickedButtonActions:" destination="yOt-lT-Q2X" eventType="touchUpInside" id="0hO-WX-bZR"/>
+                                                                </connections>
+                                                            </button>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="1" verticalHuggingPriority="1" horizontalCompressionResistancePriority="1" verticalCompressionResistancePriority="1" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IM0-j6-zr6">
+                                                                <rect key="frame" x="306.5" y="20" width="57.5" height="30"/>
+                                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                                <nil key="textColor"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                        </subviews>
+                                                        <edgeInsets key="layoutMargins" top="20" left="0.0" bottom="0.0" right="0.0"/>
+                                                    </stackView>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="Akc-3a-gPB">
+                                                        <rect key="frame" x="25" y="250" width="364" height="50"/>
+                                                        <subviews>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uzR-Lc-Qu2">
+                                                                <rect key="frame" x="0.0" y="0.0" width="49" height="25"/>
+                                                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                                                <state key="normal" title="가입 약관">
+                                                                    <color key="titleColor" systemColor="linkColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                </state>
+                                                                <connections>
+                                                                    <action selector="onClickedButtonActions:" destination="yOt-lT-Q2X" eventType="touchUpInside" id="PhU-c3-cbK"/>
+                                                                </connections>
+                                                            </button>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Fhe-tI-XwC">
+                                                                <rect key="frame" x="0.0" y="25" width="139" height="25"/>
+                                                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                                                <state key="normal" title="개인 정보 수집 이용 동의서">
+                                                                    <color key="titleColor" systemColor="linkColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                </state>
+                                                                <connections>
+                                                                    <action selector="onClickedButtonActions:" destination="yOt-lT-Q2X" eventType="touchUpInside" id="qEG-Kx-sGW"/>
+                                                                </connections>
+                                                            </button>
+                                                        </subviews>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="50" id="pOi-G0-eYw"/>
+                                                        </constraints>
+                                                    </stackView>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="vic-o2-J7n">
+                                                        <rect key="frame" x="25" y="310" width="364" height="60"/>
+                                                        <subviews>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XVC-wv-aWP">
+                                                                <rect key="frame" x="0.0" y="0.0" width="93" height="30"/>
+                                                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                                                <inset key="contentEdgeInsets" minX="5" minY="0.0" maxX="10" maxY="0.0"/>
+                                                                <inset key="imageEdgeInsets" minX="-5" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                                                <state key="normal" title="약관 동의" image="icon_check_box_off">
+                                                                    <color key="titleColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                                </state>
+                                                                <state key="selected" image="icon_check_box_on">
+                                                                    <color key="titleColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                                </state>
+                                                                <connections>
+                                                                    <action selector="onClickedButtonActions:" destination="yOt-lT-Q2X" eventType="touchUpInside" id="Pd6-GU-AW4"/>
+                                                                </connections>
+                                                            </button>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="E4L-p0-RUm">
+                                                                <rect key="frame" x="0.0" y="30" width="183" height="30"/>
+                                                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                                                <inset key="contentEdgeInsets" minX="5" minY="0.0" maxX="10" maxY="0.0"/>
+                                                                <inset key="imageEdgeInsets" minX="-5" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                                                <state key="normal" title="개인 정보 수집 이용 동의" image="icon_check_box_off">
+                                                                    <color key="titleColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                                </state>
+                                                                <state key="selected" image="icon_check_box_on">
+                                                                    <color key="titleColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                                </state>
+                                                                <connections>
+                                                                    <action selector="onClickedButtonActions:" destination="yOt-lT-Q2X" eventType="touchUpInside" id="uW9-uZ-BVF"/>
+                                                                </connections>
+                                                            </button>
+                                                        </subviews>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="60" id="YEf-Zt-JVB"/>
+                                                        </constraints>
+                                                    </stackView>
+                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="추천인 코드를 입력해주세요" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="lsP-mE-dsA">
+                                                        <rect key="frame" x="25" y="380" width="364" height="34"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                                        <textInputTraits key="textInputTraits"/>
+                                                    </textField>
+                                                </subviews>
+                                                <edgeInsets key="layoutMargins" top="30" left="25" bottom="0.0" right="25"/>
+                                            </stackView>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="M3j-9Q-J0q" firstAttribute="height" secondItem="i1t-3Z-MEj" secondAttribute="height" priority="1" id="59p-BE-bSo"/>
+                                            <constraint firstItem="M3j-9Q-J0q" firstAttribute="top" secondItem="i1t-3Z-MEj" secondAttribute="top" id="BTj-BS-MEh"/>
+                                            <constraint firstItem="M3j-9Q-J0q" firstAttribute="width" secondItem="i1t-3Z-MEj" secondAttribute="width" id="FIo-6B-Wwr"/>
+                                            <constraint firstItem="M3j-9Q-J0q" firstAttribute="leading" secondItem="i1t-3Z-MEj" secondAttribute="leading" id="FJP-Ti-eks"/>
+                                            <constraint firstAttribute="bottom" secondItem="M3j-9Q-J0q" secondAttribute="bottom" id="Y9H-oo-IQI"/>
+                                            <constraint firstAttribute="trailing" secondItem="M3j-9Q-J0q" secondAttribute="trailing" id="nJh-ur-Gtk"/>
+                                        </constraints>
+                                    </scrollView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="5r8-Po-kLp">
+                                        <rect key="frame" x="0.0" y="724" width="414" height="84"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="b24-No-hYE">
+                                                <rect key="frame" x="0.0" y="0.0" width="414" height="50"/>
+                                                <color key="backgroundColor" red="0.090196078430000007" green="0.52156862749999999" blue="0.93725490199999995" alpha="1" colorSpace="calibratedRGB"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="50" id="DDL-LB-diC"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="18"/>
+                                                <state key="normal" title="가입"/>
+                                                <connections>
+                                                    <action selector="onClickedButtonActions:" destination="yOt-lT-Q2X" eventType="touchUpInside" id="bpE-BI-rhP"/>
+                                                </connections>
+                                            </button>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ocN-hg-7Kx">
+                                                <rect key="frame" x="0.0" y="50" width="414" height="34"/>
+                                                <color key="backgroundColor" red="0.090196078430000007" green="0.52156862749999999" blue="0.93725490199999995" alpha="1" colorSpace="calibratedRGB"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="34" id="pO0-k8-BQB"/>
+                                                </constraints>
+                                            </view>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="OGh-Wq-5r8" firstAttribute="leading" secondItem="5DU-f2-ijy" secondAttribute="leading" id="2od-Qe-avG"/>
+                            <constraint firstItem="OGh-Wq-5r8" firstAttribute="top" secondItem="5DU-f2-ijy" secondAttribute="top" id="Pat-xB-MT5"/>
+                            <constraint firstAttribute="bottom" secondItem="OGh-Wq-5r8" secondAttribute="bottom" id="ZAv-88-bav"/>
+                            <constraint firstAttribute="trailing" secondItem="OGh-Wq-5r8" secondAttribute="trailing" id="h1A-ij-tzh"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="5DU-f2-ijy"/>
+                    </view>
+                    <navigationItem key="navigationItem" leftItemsSupplementBackButton="YES" id="rbT-4c-luX">
+                        <barButtonItem key="leftBarButtonItem" style="plain" id="w1G-tB-B7F">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="MzX-40-J6L">
+                                <rect key="frame" x="20" y="0.0" width="150" height="44"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="18"/>
+                                <inset key="titleEdgeInsets" minX="6" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                <state key="normal" title="개인정보 약관" image="icon_back">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="onClickedButtonActions:" destination="yOt-lT-Q2X" eventType="touchUpInside" id="c17-PX-9Va"/>
+                                </connections>
+                            </button>
+                        </barButtonItem>
+                    </navigationItem>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
+                    <connections>
+                        <outlet property="bottomScrollView" destination="ZAv-88-bav" id="Cul-Nj-nVO"/>
+                        <outlet property="btnAge" destination="6yZ-TK-fcu" id="KBB-Yq-0jb"/>
+                        <outlet property="btnArea" destination="2N5-QQ-ASD" id="XeR-13-i8P"/>
+                        <outlet property="btnBack" destination="MzX-40-J6L" id="GIZ-st-zQW"/>
+                        <outlet property="btnCheckTerm1" destination="XVC-wv-aWP" id="Tjb-NP-EMu"/>
+                        <outlet property="btnCheckTerm2" destination="E4L-p0-RUm" id="6le-y7-6pr"/>
+                        <outlet property="btnLinkTerm1" destination="uzR-Lc-Qu2" id="MSh-Zp-7ri"/>
+                        <outlet property="btnLinkTerm2" destination="Fhe-tI-XwC" id="L6U-9U-0hp"/>
+                        <outlet property="btnMan" destination="qFW-g7-abd" id="U6v-UO-0c9"/>
+                        <outlet property="btnMute" destination="22u-p4-WKD" id="hnV-J9-dzV"/>
+                        <outlet property="btnNickNameCheck" destination="BB8-GY-AqP" id="PTK-gi-kxR"/>
+                        <outlet property="btnOk" destination="b24-No-hYE" id="jaM-sF-XbI"/>
+                        <outlet property="btnShake" destination="JUg-QJ-upY" id="Nzc-ib-SyJ"/>
+                        <outlet property="btnSound" destination="Rup-ak-sgM" id="ehe-cR-JBN"/>
+                        <outlet property="btnWoman" destination="rZa-Ai-keY" id="PQz-Va-VrA"/>
+                        <outlet property="lbAge" destination="1Gd-M8-g3i" id="4Vx-AA-sNW"/>
+                        <outlet property="lbArea" destination="aOc-JL-cgP" id="U2r-fw-7wB"/>
+                        <outlet property="tfNickName" destination="zLv-J1-5LS" id="ivf-6w-xGX"/>
+                        <outlet property="tfPartnerCode" destination="lsP-mE-dsA" id="Tuc-jO-rhd"/>
+                        <outlet property="tfUserMemo" destination="cpj-J6-Xx4" id="xjd-hs-7f4"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bMH-mM-TNI" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1757.9710144927537" y="-532.36607142857144"/>
+        </scene>
+        <!--Term Navigation Controller-->
+        <scene sceneID="LPh-qZ-s0d">
+            <objects>
+                <navigationController storyboardIdentifier="TermNavigationController" automaticallyAdjustsScrollViewInsets="NO" id="Exx-Qb-W44" customClass="TermNavigationController" customModule="NoonCam" customModuleProvider="target" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="pAC-U6-TtD">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" red="0.078431372550000003" green="0.098039215690000001" blue="0.68627450980000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ohz-Bn-lgd" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1.4492753623188408" y="-528.34821428571422"/>
         </scene>
     </scenes>
     <resources>
+        <image name="icon_back" width="16.5" height="22"/>
+        <image name="icon_check_box_off" width="22" height="22"/>
+        <image name="icon_check_box_on" width="22" height="22"/>
         <image name="logo" width="240" height="400"/>
+        <image name="sort_down" width="25" height="25"/>
     </resources>
 </document>

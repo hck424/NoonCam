@@ -23,7 +23,7 @@ class Utility : NSObject {
     }
     
     class func getUUID() -> NSString {
-        let uniqueServiceName = "NoonCam"
+        let uniqueServiceName = "NOON_CAM"
 //        let uniqueAccessGroup = nil
         let wrapper = KeychainWrapper(serviceName: uniqueServiceName, accessGroup: nil)
         var uuid = wrapper.string(forKey: uniqueServiceName)
@@ -37,5 +37,21 @@ class Utility : NSObject {
         
         return uuid! as NSString
     }
+    
+    class func removeUUID () {
+        let uniqueServiceName = "NOON_CAM"
+        let wrapper = KeychainWrapper(serviceName: uniqueServiceName, accessGroup: nil)
+        wrapper.removeObject(forKey: uniqueServiceName)
+    }
+
+    class func getLanguage () -> String {
+        let language = NSLocale.preferredLanguages.first
+        return language!
+    }
+    class func getCurrentVersion() -> String {
+        let version = Bundle.main.infoDictionary?["CFBundleShortVersionString"] as? String
+        return version!
+    }
+
 }
 

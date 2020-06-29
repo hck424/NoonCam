@@ -72,6 +72,9 @@ class LeftSlideMenuViewController: UITableViewController {
         ApiManager.shared.requestGetUserInfo(param as [String : Any], success: { reuslt in
             if reuslt != nil {
                 ShareData.shared.myInfo = reuslt
+                ShareData.shared.myName = reuslt!["user_name"] as? String
+                ShareData.shared.myAge = reuslt!["user_age"] as? String
+                ShareData.shared.myArea = reuslt!["user_area"] as? String
                 self.decorationUi()
             }
         }) { error in
@@ -157,19 +160,19 @@ class LeftSlideMenuViewController: UITableViewController {
         
         if cellId == "profile" {
             let vc :ProfileViewController = self.storyboard?.instantiateViewController(withIdentifier: "ProfileViewController") as! ProfileViewController
-            AppDelegate.instance().mainNaviController?.pushViewController(vc, animated: false);
+            AppDelegate.instance().getMainMainNavi().pushViewController(vc, animated: false);
         }
         else if cellId == "notice" {
             let vc :NoticeViewController = self.storyboard?.instantiateViewController(withIdentifier: "NoticeViewController") as! NoticeViewController
-            AppDelegate.instance().mainNaviController?.pushViewController(vc, animated: false);
+            AppDelegate.instance().getMainMainNavi().pushViewController(vc, animated: false);
         }
         else if cellId == "money" {
             let vc :MoneyViewController = self.storyboard?.instantiateViewController(withIdentifier: "MoneyViewController") as! MoneyViewController
-            AppDelegate.instance().mainNaviController?.pushViewController(vc, animated: false);
+            AppDelegate.instance().getMainMainNavi().pushViewController(vc, animated: false);
         }
         else if cellId == "setting" {
             let vc :SettingViewController = self.storyboard?.instantiateViewController(withIdentifier: "SettingViewController") as! SettingViewController
-            AppDelegate.instance().mainNaviController?.pushViewController(vc, animated: false);
+            AppDelegate.instance().getMainMainNavi().pushViewController(vc, animated: false);
         }
     }
 }

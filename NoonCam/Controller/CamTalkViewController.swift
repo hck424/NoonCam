@@ -114,11 +114,11 @@ class CamTalkViewController: BaseViewController {
             else if sender.tag == 4 {
                 let vc = self.storyboard?.instantiateViewController(withIdentifier: "MytalkViewController") as!MytalkViewController
                 vc.type = .camtalk
-                AppDelegate.instance().mainNaviController?.pushViewController(vc, animated: false)
+                AppDelegate.instance().getMainMainNavi().pushViewController(vc, animated: false)
             }
             else if sender.tag == 5 {
                 let vc = self.storyboard?.instantiateViewController(withIdentifier: "JimViewController") as!JimViewController
-                AppDelegate.instance().mainNaviController?.pushViewController(vc, animated: false)
+                AppDelegate.instance().getMainMainNavi().pushViewController(vc, animated: false)
             }
         }
     }

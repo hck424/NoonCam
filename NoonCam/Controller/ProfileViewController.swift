@@ -23,6 +23,8 @@ class ProfileViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var btnOk: UIButton!
     @IBOutlet weak var bottomScroll: NSLayoutConstraint!
     
+    var isChangeProfileImage = false
+    var isChangeUserInfoData = false
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -172,36 +174,71 @@ class ProfileViewController: UIViewController, UITextFieldDelegate {
             present(pickerVC, animated: false, completion: nil)
         }
         else if sender == btnTermsRegit {
-            self.view.makeToast("링크 준비중입니다.")
+            let stroyboard:UIStoryboard = UIStoryboard(name: "Intro", bundle: nil)
+            let termVC = stroyboard.instantiateViewController(withIdentifier: "TermViewController") as? TermViewController
+            termVC?.mode = "yk1"
+            termVC?.type = .push
+            self.navigationController?.pushViewController(termVC!, animated: false)
+            
         }
         else if sender == btnTermsPersonal {
-            self.view.makeToast("링크 준비중입니다.")
+            let stroyboard:UIStoryboard = UIStoryboard(name: "Intro", bundle: nil)
+            let termVC = stroyboard.instantiateViewController(withIdentifier: "TermViewController") as? TermViewController
+            termVC?.mode = "yk2"
+            termVC?.type = .push
+            self.navigationController?.pushViewController(termVC!, animated: false)
         }
         else if sender == btnOk {
             if tfUserId.text == nil {
                 self.view.makeToast("네임은 필수 정보입니다.")
                 return
             }
-//            user_id={user_id}&user_name={user_name}&user_age={user_age}&user_area={user_area}&user_sex={user_sex}
-            let param = ["user_id": ShareData.shared.myInfo!["user_id"],
-                         "user_name" : tfUserId.text!,
-                         "user_age" : btnAge.titleLabel?.text!,
-                         "user_area" : btnArea.titleLabel?.text!,
-                         "user_sex": btnGender.titleLabel?.text!]
             
-            ApiManager.shared.requestModifyUserInfomation(param as [String : Any], successBlock: { (result) in
-                self.view.makeToast("회원 정보가 수정되었습니다.")
-                ShareData.shared.myArea = self.btnArea.titleLabel?.text!
-                ShareData.shared.myAge = self.btnAge.titleLabel?.text!
-                ShareData.shared.myName = self.tfUserId.text!
-            }) { (error) in
-                print(error?.localizedDescription ?? "")
+            
+            if ShareData.shared.myAge != btnAge.titleLabel?.text!
+                || ShareData.shared.myArea != btnArea.titleLabel?.text!
+                || ShareData.shared.myName != tfUserId.text! {
+                isChangeUserInfoData = true
             }
-            
+
+//            user_id={user_id}&user_name={user_name}&user_age={user_age}&user_area={user_area}&user_sex={user_sex}
+
+            if isChangeUserInfoData && isChangeProfileImage {
+                self.requestModifyUserInfo()
+                self.requestModiUserProfileImage()
+            }
+            else if isChangeUserInfoData {
+                self.requestModifyUserInfo()
+            }
+            else if isChangeProfileImage {
+                self.requestModiUserProfileImage()
+            }
         }
     }
     
-    
+    func requestModifyUserInfo() {
+        let param = ["user_id": ShareData.shared.myInfo!["user_id"],
+                     "user_name" : tfUserId.text!,
+                     "user_age" : btnAge.titleLabel?.text!,
+                     "user_area" : btnArea.titleLabel?.text!,
+                     "user_sex": btnGender.titleLabel?.text!]
+        
+        ApiManager.shared.requestModifyUserInfomation(param as [String : Any], successBlock: { (result) in
+            self.view.makeToast("회원 정보가 수정되었습니다.")
+            ShareData.shared.myArea = self.btnArea.titleLabel?.text!
+            ShareData.shared.myAge = self.btnAge.titleLabel?.text!
+            ShareData.shared.myName = self.tfUserId.text!
+        }) { (error) in
+            print(error?.localizedDescription ?? "")
+        }
+    }
+    func requestModiUserProfileImage() {
+        ApiManager.shared.requestUploadImage(userId: ShareData.shared.myId, image: ivProfile.image!, success: { (result) in
+            self.view.makeToast("회원 프로파일이 변경되었습니다.")
+        }) { (error) in
+            print(error?.localizedDescription ?? "")
+        }
+    }
     
     //MARK: UITextFieldDelegate
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
@@ -227,12 +264,18 @@ class ProfileViewController: UIViewController, UITextFieldDelegate {
     }
     
     func showCamera(_ sourcetype:UIImagePickerController.SourceType) {
-        let vc :HCameraViewController = HCameraViewController.init()
-        vc.sourceType = sourcetype
+        let vc: HCameraViewController = HCameraViewController.init()
+        vc.soureType = sourcetype
+        
         vc.didFinishImagesWithClosure = ({(originImg:UIImage?, cropImg:UIImage?) -> () in
-            print("block operation")
+            if let cropImg = cropImg {
+                self.ivProfile.image = cropImg
+                self.isChangeProfileImage = true
+            }
+            else {
+                self.isChangeProfileImage = false
+            }
         })
         self.navigationController?.pushViewController(vc, animated: false)
-        
     }
 }

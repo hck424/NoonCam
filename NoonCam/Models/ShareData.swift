@@ -7,7 +7,10 @@
 //
 
 import UIKit
-
+enum MemberSatus: String {
+    case notOpen = "Not_Regist_Member"
+    case already = "Already_User_Member"
+}
 enum Gender: String {
     case male = "남"
     case female = "여"
@@ -66,7 +69,7 @@ class ShareData: NSObject {
     public var myName:String?
     public var myAge:String?
     public var myArea:String?
-    
+    public var memberStatus: String?
     var myInfo:[String : Any]?
     
     static let shared = ShareData()

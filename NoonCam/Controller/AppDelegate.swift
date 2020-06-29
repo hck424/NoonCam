@@ -54,27 +54,29 @@ extension UIView {
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
-    var window: UIWindow?
+    
+    var window:UIWindow?
+    
     var mainNaviController: MainNavigationController?
+    
     var loadingView: UIView?
     
-    
-    
+    func getMainMainNavi() -> MainNavigationController {
+        return self.window?.rootViewController as! MainNavigationController
+    }
     class func instance() -> AppDelegate {
         return UIApplication.shared.delegate as! AppDelegate
     }
-    
+ 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         
         if #available(iOS 13.0, *) {
+           
         }
         else {
-            window = UIWindow(frame: UIScreen.main.bounds)
+            self.window = UIWindow.init(frame: UIScreen.main.bounds)
             self.callIntroViewController()
         }
-        
-        ShareData.shared.myGender = Gender.male
-        ShareData.shared.myId = "a1f5f492-8f25-3090-96e2-d5414023c6cc"
 //        CValiable.shared.myArea = UserDefaults.standard.object(forKey: "USER_AREA") as? String
 //        ShareData.shared.myArea = "서울"
         return true
@@ -82,16 +84,37 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func callIntroMainViewController () {
         let stroyboard:UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
-        mainNaviController = stroyboard.instantiateViewController(withIdentifier: "MainNavigationController") as? MainNavigationController
-        window?.rootViewController = mainNaviController
-        window?.makeKeyAndVisible()
+        self.mainNaviController = (stroyboard.instantiateViewController(withIdentifier: "MainNavigationController") as? MainNavigationController)!
+        
+        if self.window == nil {
+            self.window = SceneDelegate.instance()?.window
+        }
+        self.window!.rootViewController = mainNaviController
+        self.window!.makeKeyAndVisible()
     }
     
     func callIntroViewController () {
         let stroyboard:UIStoryboard = UIStoryboard(name: "Intro", bundle: nil)
         let vc = stroyboard.instantiateViewController(withIdentifier: "IntroViewController") as? IntroViewController
-        window?.rootViewController = vc
-        window?.makeKeyAndVisible()
+        if self.window == nil {
+            self.window = SceneDelegate.instance()?.window
+        }
+        self.window!.rootViewController = vc!
+        self.window!.makeKeyAndVisible()
+    }
+    
+    func callMemberRegistViewController() {
+        let stroyboard:UIStoryboard = UIStoryboard(name: "Intro", bundle: nil)
+        let termNavi = stroyboard.instantiateViewController(withIdentifier: "TermNavigationController") as? TermNavigationController
+        let termVC = stroyboard.instantiateViewController(withIdentifier: "TermViewController") as? TermViewController
+        termVC?.mode = "yk1"
+        termVC?.type = .regist
+        termNavi?.viewControllers = [termVC!]
+        if self.window == nil {
+            self.window = SceneDelegate.instance()?.window
+        }
+        self.window!.rootViewController = termNavi
+        self.window!.makeKeyAndVisible()
     }
     
     func startIndicator() {
@@ -99,12 +122,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             if self.loadingView == nil {
                 self.loadingView = UIView(frame: UIScreen.main.bounds)
             }
-
-            self.window?.addSubview(self.loadingView!)
+            if self.window == nil {
+                self.window = SceneDelegate.instance()?.window
+            }
+            self.window!.addSubview(self.loadingView!)
             self.loadingView?.startAnimation(raduis: 25.0)
         })
     }
 
+    
     func stopIndicator() {
         DispatchQueue.main.async(execute: {
             if self.loadingView != nil {
@@ -115,7 +141,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
     
    
-    
     // MARK: UISceneSession Lifecycle
     @available(iOS 13.0, *)
     func application(_ application: UIApplication, configurationForConnecting connectingSceneSession: UISceneSession, options: UIScene.ConnectionOptions) -> UISceneConfiguration {

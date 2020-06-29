@@ -56,6 +56,9 @@
 		E9115E94249B5B920047B351 /* TalkAlertView.xib in Resources */ = {isa = PBXBuildFile; fileRef = E9115E93249B5B920047B351 /* TalkAlertView.xib */; };
 		E91C3433249C45B4001145FA /* RollingView.xib in Resources */ = {isa = PBXBuildFile; fileRef = E91C3432249C45B4001145FA /* RollingView.xib */; };
 		E91C3437249CA9B6001145FA /* CButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = E91C3436249CA9B6001145FA /* CButton.swift */; };
+		E95EC48B24A1D92C00FA39F5 /* MemberRegistViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E95EC48A24A1D92C00FA39F5 /* MemberRegistViewController.swift */; };
+		E95EC48D24A1EDB300FA39F5 /* TermViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E95EC48C24A1EDB300FA39F5 /* TermViewController.swift */; };
+		E95EC48F24A2059800FA39F5 /* TermNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E95EC48E24A2059800FA39F5 /* TermNavigationController.swift */; };
 		E9B8BEAF2498489F0082FCAE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E9B8BEAD2498489F0082FCAE /* Main.storyboard */; };
 		E9B8BEB22498489F0082FCAE /* NoonCam.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = E9B8BEB02498489F0082FCAE /* NoonCam.xcdatamodeld */; };
 		E9B8BEB4249848A10082FCAE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E9B8BEB3249848A10082FCAE /* Assets.xcassets */; };
@@ -116,6 +119,9 @@
 		E9115E93249B5B920047B351 /* TalkAlertView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TalkAlertView.xib; sourceTree = "<group>"; };
 		E91C3432249C45B4001145FA /* RollingView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RollingView.xib; sourceTree = "<group>"; };
 		E91C3436249CA9B6001145FA /* CButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CButton.swift; sourceTree = "<group>"; };
+		E95EC48A24A1D92C00FA39F5 /* MemberRegistViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemberRegistViewController.swift; sourceTree = "<group>"; };
+		E95EC48C24A1EDB300FA39F5 /* TermViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TermViewController.swift; sourceTree = "<group>"; };
+		E95EC48E24A2059800FA39F5 /* TermNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TermNavigationController.swift; sourceTree = "<group>"; };
 		E9B8BEA42498489F0082FCAE /* NoonCam.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NoonCam.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E9B8BEAE2498489F0082FCAE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		E9B8BEB12498489F0082FCAE /* NoonCam.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = NoonCam.xcdatamodel; sourceTree = "<group>"; };
@@ -205,7 +211,10 @@
 			isa = PBXGroup;
 			children = (
 				E552A791249A347800BFC64E /* Intro.storyboard */,
+				E95EC48E24A2059800FA39F5 /* TermNavigationController.swift */,
+				E95EC48C24A1EDB300FA39F5 /* TermViewController.swift */,
 				E552A78C249A347800BFC64E /* IntroViewController.swift */,
+				E95EC48A24A1D92C00FA39F5 /* MemberRegistViewController.swift */,
 			);
 			name = Intro;
 			sourceTree = "<group>";
@@ -481,6 +490,7 @@
 				E552A7AC249A347800BFC64E /* CamTalkViewController.swift in Sources */,
 				E552A7A1249A347800BFC64E /* CamTalkCell.swift in Sources */,
 				E5585C2E249DB14D00154277 /* CamTalk.swift in Sources */,
+				E95EC48D24A1EDB300FA39F5 /* TermViewController.swift in Sources */,
 				E552A7A6249A347800BFC64E /* ChattingTalkViewController.swift in Sources */,
 				E54A2DFF249DF8A300FD71FD /* ApiManager.swift in Sources */,
 				E552A7A0249A347800BFC64E /* IntroViewController.swift in Sources */,
@@ -496,6 +506,7 @@
 				E5A2D05B249E204B00CD016B /* ChattingTalk.swift in Sources */,
 				E552A7C3249A3C6F00BFC64E /* ProfileViewController.swift in Sources */,
 				E5577B23249EEC2100C97347 /* BaseViewController.swift in Sources */,
+				E95EC48F24A2059800FA39F5 /* TermNavigationController.swift in Sources */,
 				E5585C2C249D931400154277 /* ServiceError.swift in Sources */,
 				E558F09124A07067001926BD /* HCameraViewController.swift in Sources */,
 				E552A7AA249A347800BFC64E /* MytalkViewController.swift in Sources */,
@@ -508,6 +519,7 @@
 				E552A7A7249A347800BFC64E /* ChargeViewController.swift in Sources */,
 				E552A7BF249A361900BFC64E /* LetterViewController.swift in Sources */,
 				E552A7C6249A3C8A00BFC64E /* NoticeViewController.swift in Sources */,
+				E95EC48B24A1D92C00FA39F5 /* MemberRegistViewController.swift in Sources */,
 				E552A7A3249A347800BFC64E /* MainViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

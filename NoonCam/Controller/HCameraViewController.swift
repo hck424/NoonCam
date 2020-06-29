@@ -8,27 +8,37 @@
 
 import UIKit
 import AVFoundation
+import CropViewController
 
 class HCameraViewController: UIViewController {
     
-    @IBOutlet var cameraOverlayView: UIView!
+    @IBOutlet var overlayView: UIView!
     @IBOutlet weak var btnShot: UIButton!
     @IBOutlet weak var btnClose: UIButton!
     
-    var sourceType:UIImagePickerController.SourceType?
+    var picker:UIImagePickerController?
+    var soureType:UIImagePickerController.SourceType?
+    
     var didFinishImagesWithClosure:(((_ originImg:UIImage?, _ cropImg: UIImage?) ->()))?
+    
+    var orgImage:UIImage?
+    var cropImag:UIImage?
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        btnShot.layer.cornerRadius = 40.0
+        
+        self.checkPermissionAfterShowImagePicker()
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         self.navigationController?.navigationBar.isHidden = true
     }
+    
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        self.checkPermissionAfterShowImagePicker()
     }
     
     override func viewWillDisappear(_ animated: Bool) {
@@ -75,35 +85,87 @@ class HCameraViewController: UIViewController {
     }
     
     func displayImagePicker() {
-        let picker = UIImagePickerController.init()
+        picker = UIImagePickerController.init()
+        guard let picker = picker else {
+            return
+        }
+        
         picker.modalPresentationStyle = UIModalPresentationStyle.fullScreen
         picker.modalTransitionStyle = UIModalTransitionStyle.crossDissolve
-        picker.sourceType = sourceType!
-        
-        if sourceType! == UIImagePickerController.SourceType.camera {
+        picker.sourceType = soureType!
+        picker.delegate = self
+        if picker.sourceType == UIImagePickerController.SourceType.camera {
             picker.isNavigationBarHidden = true
             picker.isToolbarHidden = true
             picker.allowsEditing = false
             picker.showsCameraControls = false
             
 
+            let screenSize = UIScreen.main.bounds.size // 320 x 568
+            
+            let scale = Float(screenSize.height / screenSize.width * 3 / 4)
+            let translate = CGAffineTransform(translationX: 0, y: (screenSize.height - screenSize.width * 4 / 3) * 0.5)
+            let fullScreen = CGAffineTransform(scaleX: CGFloat(scale), y: CGFloat(scale))
+            picker.cameraViewTransform = fullScreen.concatenating(translate)
+            overlayView.frame = CGRect.init(x: 0, y: 0, width: screenSize.width, height: screenSize.height)
+            
+            picker.cameraOverlayView = overlayView
         }
         else {
-            
+            picker.allowsEditing = false
         }
-        self.present(picker, animated: true, completion: nil)
+        present(picker, animated: false, completion: nil)
     }
     
     @IBAction func onClickedButtonActions(_ sender: UIButton) {
+        if sender == btnShot {
+            picker!.takePicture()
+        }
+        else if sender == btnClose {
+            self.popViewController()
+        }
     }
     
+    func popViewController() {
+        if let presnetedVC = presentedViewController {
+            presnetedVC.dismiss(animated: false, completion: nil)
+        }
+        self.navigationController?.popViewController(animated: false)
+    }
 }
 
 extension HCameraViewController : UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
         
+        guard let image = info[UIImagePickerController.InfoKey.originalImage] as? UIImage else { return }
+    
+        orgImage = image
+        picker.dismiss(animated: false) {
+            let vc = CropViewController.init(croppingStyle: CropViewCroppingStyle.default, image: self.orgImage!)
+            vc.delegate = self
+            vc.modalPresentationStyle = UIModalPresentationStyle.fullScreen
+            vc.modalTransitionStyle = UIModalTransitionStyle.crossDissolve
+            self.present(vc, animated: false, completion: nil)
+        }
     }
     func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
-        
+        picker.dismiss(animated: false) {
+            self.navigationController?.popViewController(animated: false)
+        }
+    }
+}
+extension HCameraViewController : CropViewControllerDelegate {
+    
+    func cropViewController(_ cropViewController: CropViewController, didCropToImage image: UIImage, withRect cropRect: CGRect, angle: Int) {
+        cropViewController.dismiss(animated: false) {
+            self.navigationController?.popViewController(animated: false)
+            self.didFinishImagesWithClosure!(self.orgImage, image)
+        }
+    }
+    
+    func cropViewController(_ cropViewController: CropViewController, didFinishCancelled cancelled: Bool) {
+        cropViewController.dismiss(animated: false) {
+            self.displayImagePicker()
+        }
     }
 }

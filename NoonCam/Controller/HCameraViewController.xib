@@ -12,7 +12,7 @@
             <connections>
                 <outlet property="btnClose" destination="DWi-sX-LWQ" id="pUO-zC-2ko"/>
                 <outlet property="btnShot" destination="Cw8-ff-Fsi" id="tc8-Ch-ilh"/>
-                <outlet property="cameraOverlayView" destination="2wh-Sh-D9B" id="UIf-i8-59H"/>
+                <outlet property="overlayView" destination="2wh-Sh-D9B" id="CRH-ox-z4T"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -20,11 +20,11 @@
         <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
             <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-            <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <point key="canvasLocation" x="139" y="103"/>
         </view>
-        <view contentMode="scaleToFill" id="2wh-Sh-D9B" userLabel="cameraOverlayView">
+        <view contentMode="scaleToFill" id="2wh-Sh-D9B" userLabel="overlayView">
             <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <subviews>
@@ -41,7 +41,7 @@
                     </connections>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Cw8-ff-Fsi" userLabel="btnShot">
-                    <rect key="frame" x="167" y="752" width="80" height="80"/>
+                    <rect key="frame" x="167" y="762" width="80" height="80"/>
                     <color key="backgroundColor" red="0.023529411760000001" green="0.94509803920000002" blue="0.81960784310000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <constraints>
                         <constraint firstAttribute="width" constant="80" id="nuy-Nf-k40"/>
@@ -54,9 +54,9 @@
             </subviews>
             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <constraints>
-                <constraint firstItem="Cw8-ff-Fsi" firstAttribute="centerX" secondItem="2wh-Sh-D9B" secondAttribute="centerX" id="IdU-Jn-gXC"/>
+                <constraint firstItem="9dw-Wr-M3M" firstAttribute="bottom" secondItem="Cw8-ff-Fsi" secondAttribute="bottom" constant="20" id="JU7-MV-kR1"/>
                 <constraint firstItem="DWi-sX-LWQ" firstAttribute="top" secondItem="9dw-Wr-M3M" secondAttribute="top" id="LIp-K0-1A1"/>
-                <constraint firstItem="9dw-Wr-M3M" firstAttribute="bottom" secondItem="Cw8-ff-Fsi" secondAttribute="bottom" constant="30" id="Uj3-Wh-Gdh"/>
+                <constraint firstItem="Cw8-ff-Fsi" firstAttribute="centerX" secondItem="9dw-Wr-M3M" secondAttribute="centerX" id="jB2-eL-o9O"/>
                 <constraint firstAttribute="trailing" secondItem="DWi-sX-LWQ" secondAttribute="trailing" id="mjM-yM-Gjp"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="9dw-Wr-M3M"/>
